@@ -1,0 +1,3 @@
+rootProject.name = 'springboots-shiro'
+
+include "springboots-core", "springboots-web"
