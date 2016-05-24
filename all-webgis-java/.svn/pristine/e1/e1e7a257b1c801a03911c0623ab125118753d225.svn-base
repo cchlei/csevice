@@ -1,0 +1,54 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>提示页面</title>
+    <link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../css/prompt.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode" ></script>
+    <script type="text/javascript">
+        $(function(){
+            var h = $(window).height();
+            $("#prompt_center,#procenter,.zc_success").height(h-215);
+        })
+    </script>
+</head>
+<body>
+<div class="top"><i></i></div>
+<div id="prompt_center">
+    <!-- 注册成功 -->
+    <!-- <iframe src="prompt_zc_success.html" id="procenter"></iframe> -->
+    
+    <!-- 注册失败 -->
+    <!-- <iframe src="prompt_zc_fail.html" id="procenter"></iframe> -->
+
+    <!-- 请登录邮箱完成激活 -->
+    <!-- <iframe src="prompt_email_activation.html" id="procenter"></iframe> -->
+
+    <!-- 您的企业账号激活失败 -->
+    <!-- <iframe src="prompt_qyzh_activation.html" id="procenter"></iframe> -->
+
+    <!-- 您的企业账号密码修改失败 -->
+    <!-- <iframe src="prompt_passchangerr.html" id="procenter"></iframe> -->
+
+    <!-- 重置密码提示 -->
+    <!-- <iframe src="prompt_repassword.html" id="procenter"></iframe> -->
+
+    <!-- 重置密码表单 -->
+    <iframe src="prompt_resetpassword.html" id="procenter"></iframe> 
+</div>
+<div class="foot">
+    <ul>
+        <li><a href="">关于天润云</a>|</li>
+        <li><a href="">常见问题</a>|</li>
+        <li><a href="">服务保障</a>|</li>
+        <li><a href="">加入我们</a></li>
+    </ul>
+    <p>陕ICP备12000810号&nbsp&nbsp版权所有：陕西天润科技股份有限公司&nbsp&nbsp地址：西安市雁塔北路8号&nbsp&nbsp邮箱：contact@trgis.com</p>
+</div>
+</body>
+</html>

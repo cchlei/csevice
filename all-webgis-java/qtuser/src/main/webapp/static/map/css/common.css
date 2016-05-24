@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* CSS Document */
+body,dl,ol,ul,li,dt,dd,p,h2,h3,h4 span {
+	margin: 0;
+	padding: 0
+	
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+ul,ol {
+	list-style: none
+}
+/*ul li {float:left;}*/
+a {
+	text-decoration: none
+}
+i{font-style: normal;}
+img {
+	border: 0 none;
+	/*vertical-align: middle*/
+}
+
+body{
+	font-family: Tohoma,"宋体";
+	color:#666;
+	}
+ a {text-decoration:none;}
+/***head**********************/	
+.topbar {
+height:72px;
+line-height: 80px;
+background-color: #1c456a;
+font-family:微软雅黑;
+font-size:14px;
+}
+.topbar .mc {
+text-align: right;
+}
+.mc {
+width: 1200px;
+margin-left: auto;
+margin-right: auto;
+}
+.topbar .logo {
+float: left;
+width: 180px;
+height:72px;
+background: url(../images/logo_qt_wt.png) 0 50% no-repeat;
+}
+.topbar .userinfo {
+float: right;
+cursor: pointer;
+}
+.topbar .userinfo span {
+display: block;
+position: relative;
+height:72px;
+line-height:72px;
+padding: 0 18px;
+white-space: nowrap;
+}
+.topbar .userinfo span img {
+width: 24px;
+height: 24px;
+display: inline-block;
+background-color: #08c;
+vertical-align: middle;
+}
+.topbar .userinfo span em {
+color: #fff;
+padding-left: 18px;
+}
+.topbar .userinfo span i {
+margin-left: 6px;
+border: 6px solid transparent;
+border-bottom-width: 0;
+width: 0;
+height: 0;
+font-size: 0;
+line-height: 0;
+vertical-align: middle;
+border-top-color: #08c;
+}
+.topbar .userinfo span .sub_menu {
+display: none;
+position: absolute;
+top: 72px;
+width: 100%;
+left: 0;
+text-align: left;
+color: #fff;
+}
+.topbar .userinfo span .sub_menu li {
+text-indent: 1.5em;
+cursor: pointer;
+height: 40px;
+line-height: 40px;
+background-color: #225582;
+width:100%;
+}
+.topbar .v_gap_line {
+float: right;
+width: 1px;
+height:72px;
+background-image: url(../images/gap_line.png);
+margin: 0 4.5px;
+}
+.topbar .v_gap_line {
+background-repeat: no-repeat;
+background-position: 50% 50%;
+}
+.topbar .nav{
+display: inline-block;
+vertical-align: top;
+}
+.topbar .nav a {
+position: relative;
+display: inline-block;
+vertical-align: top;
+font-size: 1.25em;
+color: #fff;
+padding: 0 1em;
+height:72px;
+line-height:72px;
+}	
+.topbar .userinfo span .sub_menu li:hover{background-color:#1c456a}
+.topbar .userinfo span:hover{background-color:#225582}
+.topbar .userinfo span:hover .sub_menu{display:block}
+.topbar .nav a:hover{background-color:#225582}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*********foot*************/
+.bottom {
+background-color: #1466d3;
+text-align: right;
+width:100%;
+position:fixed;
+bottom:0px;
+}
+.bottom .mc {
+height: 46px;
+line-height: 46px;
+}
+
+.bottom em {
+float: left;
+color: #a0b7e8;
+font-size: 14px;
+}
+em, i {
+font-style: normal;
+}
+.bottom .ibtn.qq {
+background-image: url(../images/iconfont-QQ.png);
+}
+.bottom .ibtn {
+display: inline-block;
+vertical-align: middle;
+background-image: none;
+width: 36px;
+height: 36px;
+border-radius: 50%;
+border: 1px solid #fff;
+margin-left: 6px;
+}
+.bottom .ibtn.wx {
+background-image: url(../images/iconfont-wx.png);
+}
+.bottom .ibtn.wb {
+background-image: url(../images/iconfont-weibo.png);
+}.ibtn.ph {
+background-image: url(../images/iconfont-phone.png);
+}
+.bottom .ibtn{background-repeat: no-repeat;
+background-position: 50% 50%;}
+
+.clear{
+	clear: both;
+	height:0;
+	font-size:0;
+}

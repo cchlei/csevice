@@ -1,0 +1,9 @@
+cas.realm.casServerUrlPrefix=https://login.trmap.cn/
+
+cas.realm.casService=http://localhost:8080/qtenterprise/cas
+
+shiro.cas.loginUrl=https://login.trmap.cn?service=http://localhost:8080/qtenterprise/cas
+
+shiro.logout.redirectUrl=https://login.trmap.cn/logout?service=http://localhost:8080/qtenterprise
+
+sessionId.cookie.domain=localhost

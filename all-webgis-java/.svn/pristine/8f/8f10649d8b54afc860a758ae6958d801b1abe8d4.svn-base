@@ -1,0 +1,63 @@
+.div_inline_block{display:inline-block;*display:inline}
+body{padding:0;margin:0}
+body,html{overflow:hidden}
+.clear{font-size:0;height:0;clear:both}
+a{color:#08c}
+.framePage body .nvCont #navi{padding:0!important}
+.framePage body .nvCont #navi>.level0{margin-bottom:6px;position:relative;*position:static}
+.framePage body .nvCont #navi>.level0>ul{padding-top:6px;padding-bottom:9px;margin-left:-8px}
+.framePage body .nvCont #navi>.level0>a{height:30px!important;line-height:30px!important;display:block!important;text-indent:1em;color:#f0f0f0;border:none!important;border-top:1px solid #7995b6!important;padding-top:0;margin:0;background:95% 50% no-repeat #B1B1B1}
+.framePage body .nvCont #navi>.level0>a.curSelectedNode{color:#e0e0e0}
+.framePage body .nvCont #navi>.level0>a .button{display:none}
+.framePage body .nvCont #navi>.level0>a span{font-size:14px;*display:inline-block;*margin-top:2px;*line-height:22px}
+.framePage body .nvCont #navi>.level0>.button.switch{transition-duration:330ms;display:inline-block!important;position:absolute;top:3px;right:15px;*display:none!important;z-index:5}
+.framePage body .nvCont #navi>.level0>.button.switch.bottom_open,.framePage body .nvCont #navi>.level0>.button.switch.center_open,.framePage body .nvCont #navi>.level0>.button.switch.roots_open{background:url(../libs/ztree/img/cpic/shang.png) 50% 50% no-repeat!important;display:none!important}
+.framePage body .nvCont #navi>.level0>.button.switch.bottom_close,.framePage body .nvCont #navi>.level0>.button.switch.center_close,.framePage body .nvCont #navi>.level0>.button.switch.roots_close{background:url(../libs/ztree/img/cpic/xia.png) 50% 50% no-repeat!important}
+.framePage .ztree *{padding:0;margin:0;font-size:12px;font-family:"微软雅黑","黑体",Helvetica,AppleGothic,sans-serif}
+.framePage .ztree li a{padding-top:0;height:18px!important;line-height:18px}
+.framePage .ztree li a.curSelectedNode{border:none}
+.framePage .ztree li a,.framePage .ztree li span.button.switch{margin:3px 0}
+.framePage .ztree li span.button.switch{display:none}
+.framePage .ztree ul{padding-left:18px}
+.framePage .ztree ul.line{background:0 0}
+.framePage #header{height:45px;;background-color:#428BCA;overflow:hidden;position:relative}
+.framePage #header .sysname{position:relative;top:50%;margin-top:-14px;font-family:"微软雅黑" "黑体";font-size:21px;text-indent:1em;color:#fff}
+.framePage #header .action{position:absolute;right:5px;top:5px}
+.framePage #header a{text-decoration:none;color:#f0f0f0}
+.framePage #main{width:100%;border-collapse:collapse}
+.framePage #main td{background-color:#e2e4e6;padding:0;vertical-align:top}
+.framePage #main .lnav{background-color:#f0f0f0;width:120px}
+.framePage #main .lnav .nvCont{width:210px;height:100%;overflow-x:hidden;overflow-y:auto}
+.framePage #main .spacer{width:0px}
+.framePage #main #infoDiv{height:0;background-color:#5484d4}
+.framePage #main #ifmCont{background-color:#ccc;overflow:hidden}
+.indexFrame #header{height:70px;position:relative;background:url(img/mount.jpg) 100% 100% no-repeat #ece3d2;border-bottom:1px solid #bababa}
+.indexFrame #header .sname{display:inline-block;background:url(img/sname.png) 50% 50% no-repeat;width:540px;height:50px;top:50%;margin-top:-25px;margin-left:20px;position:absolute}
+.indexFrame #header .br,.indexFrame #header .tr{color:#8F7957;font-size:12px}
+.indexFrame #header .br a,.indexFrame #header .tr a{color:#8F7957}
+.indexFrame #header .tr{position:absolute;top:10px;right:20px}
+.indexFrame #header .tr a{background:15px 50% no-repeat none;padding-left:36px;padding-top:8px;padding-bottom:8px}
+.indexFrame #header .tr .help{background-image:url(../images/bangzhu.png)}
+.indexFrame #header .tr .leave{background-image:url(../images/tuichu.png)}
+.indexFrame #header .tr .zhuce{background-image:url(../images/zhuce.png)}
+.indexFrame #header .tr .denglu{background-image:url(../images/denglu.png)}
+.indexFrame #header .br{position:absolute;right:20px;bottom:10px}
+.indexFrame #navi{height:30px;background-color:#8F7957;font-size:0;padding-left:20px}
+.indexFrame #navi>a{cursor:pointer;display:inline-block;font-size:12px;height:30px;line-height:30px;color:#fff;background:url(../images/shuzishequ.png) 9px 50% no-repeat;padding-left:45px;padding-right:9px;text-decoration:none}
+.indexFrame #navi>a.cur{background-color:#BFA78A}
+.indexFrame #loca{overflow:hidden;height:0px;line-height:33px;background-color:#fff;padding-left:20px;border-bottom:1px solid #D9D3D3;font-size:12px}
+.indexFrame #loca i.loca{position:relative;top:5px;width:18px;height:18px;display:inline-block;background:url(../images/weizhi.png) 50% 50% no-repeat}
+.indexFrame #loca .dark{color:#5F5F5F;text-decoration:none}
+.indexFrame #main{background-color:#e2e4e6;height:60px;overflow:hidden}
+.indexFrame #main #ifCont{margin:10px;position:relative}
+.indexFrame #main iframe{width:100%;height:100%;position:absolute;top:0;left:0;opacity:0;-webkit-transform:scale(0.6)}
+body .animated{-webkit-animation-duration:.39s;animation-duration:.39s}
+@-webkit-keyframes scaleIn{0%{opacity:0;-webkit-transform:scale(1.8)}
+50%{opacity:.85;-webkit-transform:scale(0.1 .1)}
+100%{opacity:1;-webkit-transform:scale(1)}}
+@-webkit-keyframes scaleOut{0%{opacity:1;-webkit-transform:scale(1)}
+50%{opacity:.8;-webkit-transform:scale(0.3)}
+100%{opacity:0;-webkit-transform:scale(0)}}
+.scaleIn{transition-duration:.4s;transition-delay:.3s;-webkit-transform:scale(1)!important;opacity:1!important;z-index:5}
+.scaleOut{transition-duration:.18s;opacity:0!important;-webkit-transform:scale(0.9)!important}
+.tr{position:absolute;top:6px;right:6px;}

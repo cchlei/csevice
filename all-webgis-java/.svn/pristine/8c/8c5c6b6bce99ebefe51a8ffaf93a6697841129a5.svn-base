@@ -1,0 +1,534 @@
+@import "tool";
+@import "vars";
+
+.fans_sub {
+  font-family: @font_yahei;
+  h2 {
+    font-size: @f+2;
+    .lineh(@page_name_h);
+    color: #57a3f2;
+    padding-left: 47px;
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+  .focus_name {
+    border-bottom: 1px solid #BCCDDA;
+    padding-left: 47px;
+    background: url(../images/icon_focus.png) no-repeat 21px center;
+    i {
+      position: absolute;
+      right: 21px;
+      font-size: @f+10;
+      color: #666666;
+    }
+  }
+  .fans_name{
+    background: url(../images/icon_fans.png) no-repeat 22px -1px;
+  }
+  .fans_guanzhu{
+    background: url(../images/icon_guanzhu.png) no-repeat 22px center;
+  }
+  .fans_name,.fans_guanzhu {
+    font-size: 16px;
+    color: #57a3f2;
+    padding-left: 47px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 27px;
+  }
+  span {
+    cursor: pointer;
+    margin-left: @g+4;
+    display: block;
+    border-radius: @btn_radius;
+    .lineh(36px);
+    width: 160px;
+    margin-bottom: @g;
+    margin-top: @g;
+    font-size: @f;
+    text-align: center;
+  }
+  .addgroups{
+    em{
+      font-size: 16px;
+      font-weight: 600;
+    }
+    background: #f3a825;
+    color: #fff;
+    margin-left: @g+4;
+    display: block;
+    border-radius: @btn_radius;
+    .lineh(36px);
+    width: 160px;
+    margin-bottom: @g;
+    margin-top: @g;
+    font-size: @f;
+    text-align: center;
+    cursor: pointer;
+  }
+  .bg-focus {
+    background: #f0f2f5;
+    color: #666666;
+    em{
+      display: inline-block;
+      width: 110px;
+      overflow: hidden;
+    }
+    &.hove{
+      background: #428de8;
+      color: #fff;
+      i{
+        background:url("../images/icon_del_white.png") ;
+      }
+    }
+    &:hover{
+      background: #428de8;
+      color: #fff;
+      i{
+        background:url("../images/icon_del_white.png") ;
+      }
+    }
+    i{
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background:url("../images/icon_del.png") ;
+      margin-left: 20px;
+      vertical-align: middle;
+    }
+  }
+  .bg-all,.addattention {
+    background: #669fe4;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover{
+      background-color: #428de8;
+    }
+  }
+}
+
+.fans_all {
+  color: #192330;
+  font-size: 18px;
+  &:extend(.yahei);
+  .lineh(@page_name_h);
+  font-weight: 500;
+  text-indent: @g;
+  border-bottom: 1px solid #bccdda;
+  &.page_name{
+    .text_left{
+      float: left;
+      font-size: 15px;
+    }
+    .text_right{
+      float: right;
+      margin-left: @g;
+      span{
+        margin-right: @g;
+        color: #fff;
+        font-size: 14px;
+        padding: 6px 24px;
+        cursor: pointer;
+        border-radius: 15px;
+        &:nth-of-type(1){
+            background-color: #f3a825;
+        }
+        &:nth-of-type(2){
+          background-color: #EC4A4C;
+        }
+      }
+
+    }
+  }
+}
+
+.fans_framework {
+  margin-left: 22px;
+  margin-top: 9px;
+  font-family: @font_yahei;
+  li {
+    margin: 12px 10px;
+    background: #ffffff;
+    border-radius: @btn_radius;
+    font-size: @f;
+    min-height: 120px;
+    float: left;
+    width: 250px;
+    position: relative;
+    .guanzhu{
+      display: flex;
+      margin-top: @g*2;
+    }
+    .change_group{
+      width:  @g*15;
+      margin-left: @g*2;
+      padding: @g;
+      position: absolute;
+      top: 141px;
+      z-index: 9;
+      left: 0px;
+      background: #fff;
+      border: 1px solid #cfcfcf;
+      font-size: 12px;
+      color: #777;
+      label{
+        cursor: pointer;
+      }
+      input{
+        display: inline-block;
+        vertical-align: text-bottom;
+        text-indent: 0.5em;
+      }
+    }
+    .bth{
+      margin-top: @g*2;
+      text-align: right;
+      span{
+        text-align: center;
+        padding: 4px 6px;
+        color: #fff;
+        cursor: pointer;
+        &.determine{
+          background: #428de8;
+        }
+        &.cal{
+          background: #bcbcbc;
+          margin-left: 6px;
+        }
+      }
+    }
+    .fanslist{
+      display: none;
+    }
+  }
+  .fans_img {
+    width: @g*8;
+    height: 71px;
+    float: left;
+    border-right: 1px solid #cfcfcf;
+    margin-top: 22px;
+    margin-left: @g*2;
+    p {
+      ._size(71);
+      border-radius: 100%;
+    }
+  }
+  .fans_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+  }
+  span.rightname{
+    float: left;
+    height: 72px;
+    margin-top: 21px;
+    margin-left: 17px;
+    margin-right: 15px;
+    display: block;
+    em{
+      display: block;
+      width: 97px;
+      overflow: hidden;
+      white-space: nowrap;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      line-height: 23px;
+    }
+    i {
+      width: 18px;
+      height: 15px;
+      color: #666666;
+      padding-top: 12px;
+      display:inline-block;
+      background:url("../images/ico_guanzhu.png") no-repeat;
+      padding-right: 6px;
+      position: relative;
+    }
+  }
+  .grouping,.cancel_attention{
+    .lineh(30px);
+    display: inline-block;
+    border-radius: @btn_radius;
+    text-align: center;
+    margin-top: @g;
+    margin-bottom: @g;
+    cursor:pointer;
+    display: inline-block;
+    vertical-align: top;
+
+  }
+  .grouping{
+    width:@g*7;
+    border: 1px #cfcfcf solid;
+    margin-left: @g*2;
+    em{
+      width: 46px;
+      display: inline-block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    i{
+      width:0;
+      height:0;
+      border-left:8px solid transparent;
+      border-right:8px solid transparent;
+      border-top:8px solid #cfcfcf;
+      margin-left: @g;
+      position: relative;
+      top: 3px;
+    }
+  }
+  .attention{
+    background: #57a3f2;
+    color: #fff;
+    width: @g*7;
+    display: inline-block;
+    border-radius: @btn_radius;
+    text-align: center;
+    margin-top: @g*2;
+    .lineh(30px);
+    cursor:pointer;
+    &:hover {
+      background: #428de8;
+    }
+  }
+  .cancel_attention{
+    background: #57a3f2;
+    color: #fff;
+    width: @g*8;
+    margin-left: @g;
+    &:hover {
+      background: #428de8;
+    }
+  }
+  &.noxinxi{
+    margin-left: 22px;
+    font-family: @font_yahei;
+    font-size: 16px;
+    color: #333;
+    margin-top: @g;
+  }
+}
+.layui-layer-content,.layui-layer.layui-anim{
+  background-color: #f1f2f6;
+}
+.concern{
+  width: 690px;
+  height: 420px;
+  display: none;
+  font-family: @font_yahei;
+  background-color: #f1f2f6;
+  border-top: 1px #428de8 solid;
+  padding: @g*3 @g*2;
+  position: relative;
+  .noname{
+    margin-top: @g*2;
+  }
+  .searchfriend{
+    .lineh(36px);
+    text-align: center;
+    input{
+      width: 608px;
+      border: 0px;
+      .lineh(36px);
+      text-indent: 0.5em;
+      display: inline-block;
+      vertical-align: top;
+      &:focus{
+        outline:none;
+      }
+    }
+    span{
+      width: 80px;
+      .lineh(36px);
+      display: inline-block;
+      color: #fff;
+      background-color: #57a3f2;
+      text-align: center;
+      cursor:pointer;
+    }
+  }
+  ul{
+    overflow: hidden;
+    height: 325px;
+    margin-top: @g;
+    display: inline-block;
+  }
+  li{
+    float: left;
+    width: 221.5px;
+    margin-top: @g;
+    border-radius: 4px;
+    background-color: #fff;
+    padding-bottom: @g;
+    margin-right: @g;
+   /* &:nth-of-type(3n){
+      margin-right: 0px;
+    }*/
+    &:first-child+li+li{
+      margin-right: 0px;
+    }
+    &:first-child+li+li+li+li+li{
+      margin-right: 0px;
+    }
+    &:first-child+li+li+li+li+li+li+li+li{
+      margin-right: 0px;
+    }
+    .attention{
+      background: #57a3f2;
+      color: #fff;
+      width: 62px;
+      display: inline-block;
+      border-radius: @btn_radius;
+      text-align: center;
+      margin-top: @g*2;
+      .lineh(25px);
+      cursor:pointer;
+      &:hover {
+        background: #428de8;
+      }
+    }
+    .guanzhu,.qxattention{
+      display: flex;
+      margin-top: @g*2;
+    }
+    i {
+      width: 18px;
+      height: 15px;
+      color: #666666;
+      display:inline-block;
+      vertical-align: top;
+      background:url("../images/ico_guanzhu.png") no-repeat;
+      padding-right: 6px;
+      position: relative;
+    }
+  }
+  .page_nav.lite-theme.simple-pagination{
+    margin-top: 24px;
+    li{
+      display: inline-block;
+      vertical-align: middle;
+      margin:0px @g;
+      width: 90px;
+      height: 30px;
+      line-height: 30px;
+      .page-link,.current{
+        padding: @g 18px;
+      }
+      .current.prev{
+        background-color: #669fe4;
+        color: #fff;
+      }
+      .page-link.prev{
+        background-color: #669fe4;
+        color: #fff;
+        &:hover{
+          background: #428de8;
+        }
+      }
+      .page-link.next{
+        background-color: #669fe4;
+        color: #fff;
+        &:hover{
+          background: #428de8;
+        }
+      }
+    }
+    ul{
+      height: 30px;
+      margin-top: 0;
+    }
+    a,span{
+      display: block;
+      padding: 0px !important;
+    }
+  }
+  .fans_img {
+    width: @g*7;
+    height: 71px;
+    float: left;
+    border-right: 1px solid #cfcfcf;
+    margin-top: @g;
+    margin-left: @g;
+    p {
+      ._size(71);
+      border-radius: 100%;
+    }
+  }
+  .fans_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+  }
+  span.rightname{
+    float: left;
+    height: 72px;
+    margin-top: @g;
+    margin-left: @g;
+    margin-right: @g;
+    display: block;
+    p{
+      display: block;
+      width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      line-height: 24px;
+      height: 24px;
+      &:first-child+p{
+        width: 96px;
+      }
+    }
+  }
+
+}
+.clear{
+  clear: both;
+}
+.simple-pagination{
+  text-align: center;
+}
+#page_no{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -112px;
+  width: 224px;
+  li{
+    margin:0px @g;
+    .page-link,.current{
+      padding: @g @g*2;
+    }
+    .current.prev{
+      background-color: #669fe4;
+      color: #fff;
+    }
+    .page-link.prev{
+      background-color: #669fe4;
+      color: #fff;
+      &:hover{
+        background: #428de8;
+      }
+    }
+    .page-link.next{
+      background-color: #669fe4;
+      color: #fff;
+      &:hover{
+        background: #428de8;
+      }
+    }
+  }
+  .current{
+    background-color: #669fe4;
+  }
+}
+input.addname,input.editname{
+  text-indent:0.5em;
+}
+
+

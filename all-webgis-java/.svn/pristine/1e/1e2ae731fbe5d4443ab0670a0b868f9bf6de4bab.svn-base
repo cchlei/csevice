@@ -1,0 +1,41 @@
+{
+  "rows": {
+    "jktype": [
+      "REST",
+      "OGC"
+    ],
+    "tclayer": [
+      {
+        "class":"mrtype",
+        "name": "默认图层",
+        "data": [
+          {
+            "name": "编码",
+            "code": "qq"
+          },
+          {
+            "name": "名称",
+            "code": "sssss"
+
+          }
+        ]
+      },
+      {
+        "class":"layer",
+        "name":"可选图层",
+        "data": [
+          {
+            "name": "扩展属性1",
+            "code": "sss",
+            "checked":false
+          },
+          {
+            "name": "扩展属性2",
+            "code": "eee",
+            "checked":false
+          }
+        ]
+      }
+    ]
+  }
+}

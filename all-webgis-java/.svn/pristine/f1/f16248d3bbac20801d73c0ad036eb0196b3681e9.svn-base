@@ -1,0 +1,122 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>重置密码</title>
+    <link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../css/prompt.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode" ></script>
+</head>
+<body>  
+<div class="resetpassword">
+    <div class="topp"></div>
+    <form class="zccenter" action="#">
+        <ul>
+            <li><span>新的登录密码:</span><input id="password" name="password" class="ipt" placeholder="请输入密码" type="password" value="" size="25" autocomplete="off"></li>
+            <li><span>确认新的登录密码:</span><input id="passwordagain" name="password_2" recheck="password" class="ipt" placeholder="请输入密码" type="password" value="" size="25" autocomplete="off"></li>
+            <li class="ascertain">确定</li>
+        </ul> 
+    </form>
+</div>
+  
+</body>
+</html>
+<script>
+    seajs.usep("_/validform",function(e){
+        
+        var vlform = $(".zccenter").Validform({
+            tiptype:function(msg,o,cssctl){
+                var m = o.obj;
+                var p = m.parents("li:first");
+
+                //寻找或者创建错误提示元素
+                var el = p.find(".errtip");
+                if(!el.length){
+                    p.append("<span class='errtip'></span>");
+                    el = p.find(".errtip");
+                }
+                el.html("");
+
+
+
+                //先清理掉成功和失败的状态
+                el.removeClass("suc err");
+
+                //验证失败
+                if(o.type == 3){
+                    fail_action();
+
+                    //通过验证
+                }else if(o.type==2){
+
+                    //进行ajax验证
+                    if(o.obj.is("[ajax_valid_errmsg]")){
+                        $.ajax({
+                            url:"http://user.trmap.cn/account/validation",
+                            data:{
+                                type: m.attr("name"),
+                                value: m.val()
+                            },
+                            type:"post",
+                            dataType:"jsonp"
+                        })
+                            .fail(function(){
+                                fail_action("重复性检测失败");
+                            })
+                            .done(function(data){
+                                if($.trim(data) == "true"){
+                                    success_action();
+                                }else{
+                                    fail_action(m.attr("ajax_valid_errmsg"));
+                                }
+                            })
+                        ;
+                    }else{
+                        success_action();
+                    }
+                }
+
+
+                function fail_action(_msg){
+                    el.html(_msg||msg).addClass("err");
+                    m.parent().addClass("error");
+                }
+
+                function success_action(){
+                    // el.html("&#xe601;").addClass("suc");
+                    // m.parent().removeClass("error");
+                }
+
+            },
+            showAllError:true,
+            datatype:{
+                "zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+            },
+            ajaxPost:false
+        });
+
+        vlform.addRule([
+            {
+                ele:"input:eq(0)",
+                datatype:"*6-16",
+                nullmsg:"请填写密码",
+                errormsg:"密码大于6个字符"
+            },
+            {
+                ele:"input:eq(1)",
+                datatype:"*6-16",
+                nullmsg:"请填写密码",
+                errormsg:"两次输入的内容不一致！"
+            }
+
+        ]);
+
+
+    })
+
+
+</script>

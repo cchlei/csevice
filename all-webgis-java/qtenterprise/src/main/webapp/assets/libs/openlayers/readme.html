@@ -1,0 +1,106 @@
+<html>   <head>       <meta charset="UTF-8" />   </head>   <body><h1 id="-">地图编辑的接口定义</h1>
+<hr>
+<hr>
+<blockquote>
+<p>图层字段增加 layer_field_add</p>
+<blockquote>
+<p>请求参数</p>
+<blockquote>
+<p>field 字段名</p>
+<p>title 字段别称</p>
+<p>type 字段类型</p>
+</blockquote>
+<p>响应参数</p>
+<blockquote>
+<p>result</p>
+<blockquote>
+<p>&quot;success&quot;表示创成功</p>
+<p>&quot;failt&quot; 或者其他 表示创建失败        此时 &quot;msg&quot;附带错误信息</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<blockquote>
+<p>图层字段删除 layer_field_del</p>
+<blockquote>
+<p>请求参数</p>
+<blockquote>
+<p>field 字段名称</p>
+</blockquote>
+<p>响应参数 参考result</p>
+</blockquote>
+</blockquote>
+<hr>
+<blockquote>
+<p>图层字段的获取 layer_field_get</p>
+<blockquote>
+<p>请求参数 </p>
+<blockquote>
+<p>layerid(暂定，最终使用使用模型中的字段)</p>
+</blockquote>
+<p>响应参数</p>
+<blockquote>
+<p>rows 字段列表数组</p>
+<p>rows[0].field 字段的键名</p>
+<p>rows[0].title 字段的别名</p>
+<p>rows[0].type  字段类型</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<blockquote>
+<p>矢量创建 /entgraphics/editentgraphics</p>
+<blockquote>
+<p>请求参数</p>
+<blockquote>
+<p>geom 矢量的几何信息 </p>
+<p>mapid 地图id</p>
+<p>gtype 点1线2面3 </p>
+</blockquote>
+<p>响应参数 </p>
+<blockquote>
+<p>featureid 矢量id，取模型字段</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<blockquote>
+<p>矢量属性的保存,现在设定为批量保存 /entgraphics/editentgraphics</p>
+<blockquote>
+<p>请求参数</p>
+<blockquote>
+<p>featureid 矢量id</p>
+<p>[属性名：属性值]键值对</p>
+<p>...</p>
+</blockquote>
+<p>响应参数 参照“图层字段增加”里面对result的定义</p>
+</blockquote>
+</blockquote>
+<hr>
+<blockquote>
+<p>矢量属性的获取 /entgraphics/getgraphics</p>
+<blockquote>
+<p>请求参数</p>
+<blockquote>
+<p>gid 矢量id</p>
+<p>mapid 地图id </p>
+</blockquote>
+<p>响应</p>
+<blockquote>
+<p>[属性名：属性值]键值对</p>
+</blockquote>
+<p>响应举例</p>
+<blockquote>
+<pre><code class="lang-json">{
+    &quot;featureid&quot;:545455,
+    &quot;geom&quot;:8855455454545454,
+    &quot;name&quot;:&quot;大雁塔&quot;,
+    &quot;link&quot;:&quot;//baidu.com&quot;,
+    ...
+}
+</code></pre>
+</blockquote>
+</blockquote>
+</blockquote>
+</body></html>

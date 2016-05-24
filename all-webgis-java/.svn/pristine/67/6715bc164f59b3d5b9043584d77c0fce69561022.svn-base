@@ -1,0 +1,87 @@
+.div_inline_block,.iblock,.inblock,.navright .service_obtain .selectBox .selectBox-arrow{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.font_wei{font-family:"Microsoft YaHei"}
+.font_song{font-family:SimSun}
+.navright,.navright .service_obtain{font-family:"Microsoft YaHei"}
+.clear{clear:both}
+textarea{outline:0;resize:none}
+.navright{position:relative;color:#333}
+.navright .fwtop{height:115px;line-height:115px;background-color:#eaedf2;position:relative;top:0;width:100%;z-index:999}
+.navright .fwtop em{position:absolute;font-size:28px;top:0;left:33px}
+.navright .fwtop a{position:absolute;font-size:20px;color:#4c78d5;top:3px;left:159px}
+.navright .fwtop span{height:115px;line-height:115px;position:absolute;top:0;right:33px;display:block;font-size:14px;cursor:pointer}
+.navright .service_obtain{margin:17px 28px 0}
+.navright .service_obtain .service_search{min-width:925px;font-size:16px;color:#333;background-color:#f0f3f8;overflow:hidden;padding:16px;margin:20px 0}
+.navright .service_obtain .service_search .approval{height:44px;line-height:44px;float:left;cursor:pointer}
+.navright .service_obtain .service_search .approval span{padding:0 10px}
+.navright .service_obtain .service_search .approval span.ed{color:#4c78d5}
+.navright .service_obtain .service_search .service_search_top{width:335px;color:#4c78d5;font-size:20px;position:relative;float:right}
+.navright .service_obtain .service_search .service_search_top i{width:20px;height:19px;display:inline-block;vertical-align:middle;position:absolute;left:12px;top:13px;background:url(../images/h_search.png) no-repeat}
+.navright .service_obtain .service_search .service_search_top .fw_search{color:#fff;font-size:16px;background-color:#4c78d5;padding:14px 21px;position:absolute;right:0;top:0;cursor:pointer}
+.navright .service_obtain .service_search .service_search_top .fw_value{width:332px;height:40px;border:1px solid #4c78d5;text-indent:40px;font-size:16px}
+.obxq table .ordercenter,.obxq table .ordertitle{text-indent:0;font-family:"Microsoft YaHei"}
+.navright .service_obtain .servicemap{font-family:"Microsoft YaHei";min-width:1095px}
+.navright .service_obtain .servicemap ul.grid{width:100%;height:100%}
+.navright .service_obtain .servicemap ul.grid li{width:48.9%;height:268px;float:left;margin-bottom:25px;position:relative;margin-right:2%;background-color:#f9f9f9;-webkit-transition:-webkit-transform .6s;transition:-webkit-transform .6s;transition:transform .6s;transition:transform .6s,-webkit-transform .6s}
+.navright .service_obtain .servicemap ul.grid li:nth-of-type(2n){margin-right:0}
+.navright .service_obtain .servicemap ul.grid li.ed{-webkit-transform:scaleX(1) scaleY(1);-ms-transform:scaleX(1) scaleY(1);transform:scaleX(1) scaleY(1)}
+.navright .service_obtain .servicemap ul.grid li em{width:100%;height:100%;display:block;border:1px solid #d8dade;position:absolute;top:0;left:0;z-index:99}
+.navright .service_obtain .servicemap ul.grid li img{width:45%;height:100%}
+.navright .service_obtain .servicemap ul.grid li .describe{width:52%;color:#4c78d5;font-size:13px;font-family:"Microsoft YaHei";position:absolute;top:50%;margin-top:-123.5px;left:48%;z-index:999}
+.navright .service_obtain .servicemap ul.grid li .describe p{font-size:0;line-height:23px;display:none}
+.navright .service_obtain .servicemap ul.grid li .describe p.operation{margin-top:10px;display:block}
+.navright .service_obtain .servicemap ul.grid li .describe p.operation a{background-color:#4c78d5;color:#fff;font-size:14px;padding:1px 6px;cursor:pointer;margin-right:6px}
+.navright .service_obtain .servicemap ul.grid li .describe p.operation a.btn_dele{background:#d9dada;color:#4c78d5}
+.navright .service_obtain .servicemap ul.grid li .describe p.full{display:block}
+.navright .service_obtain .servicemap ul.grid li .describe span{width:24%;color:#555;font-size:14px;display:inline-block;position:relative;vertical-align:top}
+.navright .service_obtain .servicemap ul.grid li .describe em{font-size:14px;position:relative;border:0;width:75%;display:inline-block;vertical-align:top}
+.navright .service_obtain .servicemap ul.grid li .btn_dele,.navright .service_obtain .servicemap ul.grid li .btn_edit,.navright .service_obtain .servicemap ul.grid li .btn_goon,.navright .service_obtain .servicemap ul.grid li .btn_preview,.navright .service_obtain .servicemap ul.grid li .btn_revert{display:none}
+.navright .service_obtain .servicemap ul.grid li.status_0 .btn_detail,.navright .service_obtain .servicemap ul.grid li.status_0 .btn_preview,.navright .service_obtain .servicemap ul.grid li.status_0 .btn_revert{display:inline-block}
+.navright .service_obtain .servicemap ul.grid li.status_0 .s0{display:block}
+.navright .service_obtain .servicemap ul.grid li.status_1 .btn_detail,.navright .service_obtain .servicemap ul.grid li.status_1 .btn_goon,.navright .service_obtain .servicemap ul.grid li.status_1 .btn_preview{display:inline-block}
+.navright .service_obtain .servicemap ul.grid li.status_1 .s1{display:block}
+.navright .service_obtain .servicemap ul.grid li.status_2 .btn_dele,.navright .service_obtain .servicemap ul.grid li.status_2 .btn_detail,.navright .service_obtain .servicemap ul.grid li.status_2 .btn_edit,.navright .service_obtain .servicemap ul.grid li.status_2 .btn_preview{display:inline-block}
+.navright .service_obtain .servicemap ul.grid li.status_2 .s2{display:block}
+.navright .service_obtain .servicemap ul.grid li.status_3 .btn_dele,.navright .service_obtain .servicemap ul.grid li.status_3 .btn_detail,.navright .service_obtain .servicemap ul.grid li.status_3 .btn_goon,.navright .service_obtain .servicemap ul.grid li.status_3 .btn_preview{display:inline-block}
+.navright .service_obtain .servicemap ul.grid li.status_3 .s3{display:block}
+.navright .service_obtain .servicemap ul.grid li.status_4 .btn_dele,.navright .service_obtain .servicemap ul.grid li.status_4 .btn_detail,.navright .service_obtain .servicemap ul.grid li.status_4 .btn_edit,.navright .service_obtain .servicemap ul.grid li.status_4 .btn_preview{display:inline-block}
+.navright .service_obtain .servicemap ul.grid li.status_4 .s4{display:block}
+.navright .service_obtain .servicemap ul.grid li.status_5 .btn_dele,.navright .service_obtain .servicemap ul.grid li.status_5 .btn_detail{display:inline-block}
+.navright .service_obtain .servicemap ul.grid li.status_5 .s5{display:block}
+.obxq .ddtop span,.obxq p.ddxq span{display:inline-block;cursor:pointer}
+.navright .service_obtain .page{width:645px;margin:10px auto}
+.navright .service_obtain .page.compact-theme .current{color:#dde6f8;background:#235dd7;background:-webkit-linear-gradient(top,#235dd7 0,#235dd7 100%)}
+.navright .service_obtain .page.compact-theme a,.navright .service_obtain .page.compact-theme span{border:0 solid #839ACA;box-shadow:0 0 0 rgba(0,0,0,.2);background:#4C78D5;color:#fff;line-height:30px}
+.navright .service_obtain .page.compact-theme .ellipse{background:#4c78d5;color:#fff}
+.navright .service_obtain .page.compact-theme a:hover{background:#4C78D5;background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#4C78D5),color-stop(100%,#4C78D5));color:#fff}
+.navright .service_obtain .page li{margin:0 5px;border:0}
+.navright .service_obtain .page li a.page-link.prev,.navright .service_obtain .page li span.current.prev{background:url(../images/left_jt.png) center no-repeat #4C78D5;width:24px;height:30px;font-size:0;text-align:center}
+.navright .service_obtain .page li a.page-link.next,.navright .service_obtain .page li span.current.next{background:url(../images/right_jt.png) center no-repeat #4C78D5;width:24px;height:30px;font-size:0;text-align:center}
+.navright .service_obtain .time{margin-bottom:20px}
+.navright .service_obtain .jztime{margin-left:20px}
+.navright .service_obtain .selectBox{font-size:14px;font-family:"Microsoft YaHei";background:0 0;height:26px;line-height:26px;position:relative;min-width:110px;border:1px solid #c2c4c6;border-radius:0;-webkit-box-shadow:0 0 0 rgba(255,255,255,.75)}
+.navright .service_obtain .selectBox .selectBox-label{font-size:14px;padding:0 1em}
+.navright .service_obtain .selectBox .selectBox-arrow{background:0 0;border:none!important;border:5px solid transparent!important;border-bottom-width:0!important;width:0!important;height:0!important;font-size:0!important;line-height:0!important;vertical-align:middle!important;border-top-color:#5b83d8!important;position:absolute;top:50%;margin-top:-2.5px;right:8px}
+.navright .service_obtain .selectBox-dropdown-menu{border:1px solid #666!important;border-radius:0;margin-left:1em}
+.navright .service_obtain .selectBox-dropdown-menu li a{line-height:36px;height:36px;font-size:14px;font-family:"Microsoft YaHei"}
+.obxqCont{background-color:#fff;padding:30px}
+.obxq .ddtop{width:812px;height:35px;line-height:35px;margin:40px auto 0;font-size:14px;color:#333;font-family:"Microsoft YaHei"}
+.obxq .ddtop em{color:#4c78d5}
+.obxq .ddtop em.bianhao{margin-right:28px}
+.obxq .ddtop span{width:120px;height:35px;line-height:35px;text-align:center;color:#fff;font-size:16px;float:right}
+.obxq .ddtop .close{background-color:#f9820c;margin-right:35px}
+.obxq .ddtop .stamp{background-color:#49dba6}
+.obxq table{margin:0 auto}
+.obxq table .ordertitle{background-color:#6896f6;color:#fff;font-size:18px}
+.obxq table .ordercenter,.obxq table .tit1.bg{background-color:#f0f4fb}
+.obxq table .ordercenter{color:#4c78d5;font-size:16px;text-align:center}
+.obxq table .ordercenter p{width:16px!important;padding:0 0 0 30px!important;text-align:center!important;direction:rtl!important;direction:inherit;vertical-align:middle!important}
+.obxq table.dwxx{margin-top:20px}
+.obxq table.sysj{margin-bottom:60px}
+.obxq table td{font-size:13px;color:#333;height:40px;line-height:40px;border:1px solid #6896f6;text-indent:9px}
+.obxq table .tit1{color:#030303}
+.obxq table.row{margin-top:25px}
+.obxq p.ddxq{text-align:center;float:right;margin:35px 0}
+.obxq p.ddxq span{width:74px;height:25px;line-height:25px;font-size:14px;font-family:"Microsoft YaHei"}
+.obxq p.ddxq span.back{background-color:#c2c4c6;color:#333}
+.obxq p.ddxq span.sure{background-color:#4c78d5;color:#fff;margin-left:15px}

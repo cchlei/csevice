@@ -1,0 +1,77 @@
+<!doctype html><html class="theme_community theme_comm">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>社区</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/qt_v2.css"/>
+    <script src="js/cseajs/csea$.js" id="seajsnode" main="__/js/qt_v2_comm"></script>
+</head>
+<body>
+    <div class="root">
+        <div class="navbar">
+            <div class="mc">
+                <a href="#" class="logo"></a>
+                    <span class="nav">
+                        <a class="cur" href="#">个人</a>
+                        <a href="#">企业</a>
+                        <a href="#">行业</a>
+                        <a href="#">云服务</a>
+                        <a href="#">开发者</a>
+                        <a href="#">联系我们</a>
+                    </span>
+                    <span class="btns">
+                        <a href="https://login.trmap.cn/login?service=http://www.trmap.cn/cas">登录</a>
+                        <a href="http://www.trmap.cn/register.jsp">注册</a>
+                    </span>
+            </div>
+        </div>
+
+
+        <div class="r1">
+            <div class="cont">
+                <div class="cont">
+                    <h2 style=" padding-left: 13px; padding-top: 145px; ">社区统筹管理与辅助决策 </h2>
+                    <p style=" padding-left: 15px; ">有机整合社区资源，显著提升监管、调度与执行力； <br>基于天润云平台大数据智能分析服务，为社区综治、 <br>救助、统筹等提供更精准辅助决策。</p></div>
+            </div>
+        </div>
+        <div class="r2">
+            <div class="cont">
+                <h2 style=" padding-top: 28px; padding-left: 337px; ">便捷高效的政务服务</h2>
+                <p style=" padding-left: 340px; margin-top: 24px; ">整合线上线下的各项政务服务，全面提升政务 <br>服务水平，居民办事更便捷。</p>
+            </div>
+        </div>
+        <div class="r3">
+            <div class="cont">
+                <h2 style=" padding-left: 13px; padding-top: 42px; ">贴身定制的社区交流平台</h2>
+                <p style=" margin-top: 22px; padding-left: 13px; ">为社区居民提供量身定制、 <br>更加安全的内部交流平台，建设和谐家园。</p>
+            </div>
+        </div>
+        <div class="r4">
+            <div class="cont">
+                <h2 style=" padding-left: 27px; padding-top: 48px; ">日趋完善的O2O便民应用体系</h2>
+                <p style=" padding-top: 0px; margin-top: 27px; padding-left: 30px; ">无缝对接居民的吃、穿、住、行等各项消费需求与社区周边业服务， <br>有效提升商家盈利能力和居民生活品质。</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="bottom">
+            <div class="mc">
+                <em>陕ICP备12000810号　版权所有：陕西天润科技股份有限公司</em>
+                <a class="ibtn qq" href="#"></a>
+                <a class="ibtn wx" href="#"></a>
+                <a class="ibtn wb" href="#"></a>
+                <a class="ibtn ph" href="#"></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

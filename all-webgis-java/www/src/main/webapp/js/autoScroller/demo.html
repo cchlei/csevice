@@ -1,0 +1,72 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title></title>
+    <style type="text/css"> *{ padding: 0; margin: 0;} </style>
+    <link rel="stylesheet" href="ascroller.css"/>
+    <script src="../cseajs/csea$.js"></script>
+    <script>
+
+        $(window).load(function(){
+            seajs.use("./autoScroller",function(){
+                var asc = $("#backScroll").autoScroll({
+                    host:document,
+                    height:750
+                });
+
+                $("#ele_scroll").autoScroll({
+                    host:document,
+                    direction:"h"
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="backScroll" class="auto_scroll back">
+        <div class="view">
+            <img src="testimg.jpg"/>
+        </div>
+    </div>
+
+    <div id="ele_scroll" class="auto_scroll itemlist">
+        <div class="view">
+            <div class="item">
+                <p class="line"></p>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+                <a href="#"><em>元素元素</em></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

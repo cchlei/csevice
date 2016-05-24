@@ -1,0 +1,9 @@
+#org.springsource.ide.eclipse.gradle.core.preferences.GradleImportPreferences
+#Tue May 24 15:27:24 CST 2016
+addResourceFilters=true
+afterTasks=afterEclipseImport;
+beforeTasks=cleanEclipse;eclipse;
+enableAfterTasks=true
+enableBeforeTasks=true
+enableDependendencyManagement=true
+projects=;core;enterprise-api;enterprise-core;hstore-api;qtenterprise;qtuser;system;system-service;tresb;trmap-account;trmap-personal;trmap-personal-webapp;userauth;usermobile-api;www;wxservice;

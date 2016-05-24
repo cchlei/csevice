@@ -1,0 +1,645 @@
+//向全局对象注入对象或者变量
+@__inject:`(function(){
+	var top = this;
+
+	if(top.addUnitToNumber) return;
+
+	var temp_top;
+	top.bindvar = function(key,value){
+		temp_top = top;
+		var arr = key.split(".");
+		var le = arr.length;
+		arr.map(function(subkey,i){
+
+			if(i==le-1){
+				temp_top[subkey] = value;
+			}
+			if(!temp_top[subkey]){
+				temp_top = temp_top[subkey] = {};
+			}
+		});
+	}
+
+	//更换某个变量的数值
+	top.changeValue = function(mixin,valueName,newValue){
+		try{
+			mixin[valueName].value.value[0].value=newValue;
+		}catch(e){
+			lg("changeValue运行出错了！");
+			lg(mixin,valueName,newValue)
+		}
+	};
+
+
+	//给没有单位的数字增加默认单位
+	//如果有单位存在不处理直接返回；
+	top.addUnitToNumber = function(numStr,unitStr){
+		if(/(-?\d+\.*\d*)/.test(numStr)){
+			return RegExp["$1"] + (unitStr || "");
+		}
+		throw "addUnitToNumber:参数不正确";
+	};
+
+	//不改变数值大小的情况下，给字数字前面补0，凑成固定长度
+	Number.prototype.prepandZero = function(n,jinzhi){
+		var str = this.toString(jinzhi || 0);
+		if(str.length<n){
+			var nn = n - str.length;
+			while(nn--){
+				str="0"+str;
+			}
+			return str;
+		}
+
+		return str;
+	}
+
+	//快捷log
+	top.lg = console.log;
+
+
+	//通过形如#f80,#fffff, e0e0e0的颜色值获取数字形颜色值
+	top.__strColorToInt = function(strColor){
+		if(strColor.substring(1,0) == "#")  strColor = strColor.substring(1);                                //去井
+		if(strColor.length == 3) strColor = strColor.replace(/\w/g,function(tx){return tx+""+tx});          //3位重复
+		return parseInt("0x"+strColor);
+
+	}
+
+	//传入一个色值（字符串形式和数字形式）和透明度，返回一个包含rgba信息的对象
+	top.__get_rgba_object = function(rgb, alpha){
+		var obj = {};
+		obj.alpha = alpha || 1;
+		var rgbInt = rgb;
+		if(typeof rgbInt=="string")  rgbInt = top.__strColorToInt(rgbInt);
+		obj.r = (rgbInt & 0xff0000)>>16;
+		obj.g = (rgbInt & 0x00ff00)>>8;
+		obj.b = (rgbInt & 0x0000ff)>>0;
+		return obj;
+	}
+
+	//根据一个色值和透明度，返回RGBA，例 255,0,0,0.5 半透明红色
+	top.getRGBA = function(rgb,alpha,simpleMode){
+		var obj = top.__get_rgba_object(rgb,alpha);
+		var rgba = obj.r + "," + obj.g +","+obj.b+","+ obj.alpha;
+		if(simpleMode) return rgba;
+		return "rgba(" + rgba +")";
+	}
+
+	//根据一个色值和透明度，返回ARGB形式的字符串,如#07ff0000 半透明红色
+	top.getARGB = function(rgb,alpha){
+		var o = top.__get_rgba_object(rgb,alpha);
+		return "#"
+			+ (255*o.alpha>>0).prepandZero(2,16)
+			+ o.r.prepandZero(2,16)
+			+ o.g.prepandZero(2,16)
+			+ o.b.prepandZero(2,16)
+		;
+	}
+})()`;
+
+//同时设置行高和高度
+.lineh(@h){ height: ~`addUnitToNumber('@{h}',"px")`; line-height: ~`addUnitToNumber('@{h}',"px")`; }
+.lineh(@lh,@h){ height: ~`addUnitToNumber('@{h}',"px")`; line-height:  ~`addUnitToNumber('@{lh}',"px")`; }
+.line_height(@h){.lineh(@h)};
+.line-height(@h){.lineh(@h)};
+
+//设置补间间隔
+.dura(@time:330ms){ transition-duration:@time; }
+
+//透明度调整
+._alpha(@val:80){ opacity: @val * 0.01; filter: alpha(opacity=@val); }
+
+
+//正常和鼠标划过颜色变化 通过颜色设置
+.hover_cl(@color:#ccc, @color_hover:#fff) when(iscolor(@color_hover)){
+	color: @color;
+	&:hover{color: @color_hover;}
+}
+
+//正常和鼠标划过颜色变化 通过亮度设置
+.hover_cl(@color:#ccc, @lighten:12%) when not(iscolor(@lighten)){
+	color: @color;
+	&:hover{color: lighten(@color,@lighten);}
+}
+
+//正常和鼠标划过颜色变化 通过颜色设置
+.hover_bg(@color:#ccc, @color_hover:#fff) when(iscolor(@color_hover)){
+	background-color: @color;
+	&:hover{background-color: @color_hover;}
+}
+
+//正常和鼠标划过颜色变化 通过亮度设置
+.hover_bg(@color:#ccc, @lighten:12%) when not(iscolor(@lighten)){
+	background-color: @color;
+	&:hover{background-color:lighten(@color,@lighten); }
+}
+
+
+//横向padding
+.padding_h(@value:auto){padding-left: @value; padding-right: @value;}
+//纵向padding
+.padding_v(@value:auto){padding-top: @value; padding-bottom: @value;}
+//横向margin
+.margin_h(@value:auto){margin-left: @value; margin-right: @value;}
+//纵向margin
+.margin_v(@value:auto){margin-top: @value; margin-bottom: @value;}
+
+
+//block尺寸，同时设置长宽
+._size(@size){._size(@size,@size)}
+._size(@width,@height){
+	@c:@__inject;
+	width: ~`addUnitToNumber('@{width}',"px")`;
+	height:~`addUnitToNumber('@{height}',"px")`;
+}
+
+//设置高度时，同时设置line-height
+._size_lh(@width,@height){
+	@c:@__inject;
+	._size(@width,@height);
+	line-height: ~`addUnitToNumber('@{height}',"px")`;
+}
+
+._size_lh(@s){
+	._size_lh(@s,@s)
+}
+
+
+//设置尺寸时候，同时设置margin没size尺寸的一般（负）
+._size_rever_margin(@width,@height){
+	@c:@__inject;
+	._size(@width,@height);
+	@rev_half_w:-@width/2;
+	@rev_half_h:-@height/2;
+	margin-left: ~`addUnitToNumber('@{rev_half_w}',"px")`;
+	margin-top : ~`addUnitToNumber('@{rev_half_h}',"px")`;
+}
+
+._size_rever_margin(@size){
+	._size_rever_margin(@size,@size);
+}
+
+
+//发光效果
+._glow(@color:#fff, @blur:15px){
+	box-shadow: @color 0 0 @blur;
+}
+
+//-------------------------------------------------工具
+.noSelect(){
+	-moz-user-select: none; /*火狐*/
+	-webkit-user-select: none;  /*webkit浏览器*/
+	-ms-user-select: none;   /*IE10*/
+	-khtml-user-select: none; /*早期浏览器*/
+	user-select: none;
+}
+
+//重置ul li
+.planeUl(){ list-style: none; li{ margin: 0;} }
+
+//使inline-blcok（并兼容旧版浏览器）
+.iblock(){
+	display: inline-block;  vertical-align: top;
+	*zoom:1; *display: inline;//ie
+}
+
+//左右上下居中。 通过left margin-left top margin-top结合
+.hv_center(@w;@h;@pos){
+	top: 50%; left: 50%; margin-top: -0.5*@h; margin-left: -0.5*@w; position: @pos;
+}
+
+.hv_center(@w;@h){
+	top: 50%; left: 50%; margin-top: -0.5*@h; margin-left: -0.5*@w;
+}
+
+.vcenter(@h,@vOffset:0px){
+	top: 50%; position: absolute; margin-top: -@h/2 + @vOffset;
+}
+
+.hcenter(@w,@hOffset:0px){
+	left: 50%; position: absolute; margin-left: -@w/2 + @hOffset;
+};
+
+//居中
+.center(){margin-left: auto; margin-right: auto;}
+
+//微软雅黑 雅黑英文 黑体 新宋体
+.yahei(){   font-family: @font_yahei;}
+
+//宋体
+.songti(){  font-family: @font_songti;}
+
+//新宋体
+.xinst(){   font-family: @font_xinst;}
+
+//黑体
+.heiti(){   font-family: @font_heiti;}
+
+@font_yahei:"\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", "\9ED1\4F53", "\65B0\5B8B\4F53";
+@font_songti:"\5B8B\4F53", "SimSun";
+@font_xinst:"\65B0\5B8B\4F53", "NSimSun";
+@font_heiti:"\9ED1\4F53", "SimHei";
+@font_arial:"Arial";
+
+
+
+
+//字符串截取
+.txcut(){ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+//铺满到容器（一般用户fiex或者absolute定位）
+.expandin(){ width:100%; height:100%; top:0; left:0; }
+.expandin(@pos){position:@pos; .expandin(); }
+
+//kill gap;适用于消除inline-block元素之间的的间距，请设置于inline
+.font_resize(@size:12px){ font-size: 0; >*{font-size: @size;} }
+
+//工具class //请在需要引入的地方写 .toolClass;
+.toolClass(){
+	.clear{font-size: 0; height: 0; width: 0; clear: both;}
+	.center{.center();}
+	.txcut{.txcut();}
+	.planeUl{ .planeUl(); }
+	.noSelect{.noSelect();}
+	.yahei{.yahei();}
+	.heiti{.heiti;}
+	.expandin{.expandin();}
+	.v_hidden{.v_hidden();}
+}
+
+.inblock, .iblock, .div_inline_block{ .iblock(); }
+
+
+//transform缩写形式
+.tsform(@val){
+	-webkit-transform+_:@val; -ms-transform+_:@val; transform+_:@val;
+}
+
+
+
+//缩放，参数2表示其他属性配置
+.ts_scale(@scaleVal:1, @val:""){
+	.tsform(~"scaleX(@{scaleVal}) scaleY(@{scaleVal}) @{val}");
+}
+
+
+//旋转 @ang支持rad,deg单位
+.ts_rotate(@ang){
+	@deg:convert(@ang,"deg");
+	.tsform(rotate(@deg));
+}
+
+//兼容ie的旋转（ie必须设置尺寸，不然无法绕中心旋转）
+.ts_rotate(@ang,@width,@height){
+	.ts_rotate(@ang);
+	.ieRotate(unit(convert(@ang,"deg")),@width,@height);
+}
+
+//兼容ie并且同时设置尺寸
+.ts_rotate(@ang,@size){
+	.ts_rotate(@ang,@size,@size);
+}
+
+
+//reset;
+.reset(){
+	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em,
+	img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption,
+	tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section,
+	summary,time, mark, audio, video {
+		margin: 0;padding: 0;border: 0;font-size: 100%;font-family: inherit;vertical-align: baseline;
+	}
+
+	h1, h2, h3, h4, h5, h6{ font-weight: 700;}
+
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block;}
+	body {line-height: 1; font-size: 12px;}
+	ol, ul{ list-style: none; }
+	blockquote, q {quotes: none;}
+	blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}
+
+	i,em{font-style: normal;}
+	a{ text-decoration: none;}
+}
+
+
+//默认变量
+@cell:12px;
+@fsize:12px;
+
+
+//ie旋转
+//@ang只支持deg
+.ieRotate(@ang,@width,@height){
+	@deg:pi()*2 - unit(convert(unit(@ang,deg),"rad"));          //ie角度正好和w3c旋转相反
+	@sin:sin(@deg);
+	@cos:cos(@deg);
+	@fsin:-@sin;
+	@fcos:-@cos;
+
+	@w:unit(@width);
+	@h:unit(@height);
+	@dx:-@w/2*@cos+@h/2*@sin+@w/2;
+	@dy:-@w/2*@sin - @h/2*@cos+@h/2;
+
+	filter:progid:DXImageTransform.Microsoft.Matrix(Dx=@dx, Dy=@dy,M11=@cos,M12=@sin,M21=@fsin,M22=@cos,sizingMethod="auto expand");
+	//width: @width;
+	//height: @height;
+}
+
+//ie 的旋转
+.ieRotate(@ang,@size){
+	.ieRotate(@ang, @size, @size);
+}
+
+
+
+//形成三角
+.triangle(@size,@dir:left,@color:#08c,@blankColor:transparent){
+	border: @size solid @blankColor; border-@{dir}-width: 0; ._size(0); font-size: 0; line-height: 0; &:extend(.iblock); vertical-align: middle;
+
+	@rev_dir:~`(function(){
+		var dir = ({left:"right", top:"bottom", right:"left", bottom:"top"})["@{dir}"];
+		return dir || "left";
+	})()`;
+
+	border-@{rev_dir}-color:@color;
+}
+
+//形成斜三角(45整数倍三角)
+.triangle45(@size,@dira:left,@dirb:bottom,@color:#08c,@blankColor:transparent){
+	border: @blankColor solid @size/2;
+	border-@{dira}-color:@color;
+	border-@{dirb}-color:@color;
+	line-height: 0;
+	font-size: 0;
+	._size(0);
+	&:extend(.iblock);
+}
+//----形成三角
+
+._icon(@size, @src:none){
+	._icon(@size, @size, @src);
+}
+._icon(@width,@height,@src){
+	@ssrc:e(@src);
+	@url:~`"@{ssrc}"=="none"?"none":("url("+ "@{ssrc}" +")")`;
+	background-image: @url; ._size(@width,@height);
+	&:extend(.__icon); &:extend(.iblock);
+}
+.__icon{background-repeat: no-repeat; background-position: 50% 50%;}
+
+
+// 不可见，但是仍可以加载
+.v_hidden(){
+	position: absolute;
+	clip:rect(1px 1px 1px 1px);//ie6/7
+	clip:rect(1px, 1px, 1px, 1px);//standard
+}
+
+
+
+//用来生一个宽度序列
+//参数1 @main_w有三种形式
+//  形式1:1000px              表示总宽度为1000,单元格间距为0
+//  形式2:1000px 12px         表示总宽度为1000,单元格间距为12px，无两边空白
+//  形式3:1000px _12px        表示总宽度为1000,单元格间距为12px，两边有空白
+//参数2 @col_width_list 传入1-(n-1)各单元格宽度,最后一个单元格宽度由计算获得
+//举例 .row1{.gen_grid(1000px 10px,60px,100px,90px,88px, 180px); >*{.iblock};}
+.gen_grid(@main_w__gap,@col_width_list){
+	@leng:length(@col_width_list);
+
+	//分析第一参数
+	@p_list:`(function(index){
+		index = index || 0;
+		var para = "@{main_w__gap}".replace(/\[|\]|,/g,"");
+		var leng = @{leng};
+		var ar = para.split(" ");
+		ar[1] = ar[1] || "0px";
+		var main_w = ar[0];
+		var gap_w=ar[1].replace(/^_|\-/,"");
+		if(/^\_/.test(ar[1])){
+			leng = leng + 2;
+		}else{
+			leng = leng;
+		}
+		var resultList = [main_w, gap_w,leng];
+		return resultList[index-1];
+	})`;
+
+	//提取参数1的定义
+	@main_w:~`@{p_list}(1)`;
+	@gap_w:~`@{p_list}(2)`;
+	@gap_num:~`@{p_list}(3)`;
+
+
+	//计算最后一个单元格宽度
+	@last_w:~`(function(){
+		var arg = eval("@{col_width_list}".replace(/px/g,""));
+		var main_w = parseInt("@{main_w}");
+
+		var gap_num = @{gap_num};
+		var gap_w = parseInt("@{gap_w}");
+		var w=0;
+
+		//只有两列的情况
+		if(arg.length === undefined) arg = [arg];
+
+		arg.map(function(n){
+			w+=n;
+		});
+
+		var lstw = (main_w - w - gap_num*gap_w);
+		bindvar("gd.lastw",lstw);
+		return lstw;
+	})()`;
+
+
+
+
+	width:~`(function(){
+		var main_w = parseInt("@{main_w}");
+		var gap_num = @{gap_num};
+		var leng = @{leng};
+		var gap_w = parseInt("@{gap_w}");
+
+
+		if(gap_num>leng){
+			return (main_w - gap_w) + "px; padding-left:" + gap_w + "px";
+		}else{
+			return main_w + "px";
+		}
+	})()`;
+
+
+	//定义循环
+	.gen_grid_loop(@times,@paras) when(@times >0){
+		.gen_grid_loop(@times - 1, @paras);
+		>.cell-@{times}{
+			width: extract(@paras,@times);
+			margin-right: @gap_w;
+		}
+	}
+
+	//生成1-(n-1)的宽度
+	.gen_grid_loop(@leng , @col_width_list);
+
+	//生成n的宽度
+	@leng_p1:@leng+1;
+	>.cell-last,>.cell-@{leng_p1}{
+		width:unit(@last_w,px);
+	}
+
+	//消除间隔
+	font-size: 0;
+	//white-space: normal;
+
+	//对单元格的一些公共设置
+	>*{
+		&:extend(.iblock); font-size: @fsize;
+	}
+}
+
+.gen_grid_line(@main_w__gap,@col_width_list){
+	.gen_grid(@main_w__gap,@col_width_list);
+	white-space: nowrap;
+	>*{white-space: normal;}
+}
+
+//ie上需要垂直居中时候，字体大小和容器高度的比率
+@ie7_vm_ratio:0.905;
+
+//对p一些常用的定义
+.p_define(){
+	p{
+		text-indent: 2em;
+		&.b{ font-weight: 600;}
+		&.noti{ text-indent: 0;}
+		&.c{ text-align: center;}
+
+	}
+}
+
+
+//兼容性渐变
+.gradient(@dire; @starColor; @endColor){
+	@ie:"ie";
+	@moz_o:"";
+	@webkit:"";
+	@calc:`(function(me){
+		var dire = '@{dire}';
+		var startColor = '@{starColor}'.replace(/\[|\]/g,"");
+		var endColor = '@{endColor}'.replace(/\[|\]/g,"");
+		var rg = /\{(\w+)\}/g;
+		var all_var = { dire:dire };
+		all_var.webkit_dire = (function(){
+			if(dire=="left")    return "0 0, right 0,";
+			if(dire=="top")     return "0 0, 0 bottom,";
+			if(dire=="right")   return "right 0, 0 0,";
+			if(dire=="bottom")   return "0 bottom, 0 0,";
+		})()
+
+		var so = all_var;
+		so.s_arr = startColor.split(",");
+		so.s_cl = so.s_arr[0];
+		so.s_alpha = so.s_arr[1] || 1;
+
+		//获得#AARRGGBB形式颜色
+		so.s_cl__ie = getARGB(so.s_cl,so.s_alpha)
+		//rgba(); 形式颜色
+		so.s_rgba = getRGBA(so.s_cl,so.s_alpha);
+
+		var eo = all_var;
+		eo.e_arr = endColor.split(",");
+		eo.e_cl = eo.e_arr[0];
+		eo.e_alpha = eo.e_arr[1] || 1;
+		eo.e_cl__ie = getARGB(eo.e_cl,eo.e_alpha)
+		eo.e_rgba = getRGBA(eo.e_cl,eo.e_alpha);
+
+		//ie下的渐变类型 0垂直 1水平. 默认1
+		all_var.gradientType=1;
+		if(/top|bottom/.test(dire)) all_var.gradientType=0;
+
+		//在某些形式下，ie需要交换起始颜色和结束颜色
+		if(/right|bottom/.test(dire)){
+			var s_temp = all_var.s_cl__ie;
+			all_var.s_cl__ie = all_var.e_cl__ie;
+			all_var.e_cl__ie = s_temp;
+		}
+
+		function rep_val_func(tx,group1,i){ return all_var[group1]; }
+
+		changeValue(me,"ie", "progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr={s_cl__ie},endColorstr={e_cl__ie},gradientType={gradientType})" .replace(rg, rep_val_func) );
+		changeValue(me,"moz_o", 'linear-gradient({dire}, {s_rgba}, {e_rgba})' .replace(rg, rep_val_func) );
+		changeValue(me,"webkit", '-webkit-gradient(linear, {webkit_dire} from({s_rgba}), to({e_rgba}))' .replace(rg, rep_val_func) );
+	})(this)`;
+
+	filter:         ~"@{ie}";
+	background:     ~"-moz-@{moz_o}";
+	background:     ~"-o-@{moz_o}" ;
+	background:     ~"@{webkit}";
+}
+
+
+//文字阴影
+.tx_sd(@color:#333,@strength:2){
+	filter:glow(color=@color,strength=@strength);
+	.loop(@n) when(@n > 0 ){
+		.loop(@n - 1);
+		text-shadow+: @color 0 0 3px;
+	}
+	.loop(@strength);
+}
+
+
+
+//半透明背景，兼容ie
+.bgcolor_alpha(@bgcolor: rgba(0,0,0,.51)){
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr = argb(@bgcolor), endColorstr=argb(@bgcolor));
+	background-color:@bgcolor;
+}
+
+.bgcolor_alpha(@rgb,@alpha){
+	@rgba:~`(function(){
+		var obj = __get_rgba_object('@{rgb}',@{alpha});
+		return getRGBA('@{rgb}',@{alpha});
+	})(this)`;
+
+	@argb_16:~`(function(){
+		return getARGB('@{rgb}',@{alpha})
+	})(this)`;
+
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr= @argb_16, endColorstr=@argb_16);
+	background-color:@rgba;
+}
+
+
+//bootstrap对屏幕尺寸的区分
+
+// Phone
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+
+
+
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);

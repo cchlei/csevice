@@ -1,0 +1,41 @@
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.clear{font-size:0;height:0;width:0;clear:both}
+.center{margin-left:auto;margin-right:auto}
+.txcut{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.planeUl{list-style:none}
+.planeUl li{margin:0}
+.noSelect{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.yahei{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.heiti{font-family:"\9ED1\4F53",SimHei}
+.expandin,.header-img .label{width:100%;height:100%;top:0;left:0}
+.v_hidden{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+body{background-color:#f6f6f6}
+.page{position:relative}
+.page>form{padding-top:3em}
+.page>form>.row{padding-top:1em;padding-bottom:1em}
+.help-block.header_img_label.changeimg.webuploader-container{position:absolute;left:50%;margin-left:-57px;top:262px}
+.headimg{position:absolute;top:290px}
+.headimg ul{margin-top:20px}
+.headimg ul li{width:70px;height:70px;display:inline-block;border:2px solid #f6f6f6}
+.headimg ul li:nth-of-type(2){margin:0 30px}
+.form_item_container .form-group,.header-img img{margin-top:15px;margin-bottom:15px}
+.headimg ul li.on,.headimg ul li:hover{border:2px solid #669fe4}
+.headimg ul li img{width:100%;height:100%}
+.header-img{position:relative}
+.header-img img{width:202px;height:202px}
+.header-img .label{position:absolute}
+.form_item_container .form-group .label{position:relative;top:9px}
+.form_item_container .control-label{position:relative;top:5px}
+.line{height:1px;background-color:#ddd}
+form.form{border-radius:7.5px;background-color:#fff}
+form.form_2{padding-bottom:15px}
+.gap{height:15px}
+.ztop,.ztop span{height:115px;line-height:115px}
+.pop-el{display:none}
+.ep_email .input-group-addon,.ep_phone .input-group-addon,.ep_pwd .input-group-addon{cursor:default}
+.ztop{background-color:#eaedf2;position:relative;top:0;width:100%;z-index:999;margin-bottom:20px}
+.ztop em,.ztop span{position:absolute;top:0}
+.ztop em{font-size:28px;left:33px}
+.ztop span{right:33px;display:block;font-size:14px;cursor:pointer}
+.webuploader-pick{color:#333!important}

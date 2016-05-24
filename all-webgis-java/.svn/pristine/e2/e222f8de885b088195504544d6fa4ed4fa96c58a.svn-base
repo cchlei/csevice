@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<description>Dubbo服务提供配置</description>
+	
+	<!-- 外部配置资源文件 -->
+    <context:property-placeholder ignore-resource-not-found="true" location="classpath*:application.properties" />
+	
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="tiraincloud-qtmap.qtuser"  />
+ 
+    <!-- 使用zookeeper广播注册中心暴露服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="${zk.address}" />
+ 
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" host="${provider.host}" port="${provider.port}"/>
+	
+	<!-- 配置本地服务 -->
+<!-- 	<bean id="qtmap.qtuserService" class="com.trgis.qtmap.qtuser.dubbo.service.impl.qtmap.qtuserServiceImpl"></bean> -->
+    <!-- 增加暴露远程服务配置 -->
+<!-- 	<dubbo:service interface="com.trgis.qtmap.qtuser.dubbo.service.qtmap.qtuserService" ref="qtmap.qtuserService"></dubbo:service> -->
+	
+	
+</beans>

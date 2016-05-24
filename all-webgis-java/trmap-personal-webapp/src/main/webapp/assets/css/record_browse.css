@@ -1,0 +1,74 @@
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.clear{font-size:0;height:0;width:0;clear:both}
+.center{margin-left:auto;margin-right:auto}
+.txcut{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.planeUl{list-style:none}
+.planeUl li{margin:0}
+.noSelect{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.yahei{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.heiti{font-family:"\9ED1\4F53",SimHei}
+.expandin{width:100%;height:100%;top:0;left:0}
+.v_hidden{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+textarea{resize:none}
+.edit_recordico{background:url(../images/icon_bianji.png) 0 50% no-repeat #ED5052;width:auto;height:30px;line-height:30px;border-radius:15px;padding-left:2em;padding-right:1.2em;font-size:11.2px;color:#fff;margin-top:12px;position:absolute;right:18px;top:3px;cursor:pointer}
+.record_browse{position:relative}
+.record_browse tr{height:20px;line-height:20px}
+.record_browse tr td,.record_browse tr td em{line-height:32px;font-family:"\65B0\5B8B\4F53",NSimSun}
+.record_browse tr:nth-of-type(1) td{padding:24px 0 0 12px!important}
+.record_browse tr td{width:480px;padding:12px 0 0 12px;position:relative;vertical-align:top}
+.record_browse tr td.filerecord{padding:24px 0 0 48px!important}
+.record_browse tr td:nth-of-type(1){padding:12px 0 0 12px;width:100px}
+.record_browse tr td .uploadthing .webuploader-pick,.record_browse tr td.header-img .webuploader-pick,.record_browse tr.bth td{padding:0}
+.record_browse tr td span.close,.record_browse tr td span.open{color:#a7a7a7}
+.record_browse tr td i{display:inline-block}
+.record_browse tr td i.open{width:26px;height:20px;vertical-align:text-bottom;background:url(../images/icon_theme16.png) center 0 no-repeat}
+.record_browse tr td i.close{width:26px;height:20px;vertical-align:text-bottom;background:url(../images/icon_theme15.png) center 0 no-repeat}
+.mainCont .page_name .edit,.mainCont .page_name .ico_record,.record_browse tr td.adressmap i{vertical-align:middle;display:inline-block}
+.record_browse tr td p.descri{word-wrap:break-word;width:480px}
+.record_browse tr td.adressmap i{width:58px;height:20px;background:url(../images/icon_theme13.png) center 0 no-repeat}
+.record_browse tr td.adressmap i.link1{background:url(../images/icon_theme12.png) center 0 no-repeat}
+.record_browse tr td em{width:100px;display:inline-block;text-align:center;font-size:16px;font-weight:700;border-radius:5px;color:#ff7e00}
+.record_browse tr td .uploadthing input[name=file],.record_browse tr td.header-img input[name=file]{width:223px}
+.record_browse tr td .uploadthing .webuploader-pick img,.record_browse tr td.header-img .webuploader-pick img{width:234px}
+.record_browse tr.bth{position:absolute;top:-40px;right:48px}
+.record_browse tr.r_filemess{position:absolute;left:648px;top:0}
+.mainCont .page_name .edit{width:18px;height:22px;margin-left:6px;background:url(../images/icon_theme14.png) no-repeat}
+.mainCont .page_name .ico_record{margin-right:12px;color:#424242;font-size:42px;font-weight:400;background:url(../images/fanhui.png) 9px center no-repeat;display:inline-block;width:30px;height:30px}
+.page_name.white{background-color:#fff}
+.record_browse td .occurtime{width:230px;padding:5px;border-radius:5px;border:1px solid #ddd}
+.record_browse td .errtip{padding:12px 0 0}
+.record_browse td .uploadthing{width:480px;height:272px;margin-top:12px;background-color:#f4f6fa;border:1px solid #ddd;overflow:auto;padding-bottom:10px}
+.record_browse td .uploadthing .file{position:relative;margin:10px 0 20px 10px;display:inline-block}
+.record_browse td .uploadthing .file i{width:100px;text-align:center;position:absolute;bottom:0;left:0;color:#fff;background-color:#333;cursor:pointer}
+.record_browse td .uploadthing .file img{width:100px;height:100px;cursor:pointer}
+.record_browse td .uploadthing .file p{width:100px;text-align:center;position:absolute;bottom:-16px;height:26px;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis}
+.record_browse td .uploadclick{text-align:left}
+.record_browse td .uploadclick .webuploader-pick{padding:0;color:#ff7e00}
+.map3{margin-top:24px;width:645px;margin-left:-102px;height:374px;overflow:auto}
+.map3 img{width:100%}
+.comments_box{width:480px;font-family:"\65B0\5B8B\4F53",NSimSun;position:relative}
+.comments_box .comments-main,.comments_box .comments-main em,body{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.comments_box .comments_title{color:#ff7e00;font-size:16px;font-weight:700}
+.comments_box .text-box{margin-top:10px;position:relative}
+.comments_box .comment-area{border:2px solid #9e9e9f;font-size:14px;color:#111;padding:12px;width:450px;height:35px}
+.comments_box .btn{position:absolute;right:12px;bottom:12px;color:#ff7e00;font-size:14px;font-weight:700;cursor:pointer}
+.comments_box .comments-main{border:1px solid #ddd;width:460px;background:#f4f6fa;margin-top:9px;padding:10px;height:auto;overflow:auto;font-size:12px}
+.comments_box .comments-main a{cursor:pointer}
+.comments_box .comments-main em{display:inline-block;width:auto;font-size:12px;font-weight:500;line-height:1em}
+.comments_box .comments-main [commid].light{background-color:rgba(255,0,0,.59)}
+.comments_box .comments-list>ul>li{padding-top:6px}
+.comments_box .comments-list>ul{margin-bottom:-1px}
+.comments_box .comments-item{border-bottom:1px solid #dcdcdc;padding-bottom:10px;margin-bottom:10px}
+.comments_box .comments-item-bd{padding:0 0 0 40px;position:relative}
+.comments_box .ui-avatar{position:absolute;left:0;top:0}
+.comments_box .ui-avatar img{width:36px;height:36px}
+.comments_box .comments-content{position:relative;line-height:1.5;color:#111}
+.comments_box a.comments-name{color:#ff7e00}
+.comments_box .comments_time{color:#737373;font-size:12px;float:left}
+.comments_box .comments_reply{float:right;font-size:12px;color:#121212}
+.replayto{font-size:12px;margin-bottom:-1em}
+.replayto i{width:16px;height:16px;line-height:16px;text-align:center;background-color:#333;color:#fff;cursor:pointer}
+.ol-attribution.ol-unselectable.ol-control.ol-uncollapsible{display:none}
+html body div.ol-popup-nowrap2{position:static;padding:0;margin:0;background-color:transparent}
+html body div.ol-popup-nowrap2 .pop_label{line-height:1em}

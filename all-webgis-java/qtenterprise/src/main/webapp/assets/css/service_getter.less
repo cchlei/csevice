@@ -1,0 +1,170 @@
+@import "tool";
+.toolClass;
+
+
+@g:9px;
+
+@cl_blue:#4C79D6;
+
+html,body{
+	overflow: hidden;
+}
+
+//申请窗体
+.apply_panel{
+	.yahei;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: #ffffff;
+
+
+	@w:260px;
+	width:@w;
+	padding: @g;
+
+	z-index: 99;
+
+	border: 1px solid @cl_blue;
+	border-right: none;
+	border-bottom:none;
+
+	i.date{
+		display: none;
+	}
+
+	h3 {
+		font-weight: 100;
+		font-size: 14px;
+		.lineh(39px);
+		background-color:  @cl_blue;
+		color: #ffffff;
+		text-align: center;
+		margin-top:-@g - 1;
+		margin-left:-@g - 1;
+		padding: 0 @g+2;
+		width: 100%;
+	}
+
+	.img{
+		display: block;
+		margin-top:@g;
+		img{
+			width: 100%;
+			display: block;
+		}
+
+	}
+
+	.attrs{
+		margin-top:@g;
+		line-height: 2em;
+
+		color: @cl_blue;
+		em{
+			display: inline-block;
+			color: #6a6a6a;
+		}
+
+		background-color: #F3F3F3;
+		padding:@g;
+	}
+
+
+	//矢量类表
+	.ft_list{
+		display: none;
+		font-size: 14px;
+		li{
+			line-height: 2.7em;
+			background: url("../images/iconfont-location_red.png") no-repeat 0.5em 50%;
+			text-indent: 2em;
+			&.cur{
+				background-image: url(../images/iconfont-location_green.png);
+			}
+
+			&:hover {
+				cursor: pointer;
+				background-color: #f0f0f0;
+			}
+		}
+
+
+	}
+
+
+	.trypage{
+		display: none;
+	}
+
+	&.search_list_mode{
+		.img{
+			display: none;
+		}
+		.attrs{
+			display: none;
+		}
+		.ft_list,.trypage{
+			display: block;
+		}
+	}
+
+	//立即申请按钮
+	.applic_btn{
+		display: block;
+		line-height: 3em;
+		text-align: center;
+		background-color: @cl_blue;
+		color: #ffffff;
+	  &:hover{
+		background-color: #3471ef;
+	  }
+	}
+
+}
+
+
+.search_bar{
+	position: fixed;
+	z-index: 99;
+	top: 13px;
+	left: 140px;
+	box-shadow: #c1c1c1 0 0 5px;
+	.bt{
+		color: #ffffff;
+		padding: 0 1em;
+		text-align: center;
+		.noSelect;
+	}
+
+
+	.cls{
+		cursor: pointer;
+		.noSelect;
+
+
+	}
+
+	.input_set_full_h(39px);
+}
+
+
+@tth:115px;
+
+.ol-overlaycontainer-stopevent{
+	.ol-zoom{
+		top: @tth + @g*2;
+	}
+	.ol-zoomslider{
+		top: @tth + @g*9;
+	}
+	.trm-mapswitcher{
+		top: @tth + @g*2;
+	}
+
+
+}
+
+.search_bar{
+	top: @tth + @g*2 !important;
+}

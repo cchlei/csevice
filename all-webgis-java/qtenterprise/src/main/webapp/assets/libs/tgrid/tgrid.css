@@ -1,0 +1,25 @@
+.div_inline_block,.iblock,.inblock,.tgrid th.way_-1 i,.tgrid th.way_1 i{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.clear{font-size:0;height:0;width:0;clear:both}
+.center{margin-left:auto;margin-right:auto}
+.txcut{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.planeUl{list-style:none}
+.planeUl li{margin:0}
+.noSelect,.tgrid th{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.yahei{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.heiti{font-family:"\9ED1\4F53",SimHei}
+.expandin{width:100%;height:100%;top:0;left:0}
+.v_hidden{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.tgrid{position:relative}
+.tgrid table{width:100%;text-align:left}
+.tgrid th.way_-1 i,.tgrid th.way_1 i{width:0;height:0;font-size:0;line-height:0;vertical-align:middle}
+.tgrid th{cursor:pointer}
+.tgrid th i{margin-top:-4.5px}
+.tgrid th.way_1 i{border:5px solid transparent;border-bottom-width:0;border-top-color:#333}
+.tgrid th.way_-1 i{border:5px solid transparent;border-top-width:0;border-bottom-color:#333}
+.tgrid tr.active td{background-color:#fff}
+.tgrid td.option,.tgrid th.option{text-align:center}
+.tgrid td.option em{display:inline-block;text-align:center;font-size:12px;color:#fff;vertical-align:middle;cursor:pointer;padding:0 .3em;line-height:1.4em;text-indent:0}
+.tgrid td.option em.loc{background-color:#4C78D5}
+.tgrid td.option em.del{background-color:#F04C3D}
+.tgrid td.option em:hover{opacity:.8;filter:alpha(opacity=80)}

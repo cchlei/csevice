@@ -1,0 +1,28 @@
+<html>   <head>       <meta charset="UTF-8" />   </head>   <body><h1 id="-">文件作用及接口说明</h1>
+<blockquote>
+<p>文件说明 </p>
+<blockquote>
+<p>enterprise_auth.html 企业授权验证</p>
+<p>enterprise_summ.html 后台模板</p>
+<p>map_create.html 地图发布页面</p>
+<p>prompt_zc_success.html 注册成功提示页面</p>
+</blockquote>
+<p>字段唯一性验证接口</p>
+<blockquote>
+<p>在input上面增加 ajax_valid_errmsg=&quot;重复检测失败提示文字&quot;</p>
+<p>字段重复性检测使用jsonp的规范来通信</p>
+<p>发送字段</p>
+<blockquote>
+<p>callback jsonp所定义的名称</p>
+<p>type要验证的字段名</p>
+<p>value要验证的字段值</p>
+</blockquote>
+<p>响应字段</p>
+<blockquote>
+<p>示例callback(flag)</p>
+<p>flag为false表示该字段重复</p>
+</blockquote>
+</blockquote>
+<p>证件上传地址 参照 enterprise_auth.html第14行</p>
+</blockquote>
+</body></html>

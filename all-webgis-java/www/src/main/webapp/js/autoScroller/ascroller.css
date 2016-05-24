@@ -1,0 +1,10 @@
+.auto_scroll,.auto_scroll>.view,.itemlist .item{position:relative}
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.auto_scroll{margin-left:auto;margin-right:auto;overflow:hidden}
+.itemlist{margin-top:-500px}
+.itemlist .item{white-space:nowrap;padding-left:60px;padding-right:60px;width:100%}
+.itemlist .item .line{position:absolute;height:0;line-height:0;border-bottom:1px dotted #555;left:0;top:45%;width:100%}
+.itemlist .item a{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53";position:relative;z-index:10;border-radius:50%;display:inline-block;line-height:18px;width:18px;height:18px;background:#fff;color:#fff;text-align:center;margin:0 27px;-webkit-transition-duration:330ms;transition-duration:330ms}
+.itemlist .item a:hover{opacity:.75;filter:alpha(opacity=75);background-color:#08c;-webkit-transform:scaleX(1.3) scaleY(1.3);-ms-transform:scaleX(1.3) scaleY(1.3);transform:scaleX(1.3) scaleY(1.3)}
+.itemlist .item a em{display:none}

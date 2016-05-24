@@ -1,0 +1,63 @@
+@import "tool";
+
+
+
+
+
+.auto_scroll{
+	.center;
+	position: relative;
+	overflow: hidden;
+	>.view{
+		position: relative;
+		//padding: 0 27px;
+	}
+}
+
+.itemlist{
+	margin-top: -500px;
+
+	.item{
+		white-space: nowrap;
+		.padding_h(60px);
+		position: relative;
+		width: 100%;
+		.line{
+			position: absolute;
+			.lineh(0);
+			border-bottom: 1px dotted #555;
+			left: 0;
+			top: 45%;
+			width: 100%;
+		}
+		a{
+			@size:18px;
+			.yahei;
+			position: relative;
+			z-index: 10;
+			border-radius: 50%;
+			display: inline-block;
+			line-height: @size;
+			width: @size;
+			height: @size;
+			background: #fff;
+			color: #fff;
+			text-align: center;
+			margin:0 27px;
+			.dura();
+
+			//position: absolute;
+
+			&:hover{
+				._alpha(75);
+				background-color: #08c;
+				.ts_scale(1.3);
+			}
+
+			em{
+				display: none;
+			}
+
+		}
+	}
+}

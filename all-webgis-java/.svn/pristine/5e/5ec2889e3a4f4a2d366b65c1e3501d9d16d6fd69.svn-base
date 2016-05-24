@@ -1,0 +1,200 @@
+<!doctype html><html class="theme_cloud_server theme_comm">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>云服务</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/qt_v2.css"/>
+    <script src="js/cseajs/csea$.js" id="seajsnode" main="__/js/qt_v2_comm"></script>
+</head>
+<body>
+    <div class="root">
+        <div class="navbar">
+            <div class="mc">
+                <a href="#" class="logo"></a>
+                    <span class="nav">
+                        <a href="#">个人</a>
+                        <a href="#">企业</a>
+                        <a href="#">行业</a>
+                        <a class="cur" href="#">云服务</a>
+                        <a href="#">开发者</a>
+                        <a href="#">联系我们</a>
+                    </span>
+                    <span class="btns">
+                        <a href="https://login.trmap.cn/login?service=http://www.trmap.cn/cas">登录</a>
+                        <a href="http://www.trmap.cn/register.jsp">注册</a>
+                    </span>
+            </div>
+        </div>
+
+
+        <div class="r1">
+            <div class="cont">
+                <h2 style="
+                    font-size: 40px;
+                    padding-top: 105px;
+                    padding-left: 5px;
+                    color: #fff;
+                ">云服务 </h2>
+
+                <p style="
+                    text-align: left;
+                    padding-left: 10px;
+                    margin-top: 34px;
+                    width: 530px;
+                    font-size: 23px;
+                    line-height: 1.4em;
+                ">大数据与传统的云平台结合，提供丰富的地图服务， 简单易用的接口服务。 </p></div></div>
+        <div class="blk_cont">
+            <div class="blk">
+                <h3>兴趣点查询</h3>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+
+
+
+            </div>
+            <div class="blk">
+                <h3>路网分析</h3>
+                <a href="//t.cn">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+            </div>
+            <div class="blk">
+                <h3>基础地图服务</h3>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+                <a href="#">
+                    <img src="images/icon_caiseban.png" alt=""/>
+                    <em>彩色版</em>
+                    <span>色彩鲜明，内容丰富。</span>
+                </a>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="mc">
+                <em>陕ICP备12000810号　版权所有：陕西天润科技股份有限公司</em>
+                <a class="ibtn qq" href="#"></a>
+                <a class="ibtn wx" href="#"></a>
+                <a class="ibtn wb" href="#"></a>
+                <a class="ibtn ph" href="#"></a>
+            </div>
+        </div>
+
+
+        <script>
+            $(".blk").delegate(">a","click",function(e){
+                e.preventDefault();
+                var m = this;
+                seajs.use("$/fancybox",function(){
+                    $.fancybox({
+                        href: m.href,
+                        type:"iframe",
+                        centerOnScroll:1,
+                        width:"96%",
+                        height:"86%"
+                    });
+                })
+            });
+
+        </script>
+    </div>
+
+</body>
+</html>

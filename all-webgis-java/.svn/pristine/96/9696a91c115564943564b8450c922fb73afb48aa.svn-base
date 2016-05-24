@@ -1,0 +1,79 @@
+{
+  "menus": [
+    {
+      "label":"用户列表",
+      "icon":"&#xe618;",
+      "href": "user/list"
+    },
+    {
+      "label":"数据",
+      "icon":"&#xe613;",
+      "href": "demo.html"
+    },
+    {
+      "label": "地图",
+      "icon": "&#xe611;",
+      "href": "demo.html",
+      "menus": [
+        {
+          "label": "图层管理(新浪)",
+          "icon": "&#xe60e;",
+          "href": "//t.cn"
+        },
+        {
+          "label": "地图设置",
+          "icon": "&#xe60b;",
+          "href": "demo.html",
+          "active": true
+        },
+        {
+          "label": "已经共享地图",
+          "icon": "&#xe606;",
+          "href": "//e.cn"
+        }
+      ]
+    },
+    {
+      "label": "设置",
+      "icon":"&#xe602;",
+      "menus": [
+        {
+          "label": "图层管理(新浪)",
+          "icon": "&#xe60e;",
+          "href": "//t.cn"
+        },
+        {
+          "label": "地图设置",
+          "icon": "&#xe60b;",
+          "href": "demo.html",
+          "active": true
+        },
+        {
+          "label": "已经共享地图",
+          "icon": "&#xe606;",
+          "href": "//e.cn"
+        },
+        {
+          "label": "图层管理(新浪)",
+          "icon": "&#xe60e;",
+          "href": "//t.cn"
+        },
+        {
+          "label": "地图设置",
+          "icon": "&#xe60b;",
+          "href": "demo.html",
+          "active": true
+        },
+        {
+          "label": "已经共享地图",
+          "icon": "&#xe606;",
+          "href": "//e.cn"
+        }
+      ]
+    },
+    {
+      "label": "其他",
+      "icon":"&#xe610;"
+    }
+  ]
+}

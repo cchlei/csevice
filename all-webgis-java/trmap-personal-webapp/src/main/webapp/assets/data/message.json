@@ -1,0 +1,62 @@
+{
+  "rows" : [
+    {
+      "id" : 43434,
+      "comcontent" :"内容asdfasdfasdf",
+      "comtime" :"时间",
+      "cuser_id" :"评论者id",
+      "cusername" : "评论者姓名",
+      "buser_id" : "被评论者id",
+      "busername" : "被评论者姓名",
+      "user_rid" : "评论记录id",
+      "parent_id" : "父级id",
+      "child" : [
+        {
+          "id" : 344354,
+          "comcontent" :"内容",
+          "comtime" :"时间",
+          "cuser_id" :"评论者id",
+          "cusername" : "评论者姓名",
+          "buser_id" : "被评论者id",
+          "busername" : "被评论者姓名",
+          "user_rid" : "评论记录id",
+          "parent_id" : "父级id",
+          "buser_headimg": "4134135232",
+          "cuser_headimg":"354132"
+        },
+        {
+          "id" : 65645,
+          "comcontent" :"内容",
+          "comtime" :"时间",
+          "cuser_id" :"评论者id",
+          "cusername" : "评论者姓名",
+          "buser_id" : "被评论者id",
+          "busername" : "被评论者姓名",
+          "user_rid" : "评论记录id",
+          "parent_id" : "父级id",
+          "buser_headimg": "4134135232",
+          "cuser_headimg":"354132"
+        }
+      ],
+      "buser_headimg": "4134135232",
+      "cuser_headimg":"354132"
+
+    },
+    {
+      "id" : 11223,
+      "comcontent" :"内容",
+      "comtime" :"时间",
+      "cuser_id" :"评论者id",
+      "cusername" : "评论者姓名",
+      "buser_id" : "被评论者id",
+      "busername" : "被评论者姓名",
+      "user_rid" : "评论记录id",
+      "parent_id" : "父级id",
+      "child" : [],
+      "buser_headimg": "4134135232",
+      "cuser_headimg":"354132"
+
+    }
+  ]
+}
+

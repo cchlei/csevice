@@ -1,0 +1,21 @@
+<html>   <head>       <meta charset="UTF-8" />   </head>   <body><h1 id="select">Select</h1>
+<p>Select adds item selection capabilities to a DataTable. Items can be rows, columns or cells, which can be selected independently, or together. Item selection can be particularly useful in interactive tables where users can perform some action on the table such as editing.</p>
+<h1 id="installation">Installation</h1>
+<p>To use Select the best way to obtain the software is to use the <a href="//datatables.net/download">DataTables downloader</a>. You can also include the individual files from the <a href="//cdn.datatables.net">DataTables CDN</a>. See the <a href="http://datatables.net/extensions/select/">documentation</a> for full details.</p>
+<h1 id="basic-usage">Basic usage</h1>
+<p>Select is initialised using the <code>select</code> option in the DataTables constructor - a simple boolean <code>true</code> will enable the feature. Further options can be specified using this option as an object - see the documentation for details.</p>
+<p>Example:</p>
+<pre><code class="lang-js">$(document).ready( function () {
+    $(&#39;#myTable&#39;).DataTable( {
+        select: true
+    } );
+} );
+</code></pre>
+<h1 id="documentation-support">Documentation / support</h1>
+<ul>
+<li><a href="https://datatables.net/extensions/select/">Documentation</a></li>
+<li><a href="http://datatables.net/forums">DataTables support forums</a></li>
+</ul>
+<h1 id="github">GitHub</h1>
+<p>If you fancy getting involved with the development of Select and help make it better, please refer to its <a href="https://github.com/DataTables/Select">GitHub repo</a>.</p>
+</body></html>

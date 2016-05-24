@@ -1,0 +1,181 @@
+<!DOCTYPE html> <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>添加记录</title>
+
+    <link rel="stylesheet" href="../libs/openlayers/css/ol.css"/>
+    <link rel="stylesheet" href="../css/comm.css"/>
+    <link rel="stylesheet" href="../css/addsubject.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode"></script>
+
+    <script src="../libs/openlayers/ol-debug.js"></script>
+    <script src="../libs/openlayers/trmap_styles.js"></script>
+    <script src="../js/map/map_topic_edit.js"></script>
+
+
+
+
+
+    <script>
+        var pageCfg = {
+
+            /*专题颜色*/
+            theme_color:"../data/co_subject.json",
+
+            /*图片请求地址*/
+            coverurl:"../data/upload_success.json"
+
+        };
+
+    </script>
+</head>
+<body>
+    <i class="cl_loading page"></i>
+    <div class="root no_col2">
+        <div class="topbar">
+            <a class="logo" href="/"> <i></i> <b></b> </a>
+            <a href="#" class="user_header"><img src="../images/icon_user.png"></a>
+            <span class="user_name">
+                欢迎 <a href="#">wawa</a> <b>|</b> <a href="#">退出</a>
+            </span>
+        </div>
+        <div class="nav col1">
+            <a href="#" class="cur">
+                <i><img src="../images/icon_zhuanti.png" alt=""></i>
+                <b>专题</b>
+            </a>
+
+            <a href="#">
+                <i><img src="../images/icon_rili.png" alt=""></i>
+                <b>日历</b>
+            </a>
+
+
+            <a href="#">
+                <i><img src="../images/icon_haoyou.png" alt=""></i>
+                <b>好友</b>
+            </a>
+
+            <a href="#">
+                <i><img src="../images/icon_xiaoxi.png" alt=""></i>
+                <b>消息</b>
+            </a>
+
+
+            <a href="#">
+                <i><img src="../images/icon_zhanghu.png" alt=""></i>
+                <b>账户</b>
+            </a>
+        </div>
+        <div class="mainCont col3">
+            <div class="inner">
+                <h1 class="page_name white"><a href="javascript:history.go(-1)"><i class="ico_record"></i></a>添加记录</h1>
+                <form action="theme_record_add" class="record_add main">
+                    <table>
+                        <tr>
+                            <td><em>记录专题</em></td>
+                            <td>
+                                <input type="text" name="title">
+                            </td>
+                            <td rowspan="5" class="webup">
+                                <em class="uploadclick"><span style="font-weight: 700;">+</span> 添加附件</em>
+                                <div class="uploadthing" ms-controller="file_man">
+                                    <span ms-repeat="list" class="file" ms-class-1="img:el.type=='image/jpeg'">
+                                       <!-- <b ms-if="el.type!='image/jpeg'">{{el.remoteurl}}</b>
+                                        <b ms-if="el.type=='image/jpeg'"><img ms-attr-src="el.thumb" alt=""></b>-->
+                                        <b ms-if="el.type=='image/jpeg' || el.isimg"><img ms-attr-src="el.thumb" alt=""></b>
+                                        <b ms-if="!el.type=='image/jpeg' || !el.isimg"><a ms-attr-href="ibpath + (el.id +'.'+ el.ext)"><img ms-attr-src="el.thumb" alt=""></a></b>
+                                        <i ms-click="del(el)">删除</i>
+                                         <p>{{el.name}}</p>
+                                    </span>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><em>是否公开</em></td>
+                            <td ms-controller="isopen">
+                                <div class="switch" ms-click='toggle'>
+                                    <span class="open" ms-if="isopen"></span><span ms-if="isopen">公开</span>
+                                    <span ms-if="!isopen">私密</span><span class="close" ms-if="!isopen"></span>
+                                </div>
+                                <input type="hidden" name="shareflag" ms-duplex="isopen">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><em>发生时间</em></td>
+                            <td>
+                                <input name="occurtimes_showing" readonly="readonly" onclick="laydate({format: 'YYYY年MM月DD',choose:on_date_picker_choose})"  class="laydate-icon occurtime"/>
+                                <input name="occurtimes" readonly="readonly" type="hidden"/>
+                                <script>
+                                    use("dateFormat",function(dd){
+                                        var showing = $("input[name=occurtimes_showing]");
+                                        showing.val(new Date().format("%Y年%m月%d日"));
+
+                                        var hid = $("input[name=occurtimes]")
+                                        hid.val(new Date().format("%Y-%m-%d %H:%M:%S:%N"));
+
+                                        window.on_date_picker_choose = function(){
+                                            var val = showing.val();
+
+
+                                            var d = dd(
+                                                    val.replace(/[^\d]/g,"-")
+                                            );
+
+                                            var now = new Date();
+
+                                            d.setHours(
+                                                now.getHours(),
+                                                now.getMinutes(),
+                                                now.getSeconds(),
+                                                now.getMilliseconds()
+                                            );
+
+                                            hid.val(d.format("%Y-%m-%d %H:%M:%S:%N"));
+                                            hid.attr("value",d.format("%Y-%m-%d %H:%M:%S:%N"));
+
+                                        }
+                                    })
+                                </script>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><em>事件描述</em></td>
+                            <td><textarea name="description" placeholder="请输入事件描述"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><em>地点</em></td>
+                            <td><input type="text" name="addrname" id="addrname"></td>
+                            <input type="hidden" name="geom" id="geom"/>
+                        </tr>
+                        <tr class="bth">
+                            <td><a href="javascript:history.go(-1)"><span class="sub_cancel">取消</span></a><span class="sub_save">保存</span></td>
+                        </tr>
+                    </table>
+
+                    <input type="hidden" name="coverurl" id="coverurl">
+
+                    <div class="map_wrapper">
+                        <div class="btn_bar">
+                            <a class="dot"  event="Point"><i></i>点</a>
+                            <a class="line" event="LineString"><i></i>线</a>
+                            <a class="area" event="Polygon"><i></i>面</a>
+                            <a class="del"  event="Clear"><i></i>清除</a>
+                        </div>
+                        <div id="mapel"></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

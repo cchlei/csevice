@@ -1,0 +1,85 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>我的企业信息</title>
+    <link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../css/enterprise_summ.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode" main="../js/enterprise_frame"></script>
+    <script>
+        var  nav_data_url = "../data/enterprise_summ_list_data.json";
+
+        /**
+         * 电话号码和邮件的修改controller
+         * @type {string}
+         */
+        var profile_modify_ajax = "";
+        var service_information_ajax ="";
+    </script>
+</head>
+<body>
+
+<div class="navright">
+    <div class="top"><i></i><span>退出</span></div>
+    <!-- 基本信息 -->
+    <div class="conter" style="margin-top: 132px;">
+        <h3 typename="jbxx"><i></i>基本信息</h3>
+        <div class="basic">
+            <div class="basicleft"><img src="../images/uimg.png"><span>修改企业LOGO</span></div>
+            <div class="basicright">
+                <ul>
+                    <li>企业名称：陕西天润科技</li>
+                    <li>账号名称：XXXXXXX</li>
+                    <li>账户状态 <span class="putin" _href="enterprise_auth.html">提交申请</span> <span class="cancel">取消</span></li>
+
+                    <!-- 账户再次申请 -->
+                    <!-- <li>账户状态 <span class="reject">驳回？</span> <span class="againputin">再次申请</span></li> -->
+
+                    <!-- 审核中 -->
+                    <!-- <li>账户状态  <span class="againputin">审核中</span></li> -->
+
+                    <!-- 已认证 -->
+                    <!-- <li>账户状态  <span class="rztrue">已认证</span></li> -->
+
+                    <li>安全操作 <span class="resetpass">重置登录密码</span></li>
+                </ul>
+                <ul>
+                    <li>企业邮箱：<span style="color:#333" class="tx">tianrun@tianrun.com</span> <span class="input"><input></span><span class="revisemail" style="color:#333">修改</span></li>
+                    <li>企业电话：<span style="color:#333" class="tx">029-87654321 </span> <span class="input"><input></span><span class="revisephone" style="color:#333">修改</span></li>
+                </ul>
+                <div class="clear"></div>
+            </div> 
+        </div>
+    </div>
+    <!-- 认证信息 -->
+    <div class="conter">
+        <h3 typename="rzxx"><i></i>认证信息</h3>
+        <div class="authentica">
+            <ul>
+                <li><p style="width: 444px;">企业名称执：<span>陕西天润科技</span></p>  <p>照注册号：<span>1234566  </span></p>  <p>机构代码：<span>3245678</span> </p></li>
+                <li><p style="width: 444px;">法人代表姓名：<span>天润科技</span></p> <p>法人证件号码：<span>123456  </span></p>  <p>证件有效期：<span>2015.8.19</span></p> </li>
+                <li><p style="width: 444px;">运维联系人：<span>天润科技 </span></p> <p>联系人证件号码：<span>123456 </span></p>  <p class="cade">证件有效期：<span>123456 </span></p><p>联系方式：<span>029-87654321</span></p> </li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- 服务信息 -->
+    <div class="conter">
+        <h3 typename="fwxx"><i></i>服务信息</h3>
+        <div class="service" ms-controller="wrap">
+            <ul>
+                <li class="fbfw">发布服务<p>{{data.publish}}</p></li>
+                <li class="hqfw">获取服务<p>{{data.obtain}}</p></li>
+                <li class="zyjs">租用计算资源<p>{{data.rent}}</p></li>
+                <li class="dspq">待审批请求<p>{{data.approval}}</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+</body>
+</html>

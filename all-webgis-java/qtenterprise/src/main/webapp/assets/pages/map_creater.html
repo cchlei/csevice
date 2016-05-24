@@ -1,0 +1,38 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>地图发布</title>
+    <link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../libs/openlayers/css/ol.css"/>
+    <link rel="stylesheet" href="../libs/openlayers/css/trmap_control.css"/>
+    <link rel="stylesheet" href="../css/map_creater.css"/>
+
+    <script src="../libs/cseajs/csea$.js" id="seajsnode"></script>
+    <script src="../libs/openlayers/ol-debug.js"></script>
+    <script src="../libs/openlayers/trmap_styles.js"></script>
+    <script src="../libs/openlayers/trmap_control.js"></script>
+    <script>
+        var ajax_feature_list="../data/feature_list.json";
+        var ajax_column = "../data/feature_fields.json";
+        var ctx = "";
+        var mapname = "未命名地图";
+        var mapid = -1;
+        seajs.use("__/js/map_creater");
+    </script>
+</head>
+<body>
+    <div class="test">
+        <div id="popup"></div>
+        <div id="popup-content"></div>
+        <div id="popup-closer"></div>
+    </div>
+
+    <div id="map" class="map"></div>
+    <script src="../js/map/map.js"></script>
+</body>
+</html>

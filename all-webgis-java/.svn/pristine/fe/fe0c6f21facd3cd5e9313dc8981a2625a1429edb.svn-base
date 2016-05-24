@@ -1,0 +1,146 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title></title>
+    <link rel="stylesheet" href="demo.css"/>
+    <script src="../cseajs/csea$.js" id="seajsnode"></script>
+    <script>
+        var ctx = "";
+        seajs.use("_/featurelist/_",function(FL){
+            var f = new FL("#featurelist",{
+
+                feature_config:{
+                    //ajax:"./demo_feature_list_json.txt"
+
+                    "ajax":{
+                        "url":"demo_feature_list_json.txt",
+                        "method":"POST",
+                        "data":function(d){
+                            d["searchText"]=$('#searchText').val();
+                            d["filterName"]=$('#filterName').html();
+                            d["point"]=$('#point').is(":checked")?1:"";
+                            d["line"]=$('#line').is(":checked")?2:"";
+                            d["surface"]=$('#surface').is(":checked")?3:"";
+                            d["startDate"]=$('#startDate').val();
+                            d["endDate"]=$('#endDate').val();
+                            d["column"]=d.columns[d.order[0].column].data;
+                            d["dir"]=d.order[0].dir
+                        }
+                    },
+                    "columns":[
+                        {"data":"gname","style":"text-align:left;"},
+                        {"data":"gtype"},
+                        {"data":"gcreatedate"},
+                        {"data": null},
+                        {"data": null}
+                    ],
+                    columnDefs: [
+                        {
+                            targets: 0,
+                            orderable:false
+                        },
+                        {
+                            targets: 4,
+                            render: function (a, b, c, d) {
+                                var html = "<img src=\""+ctx+"/static/images/iconfont-shanchu.png\" class=\"img-circle\" onclick=\"javascript:deleteGraphics('"+c.id+"','"+c.userMap.isshare+"')\">";
+                                return html;
+                            },
+                            orderable:false
+                        },
+                        {
+                            targets: 3,
+                            render: function (a, b, c, d) {
+                                var html = "<img src=\""+ctx+"/static/images/iconfont-guanlianyuan.png\" class=\"img-circle\" onclick=\"javascript:lookMap('"+c.id+"','"+c.userMap.id+"')\">";
+                                return html;
+                            },
+                            orderable:false
+                        },
+                        {
+                            targets: 1,
+                            render: function (a) {
+                                if(a=="1"){
+                                    return "<span class=\"label label-info\">点</span>"
+                                }
+                                if(a=="2"){
+                                    return "<span class=\"label label-warning\">线</span>"
+                                }
+                                if(a=="3"){
+                                    return "<span class=\"label label-success\">面</span>"
+                                }
+                            },
+                            orderable:false
+                        },
+                    ]
+                },
+
+                file_config:{
+                    ajax:{
+                        url:"./demo_file_list_json.txt",
+                        "method":"POST",
+                        "data":function(data){
+
+                        }
+                    }
+                },
+
+                //当选择某个节点时
+                on_feature_select:function(row_data,file_req_para_addtion){
+                    file_req_para_addtion.fid = row_data["id"];
+                },
+
+                /**
+                 * 初始化完成
+                 */
+                initCallback:function(){
+
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+
+<table id="featurelist" style="width: 96%; margin: 9px auto">
+    <tr>
+        <td style="width: auto">
+            <div class="cell">
+                <table class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center; width:180px;">数据名称</th>
+                            <th style="text-align:center;">数据类型</th>
+                            <th style="text-align:center; width:120px;">创建时间</th>
+                            <th style="text-align:center;">查看地图</th>
+                            <th style="text-align:center;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </td>
+        <td class="gap" style="width: 9px"></td>
+        <td style="width: 500px;">
+            <div class="cell">
+                <table class="display" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>ICON</th>
+                        <th>file_name</th>
+                        <th>date</th>
+                        <th>path.</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

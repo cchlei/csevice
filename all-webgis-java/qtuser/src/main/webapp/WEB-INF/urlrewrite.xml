@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE urlrewrite
+    PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN"
+    "http://www.tuckey.org/res/dtds/urlrewrite3.2.dtd">
+<urlrewrite>
+    <rule>
+       <from>/u2([A-Za-z0-9=\+/]+)</from>
+       <to type="forward">/urlFilter/mapshare/$1</to>
+    </rule>
+    <rule>
+       <from>/sd([A-Za-z0-9=\+/]+)/([A-Za-z0-9=\+/]+)</from>
+       <to type="forward">/urlFilter/showdata/$1/$2</to>
+    </rule>
+<!--     //0 未分享;1 审批中；2 已分享-->
+    <rule>
+       <from>/notsharemaps.html</from>
+       <to type="forward">/userMap/userMapList/0</to>
+    </rule>
+    <rule>
+       <from>/sharemaps.html</from>
+       <to type="forward">/userMap/userMapList/2</to>
+    </rule>
+    <rule>
+       <from>/allmaps.html</from>
+       <to type="forward">/userMap/userMapList/-1</to>
+    </rule>
+    <rule>
+       <from>/datas.html</from>
+       <to type="forward">/personFeatureData/toPersonFeatureData.do</to>
+    </rule>
+</urlrewrite>

@@ -1,0 +1,12 @@
+{
+  "1.0": {
+    "project_path": ":www",
+    "project_dir": "E:\\workspaces\\qtmap\\qtmap\\www",
+    "connection_project_dir": "E:\\workspaces\\qtmap\\qtmap",
+    "connection_gradle_user_home": "E:\\Environment\\gradle-2.4",
+    "connection_gradle_distribution": "GRADLE_DISTRIBUTION(LOCAL_INSTALLATION(E:\\Environment\\gradle-2.4))",
+    "connection_java_home": null,
+    "connection_jvm_arguments": "",
+    "connection_arguments": ""
+  }
+}

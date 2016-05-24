@@ -1,0 +1,188 @@
+<!DOCTYPE html> <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>记录浏览</title>
+    <link rel="stylesheet" href="../css/comm.css"/>
+    <link rel="stylesheet" href="../css/record_browse.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode" main="__/js/record_browse"></script>
+    <script>
+        var pageCfg = {
+
+            /*专题颜色*/
+            theme_color:"../data/co_subject.json",
+
+            /*图片请求地址*/
+            coverurl:"../data/upload_success.json",
+
+            recode_brows:"../data/recode_brows.json"
+
+        };
+        var recordId = "sdgr";
+        var cuserId = "reyrt";
+        var buser_id ="tgert";
+        var busername ="rtge"
+
+
+        var current_user_name = 867867;
+
+    </script>
+</head>
+<body>
+    <i class="cl_loading page"></i>
+    <div class="root no_col2">
+        <div class="topbar">
+            <a class="logo" href="/"> <i></i> <b></b> </a>
+            <a href="#" class="user_header"><img src="../images/icon_user.png"></a>
+            <span class="user_name">
+                欢迎 <a href="#">wawa</a> <b>|</b> <a href="#">退出</a>
+            </span>
+        </div>
+        <div class="nav col1">
+            <a href="#" class="cur">
+                <i><img src="../images/icon_zhuanti.png" alt=""></i>
+                <b>专题</b>
+            </a>
+
+            <a href="#">
+                <i><img src="../images/icon_rili.png" alt=""></i>
+                <b>日历</b>
+            </a>
+
+
+            <a href="#">
+                <i><img src="../images/icon_haoyou.png" alt=""></i>
+                <b>好友</b>
+            </a>
+
+            <a href="#">
+                <i><img src="../images/icon_xiaoxi.png" alt=""></i>
+                <b>消息</b>
+            </a>
+
+
+            <a href="#">
+                <i><img src="../images/icon_zhanghu.png" alt=""></i>
+                <b>账户</b>
+            </a>
+        </div>
+        <div class="mainCont col3">
+            <div class="inner">
+                <h1 class="page_name white"><a href="javascript:history.go(-1)"><i class="ico_record"></i></a>记录浏览</h1>
+                <a href="#" class="edit_recordico"> 编辑记录</a>
+                <div class="main">
+                    <form  class="record_browse" ms-controller="record_browse">
+                        <table>
+                            <tr>
+                                <td><em>记录标题:</em></td>
+                                <td>
+                                    {{data.name}}
+                                    <i ms-if="data.shareflag" class="open"></i><span ms-if="data.shareflag" class="open">公开</span>
+                                    <i ms-if="!data.shareflag" class="close"></i><span ms-if="!data.shareflag" class="open">私密</span>
+                                    <input type="hidden" ms-duplex-number="data.shareflag" name="shareflag">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><em>发生时间:</em></td>
+                                <td>{{data.occurtime}}</td>
+                            </tr>
+
+                            <tr>
+                                <td><em>事件描述:</em></td>
+                                <td><p class="descri">{{data.description}}</p></td>
+                            </tr>
+                            <tr>
+                                <td><em>地点:</em></td>
+                                <td class="adressmap">{{data.name}}<i ms-class-1="link1:data.geom"></i>
+                                    <div class="map3"><img src="../images/map2.png" ></div>
+                                </td>
+                            </tr>
+                            <tr class="r_filemess">
+                                <td class="filerecord">
+                                    <em class="uploadclick">附件</em>
+                                    <div class="uploadthing" ms-controller="file_man">
+                                    <span ms-repeat="list" class="file" ms-class-1="img:el.type=='image/jpeg'  || el.isimg">
+                                        <b  ms-attr-title="ibpath +el.id" ms-if="el.type=='image/jpeg' || el.isimg"><img ms-attr-src="el.thumb" alt=""></b>
+                                        <b ms-if="!el.type=='image/jpeg' || !el.isimg"><a ms-attr-href="ibpath + (el.id +'.'+ el.ext)"><img ms-attr-src="el.thumb" alt=""></a></b>
+                                        <p>{{el.name}}</p>
+                                    </span>
+                                    </div>
+
+                                    <em style="text-align: left">留言</em>
+                                    <div  ms-controller="message" class="comments_box">
+                                        <div class="replayto" ms-visible="msg.buser_id">回复给：{{msg.busername}} <i ms-click="clear_replay_to()">×</i></div>
+                                        <!--恢复谁谁-->
+                                        <div class="text-box">
+                                            <textarea ms-duplex="msg.comcontent" class="comment-area" placeholder="留个言~~~~"  id="comcontent"></textarea>
+                                            <span class="btn" ms-click="publish">发表</span>
+                                        </div>
+
+
+                                        <ul class="comments-main" ms-each="list" ms-visible="list.length">
+                                            <li class="comments-item">
+                                                <div class="comments-item-bd">
+                                                    <div class="ui-avatar">
+                                                        <a href="#"><img ms-attr-src="el.img || moren"></a>
+                                                    </div>
+                                                    <div class="comments-content">
+                                                        <a  href="#" class="comments-name">{{el.cusername}}</a>: {{el.comcontent}}
+                                                        <div class="comments-op" >
+                                                            <span class="comments_time"> {{el.comtime}}</span>
+                                                        <span class="comments_reply">
+                                                             <a class="act-reply" ms-click="onReplay(el)">回复</a>
+                                                            |
+                                                            <a class="act-reply" href="#" ms-click="del(el)">删除</a>
+                                                        </span>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                        <div class="comments-list ">
+                                                            <ul ms-if="el.child && el.child.length" ms-each="el.child">
+                                                                <li>
+                                                                    <div class="comments-item-bd">
+                                                                        <div class="ui-avatar">
+                                                                            <a href="#" target="_blank">
+                                                                                <img  ms-attr-src="el.bimg || moren">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="comments-content">
+                                                                            <a class="comments-name">{{el.busername}}</a>回复
+                                                                            <a  href="#" class="comments-name">{{el.cusername}}</a> : {{el.comcontent}}
+                                                                            <div class="comments-op">
+                                                                                <span class="comments_time">{{el.comtime}}</span>
+                                                                            <span class="comments_reply">
+                                                                                 <a class="act-reply" href="#" ms-click="onReplay(el,$outer.el)">回复</a>
+                                                                                |
+                                                                                 <a class="act-reply" href="#" ms-click="del(el,$outer.el)">删除</a>
+                                                                            </span>
+                                                                                <div class="clear"></div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        <input type="hidden" name="coverurl" id="coverurl">
+
+
+                    </form>
+                </div>
+            </h1>
+        </div>
+    </div>
+</body>
+</html>

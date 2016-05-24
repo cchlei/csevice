@@ -1,0 +1,8 @@
+/build/
+/common/repos/
+/core/repos/
+/hstore-api/repos/
+/userauth/repos/
+/web/repos/
+*/bin/*
+*.log

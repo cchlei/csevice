@@ -1,0 +1,33 @@
+{
+  "rows":
+    {
+      "sid":"1",
+      "bianhao":"2015XXXXX",
+      "status":"通过",
+      "sqcompany":"陕西煤航",
+      "sqauthentication":"非认证用户",
+      "sqcontacts":"李刚",
+      "sqemail":"87654321@213.com",
+      "sqphone":"029-87654321",
+      "fbcompany":"陕西煤航非认证用户",
+      "fbauthentication":"非认证用户",
+      "fbcontacts":"李刚",
+      "fbemail":"87654321@213.com",
+      "fbphone":"029-87654321",
+      "servicename":"公交站点",
+      "area":"陕西省",
+      "releasetime":"2015-11-11",
+      "refreshtime":"2015-11-11",
+      "enddate":"2015-11-28",
+      "ysnumber":"15",
+      "range":"",
+      "coordinate":"x",
+
+
+      "entry":"",
+      "output":"",
+      "description":"",
+      "usetime":"24个月"
+    }
+
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html> <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>专题详情</title>
+    <link rel="stylesheet" href="../css/comm.css"/>
+    <link rel="stylesheet" href="../css/theme_detail.css"/>
+    <script src="../libs/avalon.min.js"></script>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode" main="__/js/theme_detail"></script>
+    <script>
+        var pageVars={
+            //专题信息
+            topic:"",
+
+            //记录列表
+            reclist:"",
+
+            //记录删除
+            recdel:""
+
+        };
+    </script>
+</head>
+<body>
+    <i class="cl_loading page"></i>
+    <div class="root no_col2">
+        <div class="topbar">
+            <a class="logo" href="/"> <i></i> <b></b> </a>
+            <a href="#" class="user_header"><img src="../images/icon_user.png"></a>
+            <span class="user_name">
+                欢迎 <a href="#">wawa</a> <b>|</b> <a href="#">退出</a>
+            </span>
+        </div>
+        <div class="nav col1">
+            <a href="#" class="cur">
+                <i><img src="../images/icon_zhuanti.png" alt=""></i>
+                <b>专题</b>
+            </a>
+
+            <a href="#">
+                <i><img src="../images/icon_rili.png" alt=""></i>
+                <b>日历</b>
+            </a>
+
+
+            <a href="#">
+                <i><img src="../images/icon_haoyou.png" alt=""></i>
+                <b>好友</b>
+            </a>
+
+            <a href="#">
+                <i><img src="../images/icon_xiaoxi.png" alt=""></i>
+                <b>消息</b>
+            </a>
+
+
+            <a href="#">
+                <i><img src="../images/icon_zhanghu.png" alt=""></i>
+                <b>账户</b>
+            </a>
+        </div>
+
+        <div class="mainCont col3" ms-controller="main" ms-class-1="no_gap:view==1">
+            <div class="inner">
+                <h1 class="page_name">
+                    <table>
+                        <tr>
+                            <td class="back"><a href="#"> </a></td>
+                            <td class="info">
+                                <p>{{topic.name}}</p>
+                                <div>
+                                    <label><input type="radio" ms-duplex-string="f.open" value="-1"> <em>所有({{topic.num_of_public + topic.num_of_private}})</em>  </label>
+                                    <label><input type="radio" ms-duplex-string="f.open" value="1"> <em>公开({{topic.num_of_public}})</em>   </label>
+                                    <label><input type="radio" ms-duplex-string="f.open" value="0"> <em>秘密({{topic.num_of_private}})</em>  </label>
+                                </div>
+                            </td>
+                            <td class="search_td">
+                                <span class="search_span"> <input ms-duplex="f.key"/> <i class="iclear" ms-click="clear_key()"></i> <em ms-click="dosearch()">搜索</em> </span>
+                            </td>
+                            <td class="btns">
+                                <a href="#" class="add">添加记录</a>
+                                <a href="#" class="setting">专题设置</a>
+                                <a href="#" class="chart">统计信息</a>
+                                <a href="#" class="location"    ms-click="view_toggle(1)"   ms-visible="view==0">地图模式</a>
+                                <a href="#" class="clock"       ms-click="view_toggle(0)"   ms-visible="view==1">日历模式</a>
+                            </td>
+                        </tr>
+                    </table>
+                </h1>
+
+                <!--用来控制a的-->
+                <div class="main_scroller"><div class="place_holder"></div></div>
+
+                <!--当前记录的年月-->
+                <span class="date_box" ms-visible="date_visible">2016/3</span>
+
+
+
+                <div class="main">
+                    <!--地图模式-->
+                    <div class="mapCont" ms-visible="view==1" ms-controller="map_rec_list">
+                        <div class="map_rec_list">
+                            <a>
+                                未标注记录
+                                <i></i>
+                                <ul class="list_cont" ms-each="list">
+                                    <li ms-if="!!!el.geom" ms-click="itemclick(el)"><em>{{el.name}}</em></li>
+
+                                </ul>
+                            </a>
+                            <a>
+                                标注记录
+                                <i></i>
+                                <ul class="list_cont"  ms-each="list">
+                                    <li ms-if="!!el.geom"  ms-click="itemclick(el)"><em>{{el.name}}</em></li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div id="map"></div>
+                    </div>
+                    <!--时间轴模式 -->
+                    <div class="cont" ms-visible="view==0">
+                        <div class="cell-1">
+                            <div class="reclist" ms-controller="reclist">
+                                <b class="line"></b>
+                                <div class="cardCont">
+
+                                    <div class="card" ms-repeat="list" ms-attr-date="el.occurtime" ms-click="cardClick($event,el)">
+                                        <b class="triangle"></b> <b class="dot"></b>
+                                        <div class="inner">
+                                            <h2>
+                                                <p class="r">
+                                                    <em class="msg">({{el.num_msg}})</em>
+                                                    <i class="g"></i>
+                                                    <em class="del" ms-click="recdele(el)"></em>
+                                                </p>
+                                                <em class="date">{{el.occurtime | date('yyyy/MM')}}</em>
+                                                <a href="#">{{el.name}}</a>
+                                            </h2>
+
+                                            <p class="desc">{{el.description | truncate(131)}}</p>
+                                            <p class="thumb" ms-visible="!el.piclist || el.piclist.length">
+                                                <span ms-repeat="el.piclist"><img ms-attr-src="ibpath + el"></span>
+                                            </p>
+                                            <p class="info">
+                                                <em class="loca break">{{el.addrname || "未关联地图"}}</em>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-2">
+                            <!--专题信息-->
+                            <div class="theme_info">
+                                <div class="faceCont">
+                                    <div class="inner">
+                                        <span class="img"> <img src="../images/illu1.png" alt=""> </span>
+                                        <div class="desc" style="width: 170px;">
+                                            <h4>{{topic.name}}</h4>
+                                            <p>{{(topic.description)}}</p>
+                                            <div class="quanxian" ms-if="open">权限<span class="qx"> {{permissions}}</span> <span ms-visible="topic.permissions !==-1">人数:<em class="rs">{{topic.firends}} </em></span><a> {{topic.num_of_collect}}</a></div>
+                                            <div class="quanxian" ms-if="!open">权限 <em>私密 </em><a> {{topic.num_of_collect}}</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="minimapCont">
+                                    <div class="miniMap"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.clear{font-size:0;height:0;width:0;clear:both}
+.center{margin-left:auto;margin-right:auto}
+.txcut{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.planeUl{list-style:none}
+.planeUl li{margin:0}
+.noSelect{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.yahei{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.heiti{font-family:"\9ED1\4F53",SimHei}
+.mainCont .inner .add,.mainCont .inner .refresh{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.expandin{width:100%;height:100%;top:0;left:0}
+.v_hidden{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.mainCont>.inner>.main>.inner{padding-right:0}
+.sub_nav li a{text-indent:20px}
+.sub_nav li a.bg-color-1{background:url(../images/icon_theme1.png) 32px 10px no-repeat}
+.sub_nav li a.bg-color-2{background:url(../images/icon_theme2.png) 32px 7px no-repeat}
+.sub_nav li a.bg-color-3{background:url(../images/icon_theme3.png) 32px 8px no-repeat}
+.sub_nav li a.bg-color-4{background:url(../images/icon_theme4.png) 32px 8px no-repeat}
+.sub_nav li a.bg-color-5{background:url(../images/icon_theme5.png) 32px 8px no-repeat}
+.sub_nav li a.bg-color-6{background:url(../images/icon_theme6.png) 32px 8px no-repeat}
+.sub_nav li a.bg-color-7{background:url(../images/icon_theme77.png) 32px 8px no-repeat}
+.mainCont .page_name .ico_allshare,.mainCont .page_name .ico_alltheme,.mainCont .page_name .ico_closetheme,.mainCont .page_name .ico_mycollect,.mainCont .page_name .ico_opentheme,.mainCont .page_name .ico_sharetome{display:inline-block;margin-right:6px;vertical-align:middle}
+.mainCont .page_name .ico_alltheme{width:15px;height:20px;background:url(../images/icon_theme7.png) no-repeat}
+.mainCont .page_name .ico_opentheme{width:17px;height:20px;background:url(../images/icon_theme18.png) no-repeat}
+.mainCont .page_name .ico_closetheme{width:15px;height:18px;background:url(../images/icon_theme17.png) no-repeat}
+.mainCont .page_name .ico_allshare{width:15px;height:20px;background:url(../images/icon_theme8.png) no-repeat}
+.mainCont .page_name .ico_mycollect{width:18px;height:22px;line-height:60px;background:url(../images/icon_theme9.png) no-repeat}
+.mainCont .page_name .ico_sharetome{width:18px;height:22px;line-height:60px;background:url(../images/icon_theme71.png) no-repeat}
+.mainCont span.flase{width:30px;height:30px;line-height:30px;display:block;position:absolute;bottom:42px;right:9px;background:url(../images/icon_theme0.png) center no-repeat #000;opacity:.8}
+.mainCont span.false{display:none}
+.mainCont .inner .add,.mainCont .inner .refresh{height:60px;line-height:60px;position:absolute;right:18px;font-size:14px;cursor:pointer}
+.mainCont .inner .add{background:url(../images/icon_add.png) 0 50% no-repeat #ED5052;width:auto;height:30px;line-height:30px;border-radius:15px;padding-left:2em;padding-right:1.2em;font-size:11.2px;color:#fff;margin-top:12px;top:3px}
+.mainCont .inner .refresh{color:#0c71ff;top:0}
+.mainCont .inner .history{position:absolute;right:64px;top:13px}
+.mainCont .inner .history a{width:12px;height:12px;display:inline-block;font-size:0;margin-right:5px;background-color:#bdbdbd;cursor:pointer;border-radius:25px}
+.mainCont .inner .history a.cur{background-color:#0c71ff}
+.iconlink.start.gray_star{background-image:url(../images/icon_qxshare.png)}
+#theme_collect_page,#themepage{display:none}

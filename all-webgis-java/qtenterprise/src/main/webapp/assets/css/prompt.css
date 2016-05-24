@@ -1,0 +1,75 @@
+.foot ul li,.top i{display:inline-block}
+.font_wei{font-family:"Microsoft YaHei"}
+.font_song{font-family:SimSun}
+.aa{width:100%;height:100%;overflow:hidden}
+.top{height:100px;line-height:100px;background-color:#3f92e8;padding-left:170px}
+.top i{width:449px;height:80px;vertical-align:middle;background:url(../images/p_logo.png) center no-repeat;margin-right:20px}
+#prompt_center{width:1000px;margin:0 auto}
+.foot{width:100%;margin:0 auto;position:fixed;bottom:0;text-align:center;height:115px;font-size:12px}
+.foot ul{margin:0 70px;height:35px;line-height:35px;border:1px solid #d8d7d6;border-left:0;border-right:0}
+.foot ul li{font-family:"Microsoft YaHei";color:#7f8082}
+.foot a{color:#7f8082;padding:0 25px}
+.foot p{height:55px;line-height:55px;color:#898888;font-family:SimSun}
+.email_activation,.email_activation .zccenter,.zc_fail .zccenter,.zc_success .zccenter{font-family:"Microsoft YaHei"}
+.zc_success{width:1000px;margin:0 auto;position:relative}
+.zc_success img{width:377px;height:256px;position:absolute;left:560px;bottom:40%;margin-bottom:-178px}
+.zc_success .zccenter{width:500px;font-size:14px;position:relative;height:120px;left:60px;top:50%;margin-top:-60px;z-index:99}
+.zc_success .zccenter i{width:45px;height:150px;background:url(../images/p_success.png) no-repeat;float:left;margin-right:35px}
+#procenter,.zc_fail{width:1000px;margin:0 auto}
+.zc_success .zccenter .tishi h3{color:#6480b4;font-size:18px;line-height:40px;text-shadow:2px 1px 0 #D1D1D1;-moz-text-shadow:2px 1px 0 #D1D1D1;-webkit-text-shadow:2px 1px 0 #D1D1D1}
+.zc_success .zccenter .tishi p{color:#787777;font-size:14px;line-height:30px;text-shadow:2px 1px 0 #E6E6E6;-moz-text-shadow:2px 1px 0 #E6E6E6;-webkit-text-shadow:2px 1px 0 #E6E6E6}
+.zc_success .zccenter .tishi p a{color:#3f92e8;font-weight:700}
+.zc_success .zccenter span{color:#888889;font-weight:700}
+.zc_fail{position:relative}
+.zc_fail img{height:384px;position:absolute;left:0;bottom:50%;margin-bottom:-192px}
+.zc_fail .zccenter{width:500px;font-size:14px;position:absolute;height:190px;left:470px;top:50%;margin-top:-95px;z-index:99}
+.zc_fail .zccenter h3{color:#6480b4;font-size:18px;height:60px}
+.zc_fail .zccenter p{color:#787777;font-size:14px;line-height:30px}
+.zc_fail .zccenter p.yh{color:#3f92e8}
+.zc_fail .zccenter p.hy{color:#93a2b9}
+.zc_fail .zccenter p.again{margin-top:28px}
+.zc_fail .zccenter p a{color:#7e7c7c;text-decoration:underline}
+.zc_fail .zccenter p span{color:#fff;background-color:#56c793;padding:12px 45px;margin-right:70px}
+.email_activation{width:1000px;font-size:14px;margin:0 auto;position:relative}
+.email_activation img{width:224px;height:252px;position:absolute;left:20%;margin-left:-112px;top:50%;margin-top:-176px}
+.email_activation .zccenter{width:500px;font-size:14px;position:absolute;height:190px;left:65%;margin-left:-250px;top:50%;margin-top:-95px;z-index:99;color:#6480b4}
+.email_activation .zccenter h3{font-size:18px;height:50px;font-weight:100}
+.email_activation .zccenter p{font-size:14px;line-height:30px}
+.email_activation .zccenter p.again{margin-top:28px}
+.email_activation .zccenter p a{text-decoration:underline;color:#6480b4}
+.email_activation .zccenter p span{color:#f95e13;background-color:#f3f3f3;padding:3px;font-size:12px;margin-left:35px}
+.qyzh_activation{width:1000px;margin:0 auto;position:relative}
+.qyzh_activation img{width:336px;height:297px;position:absolute;left:580px;top:50%;margin-top:-30px}
+.qyzh_activation .zccenter,.repassword{position:relative;font-family:"Microsoft YaHei"}
+.qyzh_activation img.passchangerr{width:317px;height:266px}
+.qyzh_activation .zccenter{width:500px;font-size:14px;height:120px;top:45%;left:80px;margin-top:-125px;z-index:99}
+.qyzh_activation .zccenter i{width:45px;height:150px;background:url(../images/p_fail.png) no-repeat;float:left;margin-right:35px}
+.qyzh_activation .zccenter .tishi h3{color:#6480b4;font-size:18px;height:40px}
+.qyzh_activation .zccenter .tishi p{color:#787777;font-size:14px;height:30px}
+.qyzh_activation .zccenter .tishi p a{color:#3f92e8;font-weight:700}
+.qyzh_activation .zccenter span{color:#888889;font-weight:700}
+.repassword{width:1000px;margin:0 auto}
+.repassword .zccenter,.repassword .zccenter1{color:#787777;width:500px;position:absolute;height:240px;top:50%;left:14px;margin-top:-120px;z-index:99}
+.repassword .zccenter h3,.repassword .zccenter1 h3{font-size:18px;height:40px;font-weight:700}
+.repassword .zccenter h3 span,.repassword .zccenter1 h3 span{color:#6480b4}
+.repassword .zccenter p,.repassword .zccenter1 p{line-height:35px;font-size:14px;width:500px;word-wrap:break-word}
+.repassword .zccenter p a,.repassword .zccenter1 p a{color:#e54419;font-size:18px;text-decoration:underline;font-weight:700}
+.repassword .zccenter p.link,.repassword .zccenter1 p.link{color:#308bee}
+.repassword img{width:472px;height:241px;position:absolute;left:500px;top:60%;margin-top:-120px}
+.resetpassword .topp,.resetpassword .topp1{width:804px;margin-left:-402px;top:25%;margin-top:-30px;left:50%;position:fixed}
+.resetpassword .topp{height:58px;background:url(../images/resetpass.jpg) center no-repeat}
+.resetpassword .topp1{height:77px;background:url(../images/resetmail.png) center no-repeat}
+.resetpassword .zccenter,.resetpassword .zccenter1{width:450px;height:260px;position:fixed;left:50%;margin-left:-225px;top:70%;margin-top:-130px;z-index:99}
+.resetpassword .zccenter li,.resetpassword .zccenter1 li{font-size:14px;font-family:"Microsoft YaHei";height:80px;line-height:30px}
+.resetpassword .zccenter li span,.resetpassword .zccenter1 li span{width:130px;display:inline-block;color:#4d4d4d;text-align:right}
+.resetpassword .zccenter li input,.resetpassword .zccenter1 li input{width:210px;margin-left:10px;padding-left:5px;height:35px;line-height:35px}
+.resetpassword .zccenter li input.email,.resetpassword .zccenter1 li input.email{width:295px}
+.resetpassword .zccenter li.ascertain,.resetpassword .zccenter li.next,.resetpassword .zccenter1 li.ascertain,.resetpassword .zccenter1 li.next{width:154px;color:#fff;background-color:#3f92e8;height:40px;line-height:40px;text-align:center;margin:10px auto 0;cursor:pointer}
+.cloud i.cloud1{position:fixed;top:30%;width:188px;height:71px;margin-top:-35.5px;left:70%;margin-left:-94px;background:url(../images/p_cloud1.png) center no-repeat}
+.cloud i.cloud2{position:fixed;top:20%;width:91px;height:38px;margin-top:-19px;left:33%;margin-left:-45px;background:url(../images/p_cloud2.png) center no-repeat}
+.errtip{color:red!important;text-indent:10em;line-height:2em;display:inline-block!important;width:450px!important;text-align:inherit!important}
+.fasong,.tishi a.re{padding:3px 8px;text-align:center}
+.fasong{background:#6487d2;color:#fff!important;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;cursor:pointer}
+.tishi em{color:#4c78d5;margin-right:20px}
+.tishi .ts{height:72px!important;line-height:26px}
+.tishi a.re{background:#4c78d5;color:#fff!important;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;margin-left:20px}

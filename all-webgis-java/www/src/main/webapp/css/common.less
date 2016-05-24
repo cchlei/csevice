@@ -1,0 +1,94 @@
+@import "tool";
+@import "vars";
+
+.reset;
+.toolClass;
+
+
+html body{
+	.mc{
+		.center;
+		width: @mw;
+	}
+}
+
+
+
+.navbar{
+	background-color: #115280;
+	.yahei;
+	z-index: 99;
+	.mc {
+		position: relative;
+		.lineh(@nav_h);
+		text-align: right;
+		.fs_scale(1.2);
+	}
+
+	@logow:205px;
+	.logo{
+		width: @logow;
+		&:extend(.__icon);
+		background-position: 0 50%;
+		position: absolute;
+		height: 100%;
+		left: 40px;
+		background-image: url(../images/logo_top.png);
+	}
+
+	.webname{
+		position: absolute;
+		top: 0;
+		left: @logow;
+		.lineh(@nav_h);
+		color: #A0D4F9;
+		font-size: 30px;
+		text-indent: 0.25em;
+		line-height: @nav_h * 1.2;
+		font-weight: 100;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.nav {
+		display: inline-block;
+		vertical-align: top;
+		.lineh(@nav_h);
+		a{
+			font-size: 18px;
+			display: inline-block;
+			vertical-align: top;
+			&:extend(.navbar .nav);
+			color: #ffffff;
+			margin: 0 1em;
+			font-weight: 100;
+			&.cur{
+				background: url("../images/nav_btn_bg.png") no-repeat 50% 100%;
+			}
+			&:hover {
+				color: @cl_link_light;
+			}
+		}
+	}
+
+	.btns{
+		padding-left: 1em;
+		color: #A0D4F9;
+		font-weight: 100;
+		font-family: Arial,@font_yahei;
+		height: @nav_h;
+		a,&{
+			&:extend(.navbar .nav);
+			line-height: @nav_h * 1.04 !important;
+			.fs_scale(1);
+			letter-spacing: -0.05em;
+		}
+		a{
+			color: #ffffff;
+			padding: 0 0.25em;
+			&:hover {
+				color: @cl_link_light;
+			}
+		}
+	}
+}

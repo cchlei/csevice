@@ -1,0 +1,49 @@
+archivesBaseName = 'userauth'
+version = '1.0'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': '天润云地图用户授权中心',
+                   'Implementation-Version': version
+    }
+}
+
+dependencies {
+
+	compile project(':tresb')
+	// Shiro SecurityFramework	
+	compile ('org.apache.shiro:shiro-core:1.2.3',
+	'org.apache.shiro:shiro-ehcache:1.2.3',
+	'org.apache.shiro:shiro-web:1.2.3',
+	'org.apache.shiro:shiro-quartz:1.2.3',
+	'org.apache.shiro:shiro-spring:1.2.3')
+	
+	// shiro-quartz dependency
+	compile 'commons-collections:commons-collections:3.2.1'
+	
+	//Shiro CAS
+	compile 'org.apache.shiro:shiro-cas:1.2.3'
+	compile 'org.jasig.cas.client:cas-client-core:3.4.0'
+	
+	compile 'commons-codec:commons-codec:1.10'
+
+	// Hibernate
+	compile 'org.hibernate:hibernate-core:4.3.10.Final'
+	compile 'org.hibernate:hibernate-entitymanager:4.3.10.Final'
+	compile 'org.hibernate:hibernate-ehcache:4.3.10.Final'
+	compile 'org.springframework:spring-jdbc:4.2.1.RELEASE'
+	compile 'org.springframework:spring-orm:4.2.1.RELEASE'
+	compile 'org.springframework:spring-tx:4.2.1.RELEASE'
+	compile 'org.springframework.data:spring-data-jpa:1.8.0.RELEASE'
+	compile 'org.hibernate:hibernate-validator:5.1.3.Final'
+	
+	// DBCP
+	compile 'commons-dbcp:commons-dbcp:1.4'
+	
+	compile 'redis.clients:jedis:2.7.3'
+	
+	//JWT(JSON WEB Token)
+	compile 'org.bitbucket.b_c:jose4j:0.4.4'
+	compile 'com.nimbusds:nimbus-jose-jwt:3.10'
+	//compile 'org.springframework.amqp:spring-rabbit:1.5.3.RELEASE'
+}

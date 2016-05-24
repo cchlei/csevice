@@ -1,0 +1,73 @@
+<!doctype html><html class="_register">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>天润云地图-注册</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/qtmap.css"/>
+    <script src="js/cseajs/csea$.js" id="seajsnode" main="_/register"></script>
+</head>
+<body>
+    <div class="root">
+        <div class="navbar">
+            <div class="mc">
+                <a href="http://www.trmap.cn" class="logo"></a>
+            </div>
+        </div>
+
+        <div class="page_content">
+            <div class="mc">
+                <h3 class="page_title">注册天润云地图账号 开启您的个人地图生活</h3>
+                <p class="type_switch">
+                    <a class="cur"> <i></i> 个人用户注册</a>
+                    <a href="register.jsp"><i></i> 企业用户注册</a>
+                </p>
+
+                <form action="http://user.trmap.cn/account/register" method="post">
+                    <ul>
+                        <li class="item">
+                            <em class="label">用户名:</em>
+                            <span class="input"><i class="iconfont">&#xe602;</i><input type="text" name="username"  ajax_valid_errmsg="用户名已经被占用" placeholder="长度6-20个字母或数字"/></span>
+                        </li>
+                        <li class="item">
+                            <em class="label">Email:</em>
+                            <span class="input"><i>&#xe605;</i><input name="email" ajax_valid type="text" ajax_valid_errmsg="邮箱已存在" placeholder="请输入邮箱地址"/></span>
+                        </li>
+                        <li class="item">
+                            <em class="label">密码:</em>
+                            <span class="input"><i>&#xe603;</i><input name="password" type="password" placeholder="长度6-20个字符"/></span>
+                        </li>
+                        <li class="item qiangdu">
+                            <em class="label">密码强度:</em>
+                            <span class="input">
+                                <span class="bar"></span>
+                                <b>强</b>
+                            </span>
+                        </li>
+                        <li class="item">
+                            <em class="label">密码确认:</em>
+                            <span class="input"><i>&#xe603;</i><input recheck="password" type="password" placeholder="请再一次输入密码"/></span>
+                        </li>
+
+                        <li class="item">
+                            <em class="label"></em>
+                            <span class="btn"><i>&#xe604;</i>提交</span>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+
+        <div class="bot">
+            <p>陕ICP备12000810-2号　版权所有：陕西天润科技股份有限公司</p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

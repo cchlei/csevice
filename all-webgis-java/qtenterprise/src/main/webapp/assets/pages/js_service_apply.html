@@ -1,0 +1,159 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>计算服务申请</title>
+    <link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../css/js_service_apply.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode" main="../js/js_service_apply"></script>
+    <script>
+        /*表单内容生成*/
+        var service_apply_from_ajax = "";
+
+        /*申请时间提交*/
+        var apply_time_ajax = "../data/sava_profile.json";
+    </script>
+
+</head>
+<body>
+<div class="hall">
+    <div class="fwtop">
+        <img src="../images/fw_logo.png" alt="" class="fwlogo">
+        <i class="wx"></i>
+        <img src="../images/fw_sq.png" alt="" class="fwsq">
+        <i class="topbj"></i>
+        <div class="user">
+            <img src="../images/fw_people.png" alt="">
+            <span class="name">用户名:潇湘雨</span>
+            <span class="fwquit">退出</span>
+        </div>
+    </div>
+    <div class="order">
+        <img src="../images/qpply1.jpg" class="jdimg">
+        <div class="applyusetime">
+            <p>
+                <em>申请使用时间</em>
+                <span class="input"><input  type="text" name="usetime" class="usetime" onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"/></span>
+                <span class="info">个月同服务</span>
+                <span class="yxq"></span>有效期
+            </p>
+            <p class="next">下一步</p>
+            <div class="clear"></div>
+        </div>
+        <div class="form">
+            <table class="dwxx">
+                <!--<tr>
+                    <td colspan="6" align="center" class="ordertitle" width="810">单位信息</td>
+                </tr>
+                <tr>
+                    <td rowspan="4" height="146" width="70" class="ordercenter"><p>服务申请方</p></td>
+                    <td width="100" class="tit1">单位名称</td>
+                    <td width="235">陕西煤航	非认证用户</td>
+                    <td rowspan="4" width="70" class="ordercenter"><p>服务发布方</p></td>
+                    <td width="100" class="tit1">单位名称</td>
+                    <td width="235">陕西煤航	非认证用户</td>
+                </tr>
+                <tr>
+                    <td class="tit1">联系人</td>
+                    <td>李刚</td>
+                    <td class="tit1">联系人</td>
+                    <td>李刚</td>
+                </tr>
+                <tr>
+                    <td class="tit1">邮箱</td>
+                    <td>87654321@213.com</td>
+                    <td class="tit1">邮箱</td>
+                    <td>87654321@213.com</td>
+                </tr>
+                <tr>
+                    <td class="tit1">电话</td>
+                    <td>029-87654321</td>
+                    <td class="tit1">电话</td>
+                    <td>029-87654321</td>
+                </tr>-->
+            </table>
+            <table class="row fwxx">
+                <!--<tr>
+                    <td colspan="4" align="center" class="ordertitle" width="810">服务信息</td>
+                </tr>
+                <tr>
+                    <td class="tit1 bg">服务名称</td>
+                    <td>公交站点</td>
+                    <td class="tit1 bg">发布时间</td>
+                    <td>2015-11-11</td>
+                </tr>
+                <tr>
+                    <td class="tit1 bg">更新时间</td>
+                    <td>2015-11-11</td>
+                    <td class="tit1 bg">截止时间</td>
+                    <td>2015-11-28</td>
+                </tr>
+                <tr>
+                    <td class="tit1 bg">范围</td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td class="tit1 bg">输入</td>
+                    <td></td>
+                    <td class="tit1 bg">输出</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tit1 bg">服务描述</td>
+                    <td colspan="3"></td>
+                </tr>-->
+            </table>
+            <table class="row sysj">
+                <tr>
+                    <td colspan="4" align="center" class="ordertitle" width="810">申请信息</td>
+                </tr>
+                <tr>
+                    <td class="tit1 bg">申请使用时间</td>
+                    <td colspan="3" class="sqsytime"></td>
+                </tr>
+            </table>
+            <p class="ddxq"><span class="back">上一步</span><span class="sure">确定</span></p>
+            <div class="clear"></div>
+        </div>
+        <div class="sqsucess">
+            <h3>服务申请提交成功</h3>
+            <div class="sucess">
+                <img src="../images/fwsuccess.png">
+                <p>恭喜您，您的服务申请已提交成功！该页面将在<span class="showbox"></span>秒内关闭，您也可以进入<a href="#">服务获取</a>页面查看订单情况。</p>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="sqfail">
+            <h3>服务申请提交失败</h3>
+            <div class="sucess">
+                <img src="../images/fwfail.png">
+                <p>对不起，您的服务申请失败！该页面将在<span class="showbox"></span>秒内关闭，您也可以进入<a href="#">重新申请</a>或联系该服务发布企业运维负责人。</p>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    //设置超时时间为10000秒钟
+    var timeout = 10000;
+    function show() {
+        var showbox = $(".showbox");
+        showbox.html(timeout);
+        timeout--;
+        if (timeout == 0) {
+            window.opener = null;
+            window.location.href = "index.html";
+        }
+        else {
+            setTimeout("show()", 1000);
+        }
+    }
+
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html> <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>所有专题</title>
+    <link rel="stylesheet" href="../css/comm.css"/>
+    <link rel="stylesheet" href="../css/mythemes.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode" main="__/js/theme_list"></script>
+    <script>
+        var pageCfg = {
+            /*专题数量*/
+            themes_nubmer:"../data/themes_number.json",
+
+            /*专题数据*/
+            theme_list:"../data/theme_list.json",
+
+            /*删除返回*/
+            theme_del:"../data/success.json"
+
+        };
+    </script>
+</head>
+<body>
+<div class="mainCont col3" ms-controller="themes">
+    <div class="inner">
+        <h1 class="page_name"><i class="ico_alltheme"></i>所有专题</h1>
+        <a href="addsubject.html" class="add">添加专题</a>
+        <div class="main" >
+            <div class="inner">
+                <div class="theme_grid type2" ms-each="object">
+                    <span ms-attr-sid="el.id">
+                        <a href="#" class="inner">
+                            <i class="place_holder"></i>
+                            <span class="label" ms-css-background-color="el.color"><i ms-css-border-top-color="el.color" ms-css-border-right-color="el.color"></i><b ms-css-border-left-color="el.color"></b>{{el.title}}</span>
+                            <span class="img"> <img ms-attr-src="el.images||default_img" alt=""> </span>
+                            <span ms-class-1="true:el.open" ms-class-2="flase:!el.open"></span>
+                            <span class="tx_block">
+                                <table>
+                                    <tr>
+                                        <td class="l">{{el.time}}</td>
+                                        <td class="r">
+                                            <i class="iconlink list">{{el.record}}</i>
+                                            <i class="iconlink start">{{el.collect}}</i>
+                                            <i class="iconlink del" ms-click="dele(el)">&nbsp;</i>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <ul id="themepage"></ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+// It is a less file.
+@import "../../css/tool";
+.cring{
+	.noSelect;
+	@shandow_h:18px;
+	@shadow_w:90%;
+	@shaodw_color:rgba(0,0,0,0.9);
+
+	position: relative;
+
+	>* {
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		background-color: #0088cc;
+		.tooo(@n)when(@n>0) {
+			&:nth-child(@{n}){
+				//background-color: `#@{n}@{n}0";
+				background-color: ~`(function(){
+					var s = "#";
+					for(var i=6;i--;){
+						s+=(Math.random()+"").substr(2,1)
+					}
+					return s;
+				})()`;
+			}
+			.tooo(@n - 1);
+		}
+	;
+
+
+		.tooo(5);
+		box-shadow: rgba(0,0,0,.3) 0 0 5px;
+
+		&:after{
+			content: "";
+			position: absolute;
+			height: @shandow_h;
+			width: @shadow_w;
+			left: 50%;
+			margin-left: -@shadow_w/2;
+			background-color: @shaodw_color;
+			bottom: -@shandow_h*1.5;
+			border-radius: 100%;
+			-webkit-filter:blur(15px);
+			-ms-filter:blur(15px);
+		}
+
+	}
+}

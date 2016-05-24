@@ -1,0 +1,38 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title></title>
+    <style type="text/css">
+        body{
+            background-color: #f0f0f0;
+        }
+    </style>
+    <script src="../cseajs/csea$.js"></script>
+    <script>
+        seajs.use("_/tgrid/_",function(tg){
+            var t = new tg("#tg",{
+
+            });
+
+            t.column(["咧1","咧2","咧3","咧4","咧5"]);
+
+            t.data([
+                ["td11","td12","td13","td14"],
+                ["td21","td22","td23","td24"],
+                ["td31","td32","td33","td34"],
+                ["td41","td42","td43","td44"],
+                ["td51","td52","td53","td54"],
+                ["td61","td62","td63","td64"],
+            ]);
+        });
+    </script>
+</head>
+<body>
+    <div id="tg"></div>
+</body>
+</html>

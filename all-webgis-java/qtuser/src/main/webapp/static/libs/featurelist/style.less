@@ -1,0 +1,52 @@
+@import "../../css/tool";
+
+@cl_green:#337AB7;
+@cl_sel:#27AE60;
+
+#featurelist{
+
+
+
+	table{
+		&.think-row{
+			td{
+				line-height: 18px;
+				.padding_v(5px);
+			}
+		}
+
+		&.table-hover>tbody>tr{
+
+
+			&:hover {
+				background-color: lighten(@cl_green,27%);
+				a,&{
+					color: #ffffff;
+				}
+				cursor: default;
+			}
+
+			/*&.selected{
+				background-color: @cl_sel !important;
+				&,a{
+					color: #ffffff;
+				}
+			}*/
+		}
+
+		th{
+			background-color: @cl_green;
+			color: #ffffff;
+			border-bottom: 2px solid @cl_green;
+			line-height: 21px;
+			.padding_v(9px);
+			&:after{
+				color: #fff;
+				font-weight: 100;
+			}
+
+		}
+	}
+
+
+}

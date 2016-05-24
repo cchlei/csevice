@@ -1,0 +1,13 @@
+archivesBaseName = 'tresb'
+version = 1.0
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'TirainCloud EnterpriseServiceBus FusionMiddleware',
+                   'Implementation-Version': version
+    }
+}
+
+dependencies {
+	compile 'org.springframework.amqp:spring-rabbit:1.5.3.RELEASE'
+}

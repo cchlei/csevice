@@ -1,0 +1,20 @@
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.fans_sub{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.fans_sub h2{font-size:16px;height:60px;line-height:60px;color:#57a3f2;padding-left:47px;cursor:pointer;font-weight:400}
+.fans_sub .focus_name{border-bottom:1px solid #BCCDDA;padding-left:47px;background:url(../images/icon_focus.png) 21px center no-repeat}
+.fans_sub .focus_name i{position:absolute;right:21px;font-size:24px;color:#666}
+.fans_sub .fans_name{background:url(../images/icon_fans.png) 22px center no-repeat;font-size:16px;color:#57a3f2;padding-left:47px;position:relative;cursor:pointer;margin-top:27px}
+.fans_sub a{margin-left:16px;display:block;border-radius:4px;height:36px;line-height:36px;width:160px;margin-bottom:12px;margin-top:12px;font-size:14px;text-align:center}
+.fans_sub .bg-focus{background:#f0f2f5;color:#666}
+.fans_sub .bg-all{background:#669fe4;color:#fff}
+.fans_all{color:#192330;font-size:18px;height:60px;line-height:60px;font-weight:500;text-indent:12px;border-bottom:1px solid #bccdda}
+.fans_framework{margin-left:22px;overflow:hidden;margin-top:9px}
+.fans_framework li{margin:12px 10px;background:#fff;border-radius:4px;font-size:14px;min-height:120px;float:left;min-width:250px}
+.fans_framework .fans_img{width:95px;height:71px;float:left;border-right:1px solid #cfcfcf;margin-top:22px;margin-left:26px}
+.fans_framework .fans_img p{width:71px;height:71px;border-radius:100%}
+.fans_framework .fans_img img{width:100%;height:100%;display:block;border-radius:100%}
+.fans_framework span{float:left;height:72px;margin-top:21px;margin-left:17px;margin-right:32px}
+.fans_framework i{color:#666;padding-top:12px;display:block}
+.fans_framework a{background:#57a3f2;border-radius:4px;height:30px;line-height:30px;display:block;color:#fff;text-align:center;margin-top:13px;width:80px}
+.fans_framework a:hover{background:#428de8}

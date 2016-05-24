@@ -1,0 +1,358 @@
+<!doctype html><html class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>天润云地图首页</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+
+<style type="text/css">
+    html {
+        -ms-touch-action: none;  /* 阻止windows Phone 的默认触摸事件 */
+    }
+    body,
+    div,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        list-style: none;
+    }
+    body {
+        width: 100%;
+        *cursor: default;
+        overflow: hidden;
+        font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial;
+    }
+    .btns a{
+        cursor: pointer;
+    }
+    .box{
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+    .gryy{
+        position: absolute;
+        left: 50%;
+        top: 70px;
+        width: 1000px;
+        margin-left: -500px;
+    }
+    .gryy_x{
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        width: 1000px;
+        margin-left: -500px;
+    }
+
+    #pageContain {
+        overflow: hidden;
+    }
+    .page {
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .contain {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: relative;
+        z-index: 0;
+    }
+    .current .contain,.slide .contain {
+        display: block;
+        text-align: center;
+    }
+    .current {
+        display: block;
+        z-index: 1;
+    }
+    .slide {
+        display: block;
+        z-index: 2;
+    }
+    .swipe {
+        display: block;
+        z-index: 3;
+        transition-duration: 0ms !important;
+        -webkit-transition-duration: 0ms !important;
+    }
+    .contain.fp-tableCell h3{
+        overflow: hidden;
+
+    }
+    .contain.fp-tableCell h3 em{
+        height: 46px;
+        background: url(images/tx_title_index_page3.png) no-repeat;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 70px;
+        width: 193px;
+        margin-left: -96.5px;
+    }
+    .contain.fp-tableCell h3 i{
+        background: url(images/page3_2.png) no-repeat;
+        height: 24px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        width: 679px;
+        margin-left: -339.5px;
+    }
+    #sec4 .effect-container{width:1200px;top:30%;left:50%;margin-left:-600px;text-align:center;position:absolute}
+    #sec4 .effect-container ul li{width:33.3%;margin:0 auto;text-align:center;float:left}
+    #sec4 .effect-container ul li span{font-size:24px;font-family:"微软雅黑";color:#6b6b6b}
+    #sec4 .gdhy{position:absolute;bottom:10%;left:50%;width:1200px;margin-left:-600px;text-align:center}
+    #sec4 .gdhy p{border-radius:50px;-moz-border-radius:50px;-ms-border-radius:50px;-o-border-radius:50px;-webkit-border-radius:50px;width:170px;height:46px;line-height:46px;border:1px solid #000;margin:0 auto}
+    #sec4 .gdhy p a{color:#868383}
+
+    .page1 {
+        background: url(images/ie_page1.png) 50% 50% no-repeat;
+    }
+    .page2 {
+        background: url(images/ie_page2.png) 50% 50% no-repeat;
+    }
+    .page3 {
+        background: url(images/ie_page3.png) 50% 50% no-repeat;
+    }
+    .page4 {
+        background: url(images/ie_page4.png) 50% 50% no-repeat;
+    }
+    .page5 {
+        background: url(images/ie_page5.png) 50% 50% no-repeat;
+    }
+    #navBar {
+        z-index: 3;
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        height: 250px;
+        margin-top: -125px;
+    }
+    #navBar .active {
+        width: 12px;
+        height: 12px;
+        position: relative;
+        left: 0px;
+    }
+    #navBar li {
+        cursor: pointer;
+        margin-bottom: 10px;
+        transition: all .7s ease;
+        border-radius: 50%;
+        line-height: 40px;
+        text-align: center;
+        width: 6px;
+        height: 6px;
+        background-color: #333;
+        position: relative;
+        left: 3px;
+    }
+    .cr{
+        position: fixed;
+        bottom: 24px;
+        color: #fff;
+        font-size: 15px;
+        font-family:"微软雅黑";
+        width:600px;
+        text-align: center;
+        margin-left: -300px;
+        left: 50%;
+    }
+    .cr a{
+        color: #fff;
+        margin-right: 6px;
+    }
+    .cr p{
+        margin-top: 6px;
+    }
+    .cr .weibo i{
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        background-image: url(images/icon_cotact.png);
+        margin-right: .5em;
+        margin-bottom: -2px;
+        top: 5px;
+        background-position: 0% -58px;
+    }
+    .qq i{
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        background-image: url(images/icon_cotact.png);
+        margin-right: .5em;
+        margin-bottom: -2px;
+        top: 5px;
+        background-position: 50% -27px;
+        position: relative;
+        top: -3px;
+    }
+    .mail i{
+        background-position: 50% 0;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        background-image: url(images/icon_cotact.png);
+        margin-right: .5em;
+        margin-bottom: -2px;
+        top: 5px;
+    }
+
+
+</style>
+</head>
+<!--[if lte IE 7]>
+<body scroll="no">
+<![endif]-->
+<!--[if gt IE 7]><!-->
+<body class="_index">
+<!--<![endif]-->
+<div id="pageContain">
+
+    <div class="page page1 current">
+        <div class="contain">
+            <div class="navbar">
+                <div class="mc">
+                    <a href="#" class="logo"></a>
+					<span class="nav">
+						<a href="#">个人</a>
+						<a href="#">企业</a>
+						<a href="#">行业</a>
+						<a href="#">云服务</a>
+						<a href="#">开发者</a>
+						<a href="#">联系我们</a>
+					</span>
+					<span class="btns">
+                        <a href="https://login.trmap.cn/login?service=http://www.trmap.cn/cas" target="_self">登录</a>
+                        <a href="http://a.trmap.cn/p/regist.jsp">注册</a>
+					</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page page2">
+        <div class="contain">
+            <div class="box">
+                <div class="gryy">
+                    <img src="images/page2_1.png">
+                </div>
+                <div class="gryy_x">
+                    <img src="images/page2_2.png">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="page page3"  id="sec3">
+        <div class="contain fp-tableCell">
+            <h3>
+                <em></em><i></i>
+            </h3>
+        </div>
+    </div>
+
+    <div class="page page4"  id="sec4">
+        <div class="contain">
+            <div class="gryy">
+                <img src="images/page4_1.png">
+            </div>
+            <div class="effect-container">
+                <ul>
+                    <li>
+                        <a href="http://www.trmap.cn/theme_history.html" style="display: block;text-align: center;">
+                             <img class="img-style row1" src="images/page4_2.png" style="text-align: center" /><span style="display: block;text-align: center;">历史文化</span>
+                         </a>
+                    </li>
+                    <li>
+                        <a href="http://www.trmap.cn/theme_community.html" style="display: block;text-align: center;">
+                            <img class="img-style row2" src="images/page4_3.png" /><span style="display: block;text-align: center;">数字社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.trmap.cn/theme_travel.html" style="display: block;text-align: center;">
+                            <img class="img-style row3" src="images/page4_4.png"  style="text-align: center"  /><span style="display: block;text-align: center;">智慧旅游</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="gdhy">
+                <p>
+                    <a href="http://www.trmap.cn/">更多行业 >></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page page5"  id="sec5">
+        <div class="contain  fp-tableCell">
+            <div class="gryy">
+                <img src="images/page5_1.png">
+            </div>
+            <div class="cr">
+                <a href="http://weibo.com/trgis" target="_blank" class="weibo"><i></i>天润科技微博</a>
+                 <a href="#" class="qq"><i></i>178607699</a>
+                 <a href="mailto:contact@trmap.cn" class="mail"><i></i>contact@trmap.cn</a>
+                 <p>陕ICP备12000810号 版权所有：<a href="//trgis.com" target="_blank">陕西天润科技股份有限公司</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<ul id="navBar">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script type="text/javascript" src="libs/fullpage/fullPage.min.js"></script>
+<script type="text/javascript">
+
+    var runPage;
+
+    runPage = new FullPage({
+
+        id : 'pageContain',                            // id of contain
+        slideTime : 800,                               // time of slide
+        continuous : false,                            // create an infinite feel with no endpoints
+        effect : {                                     // slide effect
+            transform : {
+                translate : 'Y',				   // 'X'|'Y'|'XY'|'none'
+                scale : [.1, 1],				   // [scalefrom, scaleto]
+                rotate : [0, 0]				       // [rotatefrom, rotateto]
+            },
+            opacity : [0, 1]                       // [opacityfrom, opacityto]
+        },
+        mode : 'wheel,touch,nav:navBar',               // mode of fullpage
+        easing : 'ease'                                // easing('ease','ease-in','ease-in-out' or use cubic-bezier like [.33, 1.81, 1, 1];
+
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+rootProject.name = 'trmap'
+
+include 'www'
+include 'system'
+include 'system-service'
+include 'trmap-account'
+
+include 'userauth'
+include 'hstore-api'
+
+include 'core'
+include 'qtuser'
+include 'usermobile-api'
+
+include 'enterprise-core'
+include 'qtenterprise'
+include 'enterprise-api'
+
+include 'trmap-personal'
+include 'trmap-personal-webapp'
+
+include 'wxservice'
+include 'tresb'
+

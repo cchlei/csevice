@@ -1,0 +1,9 @@
+<html>
+<head>通知</head>
+<body>
+	<h1>天润云地图</h1>
+	<hr>
+	${name},您好！<br>
+	${msg}
+</body>
+</html>

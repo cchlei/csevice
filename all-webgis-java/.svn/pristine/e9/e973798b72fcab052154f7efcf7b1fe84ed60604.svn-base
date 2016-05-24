@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Test Summary</title>
+<link href="css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<script src="js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Test Summary</h1>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">35</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">35</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.005s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Packages</a>
+</li>
+<li>
+<a href="#tab2">Classes</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">TestAttachfileService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html#attachfileDao">attachfileDao</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">TestAttachfileService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html#clearAttachfileById">clearAttachfileById</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">TestAttachfileService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html#deleteAttachfile">deleteAttachfile</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">TestAttachfileService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html#findAttachfileByOssid">findAttachfileByOssid</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">TestAttachfileService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html#getByGraphicsId">getByGraphicsId</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">TestAttachfileService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html#getUsedDataSpace">getUsedDataSpace</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">TestAttachfileService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html#saveAttachfileOssid">saveAttachfileOssid</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">TestAttachfileService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html#testAttachfileList">testAttachfileList</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestBaseMapService.html">TestBaseMapService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestBaseMapService.html#deleteBaseMapByMapId">deleteBaseMapByMapId</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestBaseMapService.html">TestBaseMapService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestBaseMapService.html#getBaseMapByMapId">getBaseMapByMapId</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestBaseMapService.html">TestBaseMapService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestBaseMapService.html#testAddBaseMap">testAddBaseMap</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html">TestMapGraphicsService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html#testGraphicsList">testGraphicsList</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html">TestMapGraphicsService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html#testdelete">testdelete</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html">TestMapGraphicsService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html#testedit">testedit</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html">TestMapGraphicsService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html#testfindAll">testfindAll</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html">TestMapGraphicsService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html#testfindById">testfindById</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html">TestMapGraphicsService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html#testfindByUserMap">testfindByUserMap</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html">TestMapGraphicsService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html#testsave">testsave</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestServiceRecordService.html">TestServiceRecordService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestServiceRecordService.html#countByDaysAndId">countByDaysAndId</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestServiceRecordService.html">TestServiceRecordService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestServiceRecordService.html#createAccessRecord">createAccessRecord</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestServiceRecordService.html">TestServiceRecordService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestServiceRecordService.html#testFindPageList">testFindPageList</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSuggestionService.html">TestSuggestionService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSuggestionService.html#getByGraphicsId">getByGraphicsId</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSuggestionService.html">TestSuggestionService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSuggestionService.html#testAttachfileList">testAttachfileList</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html">TestSysMessageService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html#findById">findById</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html">TestSysMessageService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html#findByUserMap">findByUserMap</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html">TestSysMessageService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html#findSysMessages">findSysMessages</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html">TestSysMessageService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html#testdelete">testdelete</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html">TestSysMessageService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html#testedit">testedit</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html">TestSysMessageService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html#testfindAll">testfindAll</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html">TestSysMessageService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html#testsave">testsave</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html">TestUserMapService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html#deleteUserMap">deleteUserMap</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html">TestUserMapService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html#setShareUrl">setShareUrl</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html">TestUserMapService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html#testFindPageList">testFindPageList</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html">TestUserMapService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html#testcreateUserMap">testcreateUserMap</a>
+</li>
+<li>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html">TestUserMapService</a>.
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html#testshareUserMap">testshareUserMap</a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
+<h2>Packages</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Tests</th>
+<th>Failures</th>
+<th>Ignored</th>
+<th>Duration</th>
+<th>Success rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="failures">
+<a href="packages/test.com.trgis.qtmap.qtuser.html">test.com.trgis.qtmap.qtuser</a>
+</td>
+<td>35</td>
+<td>35</td>
+<td>0</td>
+<td>0.005s</td>
+<td class="failures">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Tests</th>
+<th>Failures</th>
+<th>Ignored</th>
+<th>Duration</th>
+<th>Success rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="failures"/>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestAttachfileService.html">test.com.trgis.qtmap.qtuser.TestAttachfileService</a>
+<td>8</td>
+<td>8</td>
+<td>0</td>
+<td>0.002s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures"/>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestBaseMapService.html">test.com.trgis.qtmap.qtuser.TestBaseMapService</a>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures"/>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestMapGraphicsService.html">test.com.trgis.qtmap.qtuser.TestMapGraphicsService</a>
+<td>7</td>
+<td>7</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures"/>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestServiceRecordService.html">test.com.trgis.qtmap.qtuser.TestServiceRecordService</a>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures"/>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSuggestionService.html">test.com.trgis.qtmap.qtuser.TestSuggestionService</a>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures"/>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestSysMessageService.html">test.com.trgis.qtmap.qtuser.TestSysMessageService</a>
+<td>7</td>
+<td>7</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures"/>
+<a href="classes/test.com.trgis.qtmap.qtuser.TestUserMapService.html">test.com.trgis.qtmap.qtuser.TestUserMapService</a>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="failures">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.4</a> at 2016-1-12 18:46:57</p>
+</div>
+</div>
+</body>
+</html>

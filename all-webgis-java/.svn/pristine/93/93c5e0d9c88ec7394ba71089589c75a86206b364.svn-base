@@ -1,0 +1,95 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title></title>
+    <link rel="stylesheet" href="css/login.css"/>
+<!--
+    <script src="../js/cseajs/csea$.js" id="seajsnode"></script>
+-->
+    <script src="http://libs.useso.com/js/jquery/1.8.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="illu"><img src="images/login_bg.png" alt=""></div>
+    <form id="——fm1"  action="/cas/login?service=http%3A%2F%2Fwww.trmap.cn%2Fqtplatform%2Flogin.jsp"
+          method="post">
+        <div class="login-area" data-unuse="1">
+            <div class="title" data-unuse="1">天润云平台账号登录</div>
+            <div class="tang-pass-login" data-unuse="1">
+
+                <p style="padding: 20px 0px 17px 0px;position: relative;">
+                    <span class="u_logo"></span>
+                    <span class="input">
+                    <i class="user"></i>
+                    <input id="username" name="username" class="ipt" tabindex="1" placeholder="请输入用户名或邮箱" type="text" value="" size="25" autocomplete="off"> </span>
+                </p>
+
+                <p style="position: relative;">
+                    <span class="p_logo"></span>
+                    <input id="password" name="password" class="ipt" tabindex="2" placeholder="请输入密码" type="password" value="" size="25" autocomplete="off">
+                </p>
+
+                <p style="margin-top:17px;">
+                    <input id="captcha" name="captcha" class="ipt_ma" tabindex="3" type="text" value="" size="5" maxlength="5" autocomplete="off">
+                    <span>
+                        <img title="看不清点击切换" class="safecode_img" alt="必须输入验证码。" onclick="this.src='images/captcha.jpg?'+Math.random()" src="images/captcha.jpg">
+                    </span>
+                </p>
+
+                <p style="margin-top:10px; height:28px; line-height:28px;">
+                    <input id="warn" name="warn" style="vertical-align: middle;" value="true" tabindex="3" accesskey="w"
+                           type="checkbox">
+                    <label for="warn" style="font-size: 14px;">转向其他站点前提示我。</label>
+                    <input type="hidden" name="lt" value="LT-121-QLzqMSrkbwLGKHbr7GSP93GgOo1W7j-cas.qtmap.org">
+                    <input type="hidden" name="execution" value="e2s1">
+                    <input type="hidden" name="_eventId" value="submit">
+                    <a href="http://www.trmap.cn/ucenter/jsp/userinfo/retrieve_password.jsp" class="forget_pass">忘记密码？</a>
+                </p>
+                <input class="pass-button" name="submit" accesskey="l" value="登 录" tabindex="4" type="submit">
+                <a href="http://www.trmap.cn/register.jsp" class="forget_pass"
+                   style=" margin-top:10px;">立即注册</a>
+
+                <div class="tang-pass-login-phoenix">
+                    <div class="pass-phoenix-title">可以使用以下方式登录</div>
+                </div>
+                <div class="pass-phoenix-btn clearfix">
+                    <ul class="bd-acc-list">
+                        <li class="bd-acc-qzone"><a class="phoenix-btn-item" href="#" title="QQ帐号">QQ帐号</a></li>
+                        <li class="bd-acc-tsina"><a class="phoenix-btn-item" href="#" title="新浪微博">新浪微博</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="bottom">
+        <div class="mc" data-unuse="1">
+            <em>陕ICP备12000810号　版权所有：陕西天润科技股份有限公司</em>
+            <a class="ibtn qq" href="#"></a>
+            <a class="ibtn wx" href="#"></a>
+            <a class="ibtn wb" href="#"></a>
+            <a class="ibtn ph" href="#"></a>
+        </div>
+    </div>
+
+    <script>
+        $(".login-area").each(function(i){
+            var me=$(this);
+            me.css({
+                marginTop:-me.outerHeight()/2,
+                marginLeft:-me.outerWidth()/2
+            });
+        });
+
+
+        if(/#lite/.test(location.href)){
+            $("html").addClass("lite");
+        }
+    </script>
+</body>
+</html>

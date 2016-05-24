@@ -1,0 +1,124 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+<title>元数据编辑_地图保存</title>
+<link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../css/metadata_release.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode"  main="../js/metadata_release"></script>
+    <script>
+        var uploader_conf = [
+            //图层图片
+            {server:"http://2betop.net/fileupload.php"}
+        ];
+    </script>
+</head>
+<body>
+<div class="navright">
+    <div class="maptop"><em>元数据编辑</em><span>退出</span></div>
+    <form class="mapupdata" action="../data/form_submit_json.txt" method="get">
+        <input type="hidden" name="savemode" value="1" id="savemode"/>
+        <p>
+            <em>图层名称：</em>
+            <span><input  type="text" name="imgname"/></span>
+        </p>
+        <p>
+            <em>图层图片：</em>
+            <span class="input"><input type="text" class="tctp" readonly="true" /></span>
+            <span class="info">
+                <a href="javascript:;" id="" class="uploader">上传</a>
+            </span>
+        </p>
+        <p>
+            <em class="fwmsname">地图描述：</em>
+            <span><textarea name="fwms"></textarea></span>
+            <em class="grey">描述不超过200个字符</em>
+        </p>
+        <p>
+            <em>接口类型：</em>
+            <span>
+                <input name="interfacetype" class="interfacetype" id="typerest" type="radio" value="1">rest 
+                <input name="interfacetype" class="interfacetype" id="typeogc" type="radio" value="2">ogc
+            </span>
+        </p>
+        <p class="biaoqian">
+            <em>标签：</em>
+            <span class="span">
+                <input name="label" class="label" type="checkbox" value="1" ><label>餐饮</label>
+                <input name="label" class=" label" type="checkbox" value="2" ><label>购物</label>
+                <input name="label" class=" label" type="checkbox" value="3" ><label>住宿</label>
+                <input name="label" class=" label" type="checkbox" value="4" ><label>出行</label>
+                <input name="label" class=" label" type="checkbox" value="5" ><label>文体娱乐</label>
+                <input name="label" class=" label" type="checkbox" value="6" ><label>金融服务</label>
+                <input name="label" class=" label" type="checkbox" value="7" ><label>生活服务</label>
+                <input name="label" class=" label" type="checkbox" value="8" ><label>其他</label>
+            </span>
+        </p>
+        <p><em>行政区划级别：</em>
+            <span id="distpicker">
+                  <select name="province"></select>
+                  <select name=""></select>
+<!--
+                  <select data-district="&#45;&#45;&#45;&#45; 选择区 &#45;&#45;&#45;&#45;"></select>
+-->
+            </span>
+            <input type="hidden" name="area">
+            <script>
+                var default_area = {
+                    province: "陕西省",
+                    city: "渭南市",
+                    placeholder:false
+                };
+                var arae = $("input:last");
+                var selecs = $("#distpicker>select");
+                selecs.change(function(){
+                    setTimeout(area_field_digest,888);
+                });
+
+                setTimeout(area_field_digest,1500);
+
+                function area_field_digest(){
+                    arae.val(selecs.map(function(i,el){
+                        return el.value
+                    }).toArray().join(" "));
+                }
+            </script>
+        </p>
+        <p><em>有效期：</em>
+            <span>
+                <select  name="year">
+                    <option value="">请选择有效期</option>
+                    <option value="1">一年</option>
+                    <option value="2">两年</option>
+                    <option value="3">三年</option>
+                    <option value="4">五年</option>
+                </select>
+            </span>
+        </p>
+        <div class="saveupdate">
+            <span class="mapsave" type="submit" __onclick="$(this).parents('form').submit()">保存</span>
+            <span class="maprelease"  __onclick="$(this).parents('form').submit()">发布</span>
+        </div>
+    </form>
+    <div class="releaselayer" >
+            <h3>发布协议</h3>
+            <p>【审慎阅读】<span>当您在发布前，应当认真阅读以下协议。</span>请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：</p>
+            <p>1、发布协议发布协议发布协议发布协议发布协议发布协；</p>
+            <p>2、发布协议发布协议发布协议发布协议发布协议发布协；</p>
+            <p>3、发布协议发布协议发布协议发布协议发布协议发布协。</p>
+            <p>1、发布协议发布协议发布协议发布协议发布协议发布协；</p>
+            <p>2、发布协议发布协议发布协议发布协议发布协议发布协；</p>
+            <p>3、发布协议发布协议发布协议发布协议发布协议发布协。</p>
+            <p><span>如果您对协议有任何疑问，可向平台客服咨询。</span></p>
+            <p>【特别提示】<span>当您按照编辑页面提示信息填写编辑后，阅读并同意协议且完成所有程序有，即表示您已充分阅读、理解并接受协议的全部内容。</span></p>
+            <p>阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应理解停止发布程序。</p>
+            <p class="agreebutton"><span class="calcenagree">取消协议</span><span  class="agreement">同意协议</span></p>
+    </div>
+
+</div>
+</body>
+</html>

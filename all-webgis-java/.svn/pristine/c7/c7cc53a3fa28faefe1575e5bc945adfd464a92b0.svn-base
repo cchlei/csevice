@@ -1,0 +1,11 @@
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+._sugg{font-size:14px;padding:24px;background-color:#f9f9f9;font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+._sugg h3{text-align:center;font-size:1.7em;line-height:3em;font-weight:100;background-color:#F3F3F3;color:#333;margin:-24px 0 0 -24px;padding-left:24px;padding-right:24px;width:100%}
+._sugg em{font-style:normal;display:inline-block;text-align:right;vertical-align:top;width:6em}
+._sugg>p{line-height:2.4}
+._sugg input,._sugg textarea{padding:6px;border:1px solid #999;width:39em;vertical-align:top;outline:0}
+._sugg input{line-height:1.2em;padding-top:1em;padding-bottom:1em}
+._sugg textarea{height:12em;resize:none}
+._sugg .submit{display:block;line-height:2em;font-size:1.4em;color:#fff;text-align:center;font-style:normal;background-color:#0074ED;width:auto;cursor:pointer;margin-top:24px}
+._sugg .botline{display:block;width:100%;height:5px;padding-left:24px;padding-right:24px;margin-left:-24px;background-color:#666;margin-bottom:-24px;margin-top:24px}

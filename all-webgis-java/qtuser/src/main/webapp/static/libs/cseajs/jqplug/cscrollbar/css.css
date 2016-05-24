@@ -1,0 +1,41 @@
+.cscroller {
+  position: fixed;
+  width: 10px;
+  top: 0;
+  right: 2px;
+  height: 100%;
+  z-index: 500;
+}
+.cscroller .csbar {
+  height: 80px;
+  background-color: #333;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#cscrollMask {
+  z-index: 499;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  display: none;
+}
+.noSelect {
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  user-select: none;
+}

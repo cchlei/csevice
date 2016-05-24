@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd"
+	default-lazy-init="false">
+
+	<description>Spring Shiro配置</description>
+
+	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
+	<context:component-scan base-package="com.trgis">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
+
+	<!-- 会话ID生成器 -->
+	<bean id="sessionIdGenerator"
+		class="org.apache.shiro.session.mgt.eis.JavaUuidSessionIdGenerator" />
+
+	<!-- Redis Session缓存管理器 -->
+	<bean id="redisManager" class="com.trgis.trmap.userauth.session.RedisManager">
+		<property name="host" value="117.34.70.41" />
+		<property name="port" value="6379" />
+		<property name="expire" value="1800" /><!-- 过期时间，单位为秒 -->
+		<property name="timeout" value="1800000" /><!-- 连接池超时，单位为毫秒 -->
+		<property name="password" value="jOvvcTsNG4JAJjCXcCxyEH8lEBy7ZpM8" />
+	</bean>
+
+	<!-- 会话DAO -->
+	<bean id="sessionDAO" class="com.trgis.trmap.userauth.session.RedisSessionDAO">
+		<property name="sessionIdGenerator" ref="sessionIdGenerator" />
+		<property name="redisManager" ref="redisManager" />
+	</bean>
+
+	<!-- 会话验证调度器 -->
+	<bean id="sessionValidationScheduler"
+		class="org.apache.shiro.session.mgt.quartz.QuartzSessionValidationScheduler">
+		<property name="sessionValidationInterval" value="1800000" />
+		<property name="sessionManager" ref="sessionManager" />
+	</bean>
+
+	<!-- 会话管理器 -->
+	<bean id="sessionManager"
+		class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+		<property name="sessionDAO" ref="sessionDAO" />
+		<property name="globalSessionTimeout" value="1800000" />
+		<property name="deleteInvalidSessions" value="true" />
+		<property name="sessionValidationSchedulerEnabled" value="true" />
+		<property name="sessionValidationScheduler" ref="sessionValidationScheduler" />
+		<property name="sessionIdCookie.domain" value="${sessionId.cookie.domain}" />
+		<property name="sessionIdCookie.name" value="jsid" />
+		<property name="sessionIdCookie.path" value="/"></property>
+	</bean>
+
+	<!-- Shiro Configuration -->
+	<bean id="casRealm" class="com.trgis.trmap.userauth.realm.UserCASRealm">
+		<property name="casServerUrlPrefix" value="${cas.realm.casServerUrlPrefix}"></property>
+		<property name="casService" value="${cas.realm.casService}"></property>
+	</bean>
+
+	<!-- 采用Ehcache缓存 -->
+	<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<property name="cacheManagerConfigFile" value="classpath:ehcache-shiro.xml"></property>
+	</bean>
+
+	<bean id="casSubjectFactory" class="org.apache.shiro.cas.CasSubjectFactory" />
+
+	<!-- 安全管理器 -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="casRealm" />
+		<property name="sessionManager" ref="sessionManager"></property>
+		<property name="subjectFactory" ref="casSubjectFactory"></property>
+		<property name="cacheManager" ref="cacheManager"></property>
+	</bean>
+
+	<!-- 改为自定义Filter -->
+	<bean id="casFilter" class="org.apache.shiro.cas.CasFilter">
+		<property name="failureUrl" value="/error.jsp"></property>
+	</bean>
+
+	<!-- shiro退出并且退出单点登录 否则shiro下次进入时还会接收到单点登录的票据 -->
+	<bean id="logoutFilter" class="org.apache.shiro.web.filter.authc.LogoutFilter">
+		<property name="redirectUrl" value="${shiro.logout.redirectUrl}" />
+	</bean>
+
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager"></property>
+		<property name="loginUrl" value="${shiro.cas.loginUrl}"></property>
+		<property name="filters">
+			<map>
+				<entry key="casFilter" value-ref="casFilter"></entry>
+				<entry key="logoutFilter" value-ref="logoutFilter"></entry>
+			</map>
+		</property>
+		<property name="filterChainDefinitions">
+			<value>
+				/cas = casFilter
+				/logout = logoutFilter
+				/favicon.ico = anon
+				/assets/** = anon
+				/** = authc
+			</value>
+		</property>
+	</bean>
+
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+	<bean
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod"
+			value="org.apache.shiro.SecurityUtils.setSecurityManager" />
+		<property name="arguments" ref="securityManager" />
+	</bean>
+
+
+	<!-- 本地开发测试环境配置 -->
+	<beans profile="dev">
+		<context:property-placeholder
+			ignore-unresolvable="true" location="classpath*:/test.properties" />
+	</beans>
+
+	<!-- 生产环境配置 -->
+	<beans profile="production">
+		<context:property-placeholder
+			ignore-unresolvable="true" location="classpath*:/application.properties" />
+	</beans>
+</beans>

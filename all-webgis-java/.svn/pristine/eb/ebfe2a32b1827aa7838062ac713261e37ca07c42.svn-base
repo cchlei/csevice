@@ -1,0 +1,11 @@
+cas.realm.casServerUrlPrefix=https://login.trmap.cn/
+cas.realm.casService=http://www.trmap.cn/cas
+shiro.cas.loginUrl=https://login.trmap.cn?service=http://www.trmap.cn/cas
+shiro.logout.redirectUrl=https://login.trmap.cn/logout?service=http://www.trmap.cn
+
+user.center.url=http://user.trmap.cn
+ent.center.url=http://ent.trmap.cn
+user.register.action=http://user.trmap.cn/register
+ent.register.action=http://ent.trmap.cn/register
+
+sessionId.cookie.domain=trmap.cn

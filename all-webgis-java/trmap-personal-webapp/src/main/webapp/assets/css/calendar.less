@@ -1,0 +1,570 @@
+@import "tool";
+@import "vars";
+
+.toolClass;
+
+html,body{
+	overflow: hidden !important;
+}
+
+.mainCont>.inner>.main{
+	overflow-y: auto !important;
+	.main_table_cont{
+		min-height: 780px;
+		height: 98%;
+	}
+}
+
+.mainCont>.inner>.main>.inner{
+	padding-right: 0;
+}
+
+.calendar_nav_cont{
+	position: absolute;
+	top:@page_name_h + @g;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+
+.calendar_nav{
+	top:@top_height;
+	height: 100%;
+	overflow-y: auto;
+
+	@indent:@g*2;
+	>li{
+		margin-bottom:@g;
+		overflow: hidden;
+		&:extend(.noSelect);
+		>h3{
+			margin-bottom:@g/2;
+			font-size: 16px;
+			font-weight: 100;
+			padding-left:@indent;
+			cursor: default;
+			.yahei;
+
+			>i{
+				.triangle(8px,bottom,@cl_gray_ccc);
+				margin-right:@g/2;
+				position: relative;
+				//top: -2px;
+			}
+			>b{
+				float: right;
+				margin-right:@g;
+				font-size: 140%;
+				margin-top: -5px;
+				&:hover {
+					color: #000;
+					cursor: pointer;
+				}
+			}
+			&:hover {
+				
+			}
+		}
+		a{
+			display: block;
+			line-height: 1.7em;
+			padding: 0.2em;
+			padding-left:@indent + @g/3;
+		  	font-size: 14px;
+			>i{
+				._size_lh(@g);
+				display: inline-block;
+				vertical-align: middle;
+				background-color: @cl_gray_ccc;
+				margin-right:0;
+				border-radius: 50%;
+				position: relative;
+				top: -1px;
+			}
+			&:hover {
+				cursor: pointer;
+				background-color: #f0f0f0;
+			}
+		}
+
+		&.collapse{
+
+		}
+	}
+}
+
+
+.page_name{
+	.rr{
+		>*{
+			cursor: default;
+			&:hover {
+				._alpha(95);
+			}
+		}
+		.bg-color-6{
+			.padding_h(1.5em);
+		}
+	}
+	.cl_label{
+		position: relative;
+		top: -2px;
+	}
+	.today{
+		color: #333333;
+	}
+
+	.date_arrow{
+		&:extend(.noSelect);
+		text-indent: 0;
+		display: inline-block;
+		line-height: 1.5em;
+		border: 1px solid @cl_gray_ccc;
+		.padding_h(0.5em);
+
+		&.date_prev,&.date_next{
+			position: relative;
+			z-index: 5;
+			background-color: @cl_blue_dark;
+		}
+
+
+		&.date_prev{
+			margin-right: -0.5em;
+		}
+
+		&.date_next{
+			margin-left: -0.5em;
+		}
+
+
+		&:hover {
+			color: #fff;
+			border-color: @cl_6;
+			background-color: @cl_6;
+			cursor: default;
+			i{
+				border-top-color: #fff;
+			}
+		}
+	}
+
+	.date_picker {
+		&:extend(.page_name .date_arrow all);
+		position: relative;
+		.padding_h(1em);
+		i {
+			.triangle(8px, bottom, #333);
+		}
+
+	}
+	#date_picker{
+		._alpha(0);
+		position: absolute;
+		&:extend(.expandin);
+	}
+	.rr{
+		float: right;
+		margin-right:@g;
+
+
+	}
+}
+
+.recoder_shower{
+	position: absolute;
+	&:extend(.yahei);
+	top:0;
+	left:@g;
+	right:0;
+	//padding-right:@g;
+	bottom:@g;
+	color: #ffffff;
+	height: 100%;
+
+	a{
+		color: #ffffff;
+	}
+
+	>.loading{
+		position: absolute;
+		z-index: 9;
+		&:extend(.expandin);
+		background-color: @cl_blue;
+		&:extend(.__icon);
+		background-image: url(../libs/cseajs/jqplug/layer/skin/default/loading-1.gif);
+	}
+
+	.item{
+		position: relative;
+		overflow-y: auto;
+		height: 100%;
+		padding-right:@g;
+		padding-top:@g;
+		>table{
+			width: 100%;
+		}
+		td{
+			vertical-align: top;
+		}
+		.user{
+			text-align: center;
+			>a{
+				display: block;
+			}
+			.header-img{
+				display: inline-block;
+				padding: 3px;
+				border-radius: 50%;
+				background-color: #ffffff;
+				img{
+					._size_lh(50);
+					display: block;
+					border-radius: 50%;
+				}
+			}
+			em{
+				display: block;
+				padding-top: 0.5em;
+				white-space: nowrap;
+			}
+		}
+		.date{
+			width: 80%;
+			text-align: right;
+			@hh:2.3em;
+			h3{
+				font-weight: 100;
+				height: @hh;
+			}
+			p{
+				height: @hh;
+			}
+			a{
+				line-height: 1.2em;
+				display: inline-block;
+				padding-left: 1.2em;
+				background: url("../images/icon_localtion_little.png") no-repeat 0 50%;
+			}
+		}
+	}
+
+	h2{
+		font-weight: 100;
+		font-size: 120%;
+		margin-top: 2em;
+		padding-bottom:@g;
+		border-bottom:1px solid #fff;
+	}
+
+	.illu{
+		margin-top:@g;
+		img{
+			display: block;
+			width: 100%;
+			max-width:100%;
+			max-height: 200%;
+			.center;
+		}
+	}
+
+	.lk{
+		@h:2.0em;
+		.lineh(@h);
+		border-radius: @h/2;
+		background-color: @cl_orange;
+		display: block;
+		text-align: center;
+		width: 5em;
+		margin-top:@g;
+		margin-left: auto;
+	}
+
+	.desc{
+		margin-top:@g;
+		margin-bottom: 4em;
+		line-height: 1.8em;
+	}
+
+	.ctrl{
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		left:0;
+		right:0;
+		.lineh(@f * 3);
+		background-color: @cl_blue;
+		>a{
+			border-radius: 50%;
+			._size(@g);
+			.margin_h(@g/5);
+
+			display: inline-block;
+			vertical-align: middle;
+			background-color: #ffffff;
+			&.cur{
+				background-color: @cl_orange;
+			}
+		}
+		.arrow{
+			font-size: @f * 2;
+			position: absolute;
+			top: @f*0.5;
+			.lineh(@f * 2);
+
+			font-weight: 100;
+			text-align: center;
+
+			&.left{
+				left: 0;
+			}
+			&.right{
+				right: @g;
+			}
+			&:hover {
+				background-color: #eee;
+				color: @cl_3;
+				cursor: pointer;
+			}
+		}
+	}
+
+	//
+	.blank_box{
+		position: absolute;
+		top:@g/2;
+		right:@g;
+		bottom:@g/2;
+		left:0;
+		>.ele{
+			&.e1{
+				display: block;
+				&:extend(.__icon);
+				height: 300px;
+				background-image: url(../images/feidie.png);
+
+			}
+			&.e2{
+				._icon(92,108);
+				background-image: url(../images/xinqiu.png);
+				left: -@g;
+				top: 70%;
+				position: absolute;
+			}
+		}
+
+		line-height: 2.1em;
+
+		.date{
+			font-size: @f;
+			text-align: right;
+
+		}
+		.talk{
+			padding:1em;
+			background-color: @cl_blue;
+			.bgcolor_alpha(rgba(52,105,180,0.6));
+			position: relative;
+			z-index: 9;
+		}
+
+
+	}
+}
+
+
+
+.calendar{
+	font-weight: 100;
+	.yahei;
+	height: 100%;
+	position: relative;
+	display: none;
+	&.showing{
+		display: block;
+	}
+
+
+	.week_cont{
+		.lineh(@f * 3);
+		.gen_grid_average(100%,7,0);
+		width: auto;
+		border-right:1px solid @cl_blue;
+		em{
+			text-align: center;
+		}
+	}
+
+	.day_view{
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top:@f*3;
+		.gen_grid_average(100%,7,0);
+		position: absolute !important;
+
+		&.more_day{
+			>.day_wrapper{
+				height: 100%/6;
+			}
+		}
+
+		>.day_wrapper{
+			height: 100%/5;
+			position: relative;
+			transition: background-color 0.6s;
+			>div{
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				@border:1px solid @cl_blue;
+				border-top: @border;
+				border-right: @border;
+			}
+
+			.g{
+				display: block;
+				height:@g;
+			}
+
+			&:hover {
+				background-color: #e5ecf7;
+				cursor: default;
+			}
+
+			&.today{
+				background-color: #f6f6f6;
+				.day{
+					color: @cl_3 !important;
+					font-weight: 700;
+				}
+				.yinli{
+					color: @cl_3;
+				}
+			}
+
+			&.cur{
+				background-color: #5a88c9;
+				.day,.yinli,.addtion_shower>*{
+					color: #ffffff;
+				}
+
+			}
+
+			&.diabled{
+				._alpha(36);
+			}
+
+		}
+	}
+
+
+
+	.day{
+		font-weight: 500;
+		padding-left:@g;
+		font-size: 210%;
+		font-family: Arial;
+		color: #444;
+	}
+	.yinli{
+		padding-left:@g;
+		display: inline-block;
+	  	color: #666;
+	}
+
+	//时间清单
+	.list{
+		overflow: hidden;
+		margin-top:@g;
+		.item{
+			font-size: @f * 0.8;
+			display: block;
+			text-indent:0;
+			padding-left:@g;
+			padding-right:@g/2;
+			//&:extend(.txcut);
+			background-color:#333333;
+			line-height: 1.2em;
+			.padding_v(0.4em);
+			color: #ffffff;
+			.txcut;
+
+		}
+	}
+
+
+
+	//事件位置
+	.addtion_shower{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		>a{
+			display: block;
+			font-size: @f * 0.8;
+			&:extend(.txcut);
+			.lineh(16px);
+			.padding_v(@g/4);
+
+			>i{
+				._icon(16);
+				background-image: url(../images/icon_localtion_little.png);
+				position: relative;
+				//top: -3px;
+				margin-right:@g/4;
+			}
+		}
+		>em{
+			&:extend(.calendar .addtion_shower>a all);
+			&:extend(.txcut);
+			font-size: @f * 1.2;
+			color: #8B8B8B;
+			line-height: 1em;
+			padding: 0;
+			padding-left:@g;
+			position: relative;
+			top: -@f/2;
+		}
+	}
+}
+
+
+
+
+//地图容器
+#mapCont{
+	position: relative;
+	&:extend(.expandin);
+	display: none;
+	background: url("../images/map_bg.png");
+	background-color: #f0f0f0;
+	&.showing{
+		display: block;
+	}
+}
+
+html body .laydate_box{
+	margin-top:1px !important;
+	margin-left: 2px !important;
+	.laydate_m{
+		//width: 60px;
+		.laydate_chnext{
+			display: none;
+		}
+		.laydate_chprev{
+			display: none;
+		}
+	}
+
+	.laydate_table{
+		display: none;
+	}
+	.laydate_bottom{
+		margin-top: -5px !important;
+	}
+}
+

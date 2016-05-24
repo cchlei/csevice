@@ -1,0 +1,7 @@
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+#featurelist table.think-row td{line-height:18px;padding-top:5px;padding-bottom:5px}
+#featurelist table.table-hover>tbody>tr:hover{background-color:#93bde1;cursor:default}
+#featurelist table.table-hover>tbody>tr:hover,#featurelist table.table-hover>tbody>tr:hover a{color:#fff}
+#featurelist table th{background-color:#337ab7;color:#fff;border-bottom:2px solid #337ab7;line-height:21px;padding-top:9px;padding-bottom:9px}
+#featurelist table th:after{color:#fff;font-weight:100}

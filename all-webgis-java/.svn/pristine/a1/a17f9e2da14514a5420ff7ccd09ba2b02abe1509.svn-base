@@ -1,0 +1,11 @@
+5280 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 检查参数
+5281 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 表格元数据不为空
+331113 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 检查参数
+331114 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 表格元数据不为空
+157575 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 检查参数
+159048 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 表格元数据不为空
+20848 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 检查参数
+21506 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 表格元数据不为空
+22250 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 表格列数据不为空
+24927 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 在MongoDB中创建Collection存储空间
+26092 [main] DEBUG c.t.d.s.impl.TableMetaServiceImpl - 插入表格元数据

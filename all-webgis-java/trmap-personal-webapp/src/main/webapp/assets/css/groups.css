@@ -1,0 +1,94 @@
+.concern,.fans_framework,.fans_framework.noxinxi,.fans_sub{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.fans_sub h2{font-size:16px;height:60px;line-height:60px;color:#57a3f2;padding-left:47px;cursor:pointer;font-weight:400}
+.fans_sub .focus_name{border-bottom:1px solid #BCCDDA;padding-left:47px;background:url(../images/icon_focus.png) 21px center no-repeat}
+.fans_sub .focus_name i{position:absolute;right:21px;font-size:24px;color:#666}
+.fans_sub .fans_name{background:url(../images/icon_fans.png) 22px -1px no-repeat}
+.fans_sub .fans_guanzhu{background:url(../images/icon_guanzhu.png) 22px center no-repeat}
+.fans_sub .fans_guanzhu,.fans_sub .fans_name{font-size:16px;color:#57a3f2;padding-left:47px;position:relative;cursor:pointer;margin-top:27px}
+.fans_sub .addgroups,.fans_sub span{margin-left:16px;display:block;border-radius:4px;height:36px;line-height:36px;width:160px;margin-bottom:12px;margin-top:12px;font-size:14px;text-align:center;cursor:pointer}
+.fans_sub .addgroups{background:#f3a825;color:#fff}
+.fans_sub .addgroups em{font-size:16px;font-weight:600}
+.fans_sub .bg-focus{background:#f0f2f5;color:#666}
+.fans_sub .bg-focus em{display:inline-block;width:110px;overflow:hidden}
+.fans_sub .bg-focus.hove{background:#428de8;color:#fff}
+.fans_sub .bg-focus.hove i{background:url(../images/icon_del_white.png)}
+.fans_sub .bg-focus:hover{background:#428de8;color:#fff}
+.fans_sub .bg-focus:hover i{background:url(../images/icon_del_white.png)}
+.fans_sub .bg-focus i{width:14px;height:14px;display:inline-block;background:url(../images/icon_del.png);margin-left:20px;vertical-align:middle}
+.fans_sub .addattention,.fans_sub .bg-all{background:#669fe4;color:#fff;cursor:pointer}
+.fans_sub .addattention:hover,.fans_sub .bg-all:hover{background-color:#428de8}
+.fans_all{color:#192330;font-size:18px;height:60px;line-height:60px;font-weight:500;text-indent:12px;border-bottom:1px solid #bccdda}
+.fans_all.page_name .text_left{float:left;font-size:15px}
+.fans_all.page_name .text_right{float:right;margin-left:12px}
+.fans_all.page_name .text_right span{margin-right:12px;color:#fff;font-size:14px;padding:6px 24px;cursor:pointer;border-radius:15px}
+.fans_all.page_name .text_right span:nth-of-type(1){background-color:#f3a825}
+.fans_all.page_name .text_right span:nth-of-type(2){background-color:#EC4A4C}
+.fans_framework{margin-left:22px;margin-top:9px}
+.fans_framework li{margin:12px 10px;background:#fff;border-radius:4px;font-size:14px;min-height:120px;float:left;width:250px;position:relative}
+.fans_framework li .guanzhu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-top:24px}
+.fans_framework li .change_group{width:180px;margin-left:24px;padding:12px;position:absolute;top:141px;z-index:9;left:0;background:#fff;border:1px solid #cfcfcf;font-size:12px;color:#777}
+.fans_framework li .change_group label{cursor:pointer}
+.fans_framework li .change_group input{display:inline-block;vertical-align:text-bottom;text-indent:.5em}
+.fans_framework li .bth{margin-top:24px;text-align:right}
+.fans_framework li .bth span{text-align:center;padding:4px 6px;color:#fff;cursor:pointer}
+.fans_framework li .bth span.determine{background:#428de8}
+.fans_framework li .bth span.cal{background:#bcbcbc;margin-left:6px}
+.fans_framework li .fanslist{display:none}
+.fans_framework .fans_img{width:96px;height:71px;float:left;border-right:1px solid #cfcfcf;margin-top:22px;margin-left:24px}
+.fans_framework .fans_img p{width:71px;height:71px;border-radius:100%}
+.fans_framework .fans_img img{width:100%;height:100%;display:block;border-radius:100%}
+.fans_framework span.rightname{float:left;height:72px;margin-top:21px;margin-left:17px;margin-right:15px;display:block}
+.fans_framework span.rightname em{display:block;width:97px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:23px}
+.fans_framework span.rightname i{width:18px;height:15px;color:#666;padding-top:12px;display:inline-block;background:url(../images/ico_guanzhu.png) no-repeat;padding-right:6px;position:relative}
+.fans_framework .cancel_attention,.fans_framework .grouping{height:30px;line-height:30px;border-radius:4px;text-align:center;margin-top:12px;margin-bottom:12px;cursor:pointer;display:inline-block;vertical-align:top}
+.fans_framework .grouping{width:84px;border:1px solid #cfcfcf;margin-left:24px}
+.fans_framework .grouping em{width:46px;display:inline-block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.fans_framework .grouping i{width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #cfcfcf;margin-left:12px;position:relative;top:3px}
+.fans_framework .attention{background:#57a3f2;color:#fff;width:84px;display:inline-block;border-radius:4px;text-align:center;margin-top:24px;height:30px;line-height:30px;cursor:pointer}
+.fans_framework .attention:hover{background:#428de8}
+.fans_framework .cancel_attention{background:#57a3f2;color:#fff;width:96px;margin-left:12px}
+.fans_framework .cancel_attention:hover{background:#428de8}
+.concern,.layui-layer-content,.layui-layer.layui-anim{background-color:#f1f2f6}
+.fans_framework.noxinxi{margin-left:22px;font-size:16px;color:#333;margin-top:12px}
+.concern{width:690px;height:420px;display:none;border-top:1px #428de8 solid;padding:36px 24px;position:relative}
+.concern .noname{margin-top:24px}
+.concern .searchfriend{height:36px;line-height:36px;text-align:center}
+.concern .searchfriend input{width:608px;border:0;height:36px;line-height:36px;text-indent:.5em;display:inline-block;vertical-align:top}
+.concern .searchfriend input:focus{outline:0}
+.concern .searchfriend span{width:80px;height:36px;line-height:36px;display:inline-block;color:#fff;background-color:#57a3f2;text-align:center;cursor:pointer}
+.concern ul{overflow:hidden;height:325px;margin-top:12px;display:inline-block}
+.concern li{float:left;width:221.5px;margin-top:12px;border-radius:4px;background-color:#fff;padding-bottom:12px;margin-right:12px}
+.concern li:first-child+li+li,.concern li:first-child+li+li+li+li+li,.concern li:first-child+li+li+li+li+li+li+li+li{margin-right:0}
+.concern li .attention{background:#57a3f2;color:#fff;width:62px;display:inline-block;border-radius:4px;text-align:center;margin-top:24px;height:25px;line-height:25px;cursor:pointer}
+.concern li .attention:hover{background:#428de8}
+.concern li .guanzhu,.concern li .qxattention{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-top:24px}
+.concern li i{width:18px;height:15px;color:#666;display:inline-block;vertical-align:top;background:url(../images/ico_guanzhu.png) no-repeat;padding-right:6px;position:relative}
+.concern .page_nav.lite-theme.simple-pagination{margin-top:24px}
+.concern .page_nav.lite-theme.simple-pagination li{display:inline-block;vertical-align:middle;margin:0 12px;width:90px;height:30px;line-height:30px}
+.concern .page_nav.lite-theme.simple-pagination li .current,.concern .page_nav.lite-theme.simple-pagination li .page-link{padding:12px 18px}
+.concern .page_nav.lite-theme.simple-pagination li .current.prev,.concern .page_nav.lite-theme.simple-pagination li .page-link.prev{background-color:#669fe4;color:#fff}
+.concern .page_nav.lite-theme.simple-pagination li .page-link.prev:hover{background:#428de8}
+.concern .page_nav.lite-theme.simple-pagination li .page-link.next{background-color:#669fe4;color:#fff}
+.concern .page_nav.lite-theme.simple-pagination li .page-link.next:hover{background:#428de8}
+.concern .page_nav.lite-theme.simple-pagination ul{height:30px;margin-top:0}
+.concern .fans_img,.concern span.rightname{float:left;margin-top:12px;margin-left:12px}
+.concern .page_nav.lite-theme.simple-pagination a,.concern .page_nav.lite-theme.simple-pagination span{display:block;padding:0!important}
+.concern .fans_img{width:84px;height:71px;border-right:1px solid #cfcfcf}
+.concern .fans_img p{width:71px;height:71px;border-radius:100%}
+.concern .fans_img img{width:100%;height:100%;display:block;border-radius:100%}
+.concern span.rightname{height:72px;margin-right:12px;display:block}
+.concern span.rightname p{display:block;width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:24px;height:24px}
+.concern span.rightname p:first-child+p{width:96px}
+.clear{clear:both}
+.simple-pagination{text-align:center}
+#page_no{position:absolute;bottom:60px;left:50%;margin-left:-112px;width:224px}
+#page_no li{margin:0 12px}
+#page_no li .current,#page_no li .page-link{padding:12px 24px}
+#page_no li .current.prev,#page_no li .page-link.prev{background-color:#669fe4;color:#fff}
+#page_no li .page-link.prev:hover{background:#428de8}
+#page_no li .page-link.next{background-color:#669fe4;color:#fff}
+#page_no li .page-link.next:hover{background:#428de8}
+#page_no .current{background-color:#669fe4}
+input.addname,input.editname{text-indent:.5em}

@@ -1,0 +1,54 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>对不起，您的企业账号未激活！</title>
+    <link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../css/prompt.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode" ></script>
+    <script type="text/javascript">
+        $(function(){
+            var h = $(window).height();
+            $(".qyzh_activation").height(h);
+        })
+    </script>
+
+</head>
+<body>
+<div class="qyzh_activation">
+    <div class="zccenter">
+        <div class="cloud">
+        <i class="cloud1"></i>
+        <i class="cloud2"></i>
+    </div>
+        <div class="tishi">
+            <p class="ts">您的账号XXX尚未激活，请先登录 <em>abc***g@126.com</em> 进行激活操作。若未收到激活邮件，您可以尝试重新发送邮件或重新登录。</p>
+            <p class="ts"><span>邮箱地址：</span><em>abc***g@126.com</em><span  class="fasong"  onclick="show();">发送</span><a class="re" href="#">重新登录</a></p>
+        </div>
+        <div class="clear"></div>   
+    </div>
+    <img src="../images/p_bgw.png" alt="">
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    //设置超时时间为60秒钟
+    var timeout = 60;
+    function show() {
+        var fasong = $(".fasong");
+        fasong.html(timeout);
+        timeout--;
+        if (timeout == 0) {
+            window.opener = null;
+            window.location.href = "index.html";
+        }
+        else {
+            setTimeout("show()", 1000);
+        }
+    }
+
+</script>

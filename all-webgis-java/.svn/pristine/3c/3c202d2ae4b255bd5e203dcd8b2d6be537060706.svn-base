@@ -1,0 +1,36 @@
+archivesBaseName = "tr-email"
+version = '1.0.0.RELEASE'
+jar {
+    manifest {
+        attributes 'Implementation-Title': '天润邮件发送器',
+                   'Implementation-Version': version
+    }
+}
+
+dependencies {
+	compile 'javax.mail:mail:1.4.7'
+	// Freemarker
+	compile 'org.freemarker:freemarker:2.3.18'
+}
+
+uploadArchives {
+	configuration = configurations.archives
+	
+	repositories.mavenDeployer {
+		
+		repository(url: 'http://117.34.70.38:8081/nexus/content/repositories/trgis/') {//仓库地址
+			authentication(userName: "admin",//用户名
+			password: "Tirain86:)")//密码
+		}
+	
+		pom.project {
+			name archivesBaseName
+			url 'http://117.34.70.38:8081/nexus/content/repositories/trgis/'//仓库地址
+			description 'none'
+			groupId "com.trgis"
+			artifactId archivesBaseName //LibA
+			version version
+			packaging 'jar'
+		}
+	}
+}

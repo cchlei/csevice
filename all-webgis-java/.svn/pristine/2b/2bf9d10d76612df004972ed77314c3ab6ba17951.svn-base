@@ -1,0 +1,67 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>地图制作与发布</title>
+    <link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../css/map_make.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode"  main="../js/map_make"></script>
+    <script>
+        var map_make_ajax = "";
+
+        var release_ajax ="";
+        var release_dele_ajax ="";
+        var map_create = ";"
+    </script>
+</head>
+<body>
+
+<div class="navright">
+    <div class="fwtop"><em>地图制作与发布</em><span>退出</span></div>
+    <div class="map_make">
+        <!--地图制作与发布开始-->
+        <div class="mapmake_search">
+            <div class="makemap"><a href="map_creater.html"><i></i>创建地图</a></div>
+            <div class="map_search_top">
+                <span class="fbtime">
+                    <select name="fbtime" id="sel">
+                        <option>发布时间</option>
+                        <option>全部</option>
+                        <option>三年以内</option>
+                        <option>一年以内</option>
+                        <option>三个月以内</option>
+                    </select>
+
+                    <script>
+                        use("$/selectBox",function(){
+                            $("#sel").selectBox({
+                                mobile: true,
+                                menuSpeed: 'fast'
+                            })
+                        })
+                    </script>
+                </span>
+                <input class="map_value" type="text" />
+                <span class="map_search">搜索</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--地图制作与发布结束-->
+
+        <!--地图制作与发布内容显示开始-->
+        <div class=" releasemap">
+            <ul class="grid">
+
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="page"></div>
+        <!--地图制作与发布内容显示结束-->
+    </div>
+</div>
+</body>
+</html>

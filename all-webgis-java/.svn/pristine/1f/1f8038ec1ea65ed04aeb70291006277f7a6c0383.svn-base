@@ -1,0 +1,172 @@
+@import "tool";
+
+.toolClass;
+
+.page_tit_1{
+	display: none;
+}
+.footer{
+	display: none;
+}
+
+body{
+	background-color: #f0f1f5;
+}
+
+form{
+
+}
+
+.box{
+
+}
+
+.auth_info_table{
+	width: 770px;
+	margin: 0 auto;
+	margin-top: 70px;
+	.box{
+		margin-left: 70px;
+		padding-left: 112px;
+		position: relative;
+		border-left: 1px solid #D6D6D7;
+		padding-bottom: 1px;
+		padding-top: 1px;
+
+		&.boxfooter{
+			font-size: 14px;
+		}
+	}
+
+	.seqno{
+		position: absolute;
+		._size_revert_margin_lh(24);
+		border-radius: 50%;
+		top: 0;
+		left: 0;
+		color: #ffffff;
+		background-color: #33c2a6;
+		text-align: center;
+	}
+
+	.bbody{
+		min-height: 150px;
+		padding-bottom: 50px;
+		background-color: #fff;
+		margin-bottom: 50px;
+		margin-top: -35px;
+
+		h3{
+			padding-left: 60px;
+			line-height: 70px;
+			font-size: 2em;
+			background-color: #fafafa;
+		}
+
+		>p{
+			padding-left: 60px;
+		}
+		em{
+			display: block;
+			line-height: 30px;
+			margin-top: 1.5em;
+			margin-bottom: 0.5em;
+			font-size: 1em;
+			color: #b0b0b0;
+		}
+
+		.input{
+			input{
+				border: 1px solid #C6C6C6;
+				line-height: 1em;
+				padding: 1.6em 1em;
+				outline: none;
+				width: 24em;
+			}
+
+			select{
+				width: 21em;
+				line-height: 3em;
+				height: 3em;
+			}
+
+		}
+		.info{
+			font-size: 14px;
+			padding-left: 2em;
+			a{
+				color: #0078d7;
+			}
+		}
+
+		.errtip{
+			margin-top: 1.7em;
+
+			&.err{
+				display: block;
+				color: #ff0000;
+			}
+		}
+	}
+
+
+	.submit{
+		display: inline-block;
+		vertical-align: top;
+		background-color: #3F92E8;
+		width: 21em;
+		line-height: 3em;
+		margin-top: 2em;
+		color: #ffffff;
+		text-align: center;
+		font-size: 1.2em;
+		&:hover {
+			._alpha(80)
+		}
+	}
+}
+
+
+.orange{
+	color: orange !important;
+}
+
+html body{
+	.webuploader-pick{
+		display: inline;
+		background-color: transparent;
+		color: #0078d7;
+	}
+
+	.preview{
+		display: inline-block;
+		margin-top: 2em;
+		margin-bottom: 1em;
+		position: relative;
+		//text-align: center;
+		//padding: 3em;
+		//background-color: #f0f0f0;
+		img{
+			max-width: 80%;
+		}
+
+		.tip{
+			position: absolute;
+			z-index: 8;
+			background-color: rgba(102, 102, 102, 0.66);
+			color: #ffffff;
+			._size_lh(90,36);
+			//top: 50%;
+			text-align: center;
+			//left: 50%;
+			//width: 100%;
+		}
+
+		&.suc{
+			.tip{
+				display: none;
+			}
+		}
+	}
+}
+

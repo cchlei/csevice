@@ -1,0 +1,57 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title></title>
+    <link rel="stylesheet" href="cring.css"/>
+    <script src="../cseajs/csea$.js" id="seajsnode"></script>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="cring" style="margin: auto">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+<script>
+
+
+    //-----------
+
+
+
+    seajs.usep("_/cring/cring,$/easing",function(CRing){
+        var cr = new CRing(".cring",{
+            width:1600,
+            height:180,
+            //ease:"easeOutBack",
+            ease:"easeInOutExpo",
+
+            dura:720,
+
+            h_ratio:0.18,
+
+            child_width:454,
+            child_height:360
+        });
+
+
+
+
+    });
+
+</script>
+</body>
+</html>

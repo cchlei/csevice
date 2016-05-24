@@ -1,0 +1,15 @@
+{
+  "fields" :[
+    {"field":"gname",     "title":"兴趣点名称",     "type":1,   "id":222,  "fixed":1},
+    {"field":"sq",        "title":"编号",           "type":4,   "fixed":1, "hidden":1},
+    {"field":"name",      "title":"名称",           "type":2,   "fixed":1, "hidden":1},
+    {"field":"no",        "title":"数值字段",       "type":1},
+    {"field":"no",        "title":"数值字段",       "type":2},
+    {"field":"no",        "title":"数值字段",       "type":3},
+    {"field":"no",        "title":"数值字段",       "type":1},
+    {"field":"no",        "title":"数值字段",       "type":3},
+    {"field":"no",        "title":"数值字段",       "type":2},
+    {"field":"no",        "title":"数值字段",       "type":1},
+    {"field":"date",      "title":"时间",           "type":4,   "id":222}
+  ]
+}

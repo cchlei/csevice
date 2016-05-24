@@ -1,0 +1,150 @@
+@charset "utf-8";
+html {
+	background: #DFDFDF;
+	overflow: hidden
+}
+body {
+	background: #fff;
+	position: relative
+}
+.main, .s, body, html {
+	height: 100%
+}
+.s {
+	font-size: 16px;
+	color: #777;
+	line-height: 26px;
+	overflow: hidden
+}
+a {
+	-webkit-transition: all .3s cubic-bezier(0.165, .84, .44, 1);
+	-moz-transition: all .3s cubic-bezier(0.165, .84, .44, 1);
+	-o-transition: all .3s cubic-bezier(0.165, .84, .44, 1);
+	transition: all .3s cubic-bezier(0.165, .84, .44, 1)
+}
+.main {
+	-webkit-transition: all 1000ms cubic-bezier(0.86, 0, .07, 1);
+	-moz-transition: all 1000ms cubic-bezier(0.86, 0, .07, 1);
+	transition: all 1000ms cubic-bezier(0.86, 0, .07, 1)
+}
+.showScroll {
+	overflow: auto;
+	min-height: 720px
+}
+.nav_fixed {
+	position: fixed;
+	_position: absolute;
+	top: 50%;
+	right: 20px;
+	margin-top: -117px;
+	z-index: 100
+}
+.nav_fixed a {
+	margin-bottom: 8px;
+	position: relative;
+	display: block;
+	padding: 2px;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none
+}
+.nav_fixed a .dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #464646;
+	display: block;
+	opacity: .3
+}
+.nav_fixed .cur {
+	padding: 0
+}
+.nav_fixed .cur .dot {
+	width: 12px;
+	height: 12px;
+	background: #464646;
+	opacity: 1
+}
+.nav_fixed a .text {
+	position: absolute;
+	right: 20px;
+	line-height: 18px;
+	top: -3px;
+	width: 100px;
+	color: #333;
+	visibility: hidden;
+	font-size: 12px;
+	text-align: right
+}
+.nav_fixed a:hover .text {
+	visibility: visible
+}
+
+.nav_fixed {
+	position: fixed;
+	_position: absolute;
+	top: 50%;
+	right: 20px;
+	margin-top: -117px;
+	z-index: 100
+}
+.nav_fixed a {
+	margin-bottom: 8px;
+	position: relative;
+	display: block;
+	padding: 2px;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none
+}
+.nav_fixed a .dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #000;
+	display: block;
+	opacity: .3
+}
+.nav_fixed .cur {
+	padding: 0
+}
+.nav_fixed .cur .dot {
+	width: 10px;
+	height: 10px;
+	background: #333;
+	opacity: 1
+}
+.nav_fixed a .text {
+	position: absolute;
+	right: 20px;
+	line-height: 18px;
+	top: -3px;
+	width: 100px;
+	color: #fff;
+	visibility: hidden;
+	font-size: 12px;
+	text-align: right
+}
+.nav_fixed a:hover .text {
+	visibility: visible
+}
+.qtleft{ position:absolute; width:100px; height:100px;}
+.qttop{ position:absolute; width:100px; height:100px;}
+.qtbottom{ position:absolute; width:100px; height:100px;}
+.qtright{ position:absolute; width:100px; height:100px;}
+.foot{ width:1028px; margin:0px auto; font-family:"微软雅黑"; color:#fff; font-size:24px; padding-top:110px; text-align:center;}
+.foot ul li{ width:33.3%; float:left; height:100px; line-height:100px; }
+.foot p{ margin:65px 0px;}
+.foot ul li img{ margin:0px 5px;}
+.page6{
+	width:100%;
+	height:398px;
+	background:url(../images/page6_bg.png) no-repeat center center #4468A6;
+	background-size: 100% 100%;
+
+} 
+#lou{ width:100%; height:202px; position:absolute; top:52%;z-index:1;}
+.curr{ z-index:100; box-shadow:0 0 5px #000; }
+.curr .pag5{ position:absolute;background:#126599; opacity:0.9; z-index:-5;}	

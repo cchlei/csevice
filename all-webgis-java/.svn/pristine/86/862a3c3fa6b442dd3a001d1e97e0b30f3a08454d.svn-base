@@ -1,0 +1,133 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+<title>元数据编辑_地图</title>
+<link rel="stylesheet" href="../css/tr_comm.css"/>
+    <link rel="stylesheet" href="../css/metadata_release.css"/>
+    <script src="../libs/cseajs/csea$.js" id="seajsnode"  main="__/js/metadata_release"></script>
+    <script>
+        var uploader_conf = [
+            //图层图片
+            {server:"http://2betop.net/fileupload.php"}
+        ];
+    </script>
+</head>
+<body>
+<div class="navright">
+    <div class="maptop"><em>元数据编辑</em><span>退出</span></div>
+    <form class="mapupdata" action="../data/form_submit_json.txt" method="get">
+        <input type="hidden" name="savemode" value="1" id="savemode"/>
+
+        <p>
+            <em>图层名称：</em>
+            <span><input  type="text" name="imgname"/></span>
+        </p>
+        <p>
+            <em>图层图片：</em>
+            <span class="input"><input type="text" class="tctp" readonly="true"/></span>
+            <span class="info">
+                <a href="javascript:;" id="" class="uploader">上传</a>
+            </span>
+        </p>
+        <p>
+            <em class="fwmsname">地图描述：</em>
+            <span><textarea name="fwms"></textarea></span>
+            <em class="grey">描述不超过200个字符</em>
+        </p>
+        <p>
+            <em>接口类型：</em>
+            <span>
+                <input name="interfacetype" class="interfacetype" id="typerest" type="radio" value="1">rest 
+                <input name="interfacetype" class="interfacetype" id="typeogc" type="radio" value="2">ogc
+            </span>
+        </p>
+        <p class="biaoqian">
+            <em>标签：</em>
+            <span class="span">
+                <input name="label" class="label" type="checkbox" value="1" ><label>餐饮</label>
+                <input name="label" class=" label" type="checkbox" value="2" ><label>购物</label>
+                <input name="label" class=" label" type="checkbox" value="3" ><label>住宿</label>
+                <input name="label" class=" label" type="checkbox" value="4" ><label>出行</label>
+                <input name="label" class=" label" type="checkbox" value="5" ><label>文体娱乐</label>
+                <input name="label" class=" label" type="checkbox" value="6" ><label>金融服务</label>
+                <input name="label" class=" label" type="checkbox" value="7" ><label>生活服务</label>
+                <input name="label" class=" label" type="checkbox" value="8" ><label>其他</label>
+            </span>
+        </p>
+        <p><em>行政区划级别：</em>
+           <span id="distpicker">
+                  <select name="province"></select>
+                  <select name=""></select>
+<!--
+                  <select data-district="&#45;&#45;&#45;&#45; 选择区 &#45;&#45;&#45;&#45;"></select>
+-->
+            </span>
+            <input type="hidden" name="area">
+            <script>
+                var default_area = {
+                    province: "陕西省",
+                    city: "渭南市",
+                    placeholder:false
+                };
+                var arae = $("input:last");
+                var selecs = $("#distpicker>select");
+                selecs.change(function(){
+                    setTimeout(area_field_digest,888);
+                });
+
+                setTimeout(area_field_digest,1500);
+
+                function area_field_digest(){
+                    arae.val(selecs.map(function(i,el){
+                        return el.value
+                    }).toArray().join(" "));
+                }
+            </script>
+        </p>
+        <p><em>有效期：</em>
+            <span>
+                <select  name="year">
+                    <option value="">请选择有效期</option>
+                    <option value="1">一年</option>
+                    <option value="2">两年</option>
+                    <option value="3">三年</option>
+                    <option value="4">五年</option>
+                </select>
+            </span>
+        </p>
+        <p><em>要素数量：</em><span>自动生成</span></p>
+        <p><em>范围：</em><span>要素的坐标范围，自动生成</span></p>
+        <p><em>坐标系：</em><span>采用的坐标系，自动生成</span></p>
+        <p><em>发布单位：</em><span>自动生成</span></p>
+        <p><em>发布时间：</em><span>自动生成</span></p>
+        <div class="greybg"><p><em>EST服务：</em><span>http://www.tiraingis.com/rest?mapid=12321321321?mapid=123?mapid=123?mapid=123</span></p></div>
+        <div class="greybg"><p><em>OGC服务：</em><span>http://www.tiraingis.com/rest?mapid=12321321321</span></p></div>
+        <div class="saveupdate">
+            <span class="mapsave" type="submit" __onclick="$(this).parents('form').submit()">保存</span>
+            <span class="mapup"  __onclick="$(this).parents('form').submit()">更新</span>
+        </div>
+    </form>
+    <div class="updatelayer layersuccess" >
+        <img src="../images/p_success.png" height="45" width="45" alt="">
+        <div class="uptishi">
+            <h3>恭喜您，已经更新成功！</h3>
+            <p><span class="minclose"></span>秒以后关闭并跳转到地图制作与发布页面！</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="updatelayer layerfail" >
+        <img src="../images/p_fail.png" height="45" width="45" alt="">
+        <div class="uptishi">
+            <h3>对不起，您发布失败</h3>
+            <p>请重新发布</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>

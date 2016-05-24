@@ -1,0 +1,86 @@
+@import "../../css/tool";
+
+.toolClass;
+
+
+@tri_size:5px;
+
+.tgrid{
+
+	position: relative;
+	.loadingLayer{
+		/*position: absolute;
+		&:extend(.expandin);
+		z-index: 9;
+		background-color: #ffffff;
+		&:extend(.__icon);
+		background-image: url(img/loading.gif);*/
+	}
+
+	table{
+		width: 100%;
+		text-align: left;
+	}
+
+	th{
+		cursor: pointer;
+		//background: none no-repeat 95% 50%;
+		i{
+			margin-top:-@tri_size/2 - 2;
+		}
+		&.way_1{
+			i{
+				.triangle(@tri_size,bottom,#333);
+			}
+
+		}
+		&.way_-1{
+			i{
+				.triangle(@tri_size,top,#333);
+			}
+		}
+		&:extend(.noSelect);
+	}
+
+	tr{
+		&.active{
+			td{
+				background-color: #ffffff;
+			}
+		}
+	}
+
+
+	//操作单元格和标题
+	th{
+		&.option{
+			text-align: center;
+		}
+	}
+	td{
+		&.option{
+			text-align: center;
+			em{
+				display: inline-block;
+				text-align: center;
+				font-size: 12px;
+				color: #ffffff;
+				vertical-align: middle;
+				cursor: pointer;
+				padding: 0;
+				line-height: 1.4em;
+				.padding_h(0.3em);
+				text-indent: 0;
+				&.loc{
+					background-color: #4C78D5;
+				}
+				&.del{
+					background-color: #F04C3D;
+				}
+				&:hover {
+					._alpha(80);
+				}
+			}
+		}
+	}
+}

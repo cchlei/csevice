@@ -1,0 +1,13 @@
+html body .layplayer .layui-layer-close {
+  border: none;
+  border-radius: 0;
+  background: #888888 url("x.png") no-repeat 50% 50%;
+  width: 45px;
+  height: 45px;
+  top: -10px;
+  right: -55px;
+}
+html body .layplayer .layui-layer-close:hover {
+  background: #888888 url("x.png") no-repeat 50% 50%;
+  opacity: .8;
+}

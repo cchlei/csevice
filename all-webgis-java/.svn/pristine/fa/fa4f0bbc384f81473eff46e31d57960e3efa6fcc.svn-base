@@ -1,0 +1,261 @@
+@import "tool";
+@import "vars";
+
+.toolClass;
+
+.col2 > ul > li {
+  a {
+    color: #fff;
+    display: none;
+    border-radius: @btn_radius;
+    text-align: center;
+    .lineh(36);
+    font-size: @f;
+    font-family: @font_yahei;
+    ._size(160, 36);
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+  .orange {
+    background-color: #f3a926;
+    cursor: pointer;
+  }
+  .blue {
+    background-color: #669fe4;
+    cursor: pointer;
+  }
+  .red {
+    background-color: #f26168;
+    cursor: pointer;
+  }
+}
+
+.inner h1 {
+  background-color: #f0f2f5;
+  font-size: 15px;
+}
+
+.inner ul li {
+  i {
+    ._size(22, 22);
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 15px;
+  }
+  em.weidu{
+    font-weight: 700;
+  }
+  .state-expand {
+    background: url(../images/ico_em.png) center no-repeat;
+    &.yd{
+      background: url(../images/ico_mail.png) center no-repeat;
+    }
+  }
+  .state-expand_mail {
+    background: url(../images/ico_mail.png) center no-repeat;
+  }
+
+  strong {
+    padding-left: 20px;
+    color: #666666;
+    font-weight: normal;
+  }
+
+}
+.mainCont>.inner>.main{
+  top:61px !important;
+}
+.main{
+  .mainmsg{
+    li{
+      &:nth-of-type(n){
+        background: #f7f7f8;
+      }
+      &:nth-of-type(2n){
+        background: #f0f2f5;
+      }
+      font-family: @font_yahei;
+      .lineh(40);
+      cursor: pointer;
+      span {
+        float: right;
+        font-size: @f;
+        color: #737373;
+        margin-right: 26px;
+      }
+    }
+  }
+  .noxinxi{
+    margin-left: 22px;
+    font-family: @font_yahei;
+    font-size: 16px;
+    color: #333;
+    margin-top: @g;
+  }
+}
+
+.pageno.page_nav.lite-theme.simple-pagination{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  margin-top: 35px;
+  text-align: right;
+  li{
+    margin: 0 3px;
+    cursor: pointer;
+  }
+  .current,.page-link.prev,.page-link.next{
+    background-color: #3469B4;
+    padding: 8px;
+  }
+  a,span,.current.next,.current.prev{
+    background: #81a9e2;
+    color: #fff;
+    padding: 8px;
+  }
+  .ellipse {
+    background-color: #81A9E2;
+  }
+}
+.msgpop_up{
+  width: 480px;
+  padding: 40px;
+  display: none;
+  background-color: #fff;
+  color: #2a2a2a;
+  font-family: @font_yahei;
+  border: 2px #5e9dea solid;
+  box-shadow:1px 3px 9px #666;
+  overflow: auto;
+  .welcome{
+    height: 150px;
+  }
+  .follow {
+    height: 120px;
+  }
+  .welcome,.follow{
+    h3{
+      color: #ff3943;
+      font-size: 16px;
+      line-height: 30px;
+    }
+    p{
+      text-indent: 2em;
+      line-height: 30px;
+      font-size: 14px;
+      &.tright{
+        text-align: right;
+        color: #5e9dea;
+      }
+    }
+  }
+  .review{
+    font-size: 14px;
+    max-height: 349px;
+    overflow: auto;
+    p{
+      line-height: 30px;
+      word-break: break-all;
+      &:nth-of-type(2){
+        display: block;
+        width: 463px;
+        overflow: hidden;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+      }
+    }
+    em{
+      color: #ff3943;
+    }
+    .people{
+      padding-top: 12px;
+      border-top: 1px #666 solid;
+      span{
+        cursor: pointer;
+      }
+      .textright{
+        text-align: right;
+        margin-left: 0px;
+        span{
+          margin-top: 12px;
+          display: block;
+          background-color: #ff3943;
+          color: #fff;
+          width: 57px;
+          text-align: center;
+          padding: 6px;
+          float: right;
+        }
+      }
+      .messages{
+        &:focus{
+          outline: none;
+        }
+        outline: none;
+        resize:none;
+        width: 415px;
+        height: 60px;
+        padding: 12px;
+        border: 1px #C6C3C3 solid;
+      }
+      .del{
+        float: right;
+        color: #2a2a2a;
+        margin-left: @g;
+      }
+      div{
+        margin-left: 38px;
+        ul{
+          padding-top: @g;
+          border-top: 1px #CECACA solid;
+        }
+        em{
+          line-height: 23px;
+          color: #2a2a2a;
+          word-wrap: break-word;
+        }
+      }
+    }
+    img{
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    ul{
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0;
+      padding-top: 0;
+      margin-left: 0;
+      border-top:0px;
+      padding-bottom: @g;
+      li{
+        width: 440px;
+        font-size: 14px;
+          span{
+            color: #ff7e00;
+          }
+        &:nth-of-type(2){
+          color: #999;
+          font-size: 12px;
+          margin-top: 9px;
+        }
+      }
+    }
+  }
+}
+.clear{
+  clear: both;
+}
+
+
+.green_account{
+  color: @cl_blue;
+  padding-left: 0.4em;
+}
+
+
+
+

@@ -1,0 +1,58 @@
+.font_wei{font-family:"Microsoft YaHei"}
+.font_song{font-family:SimSun}
+.hall,.hall .order .applyusetime,.hall .order p.ddxq span,.hall .order table .ordercenter,.hall .order table .ordertitle{font-family:"Microsoft YaHei"}
+.clear{clear:both}
+textarea{outline:0;resize:none}
+.hall{position:relative;color:#333}
+.hall .fwtop{height:115px;line-height:115px;background-color:#3c6bcd;color:#fff;position:relative;top:0;width:100%;z-index:999}
+.hall .fwtop img.fwlogo{position:absolute;height:61px;top:50%;margin-top:-30.5px;left:33px;z-index:999}
+.hall .fwtop img.fwsq{width:124px;height:31px;position:absolute;left:50%;margin-left:-62.5px;top:50%;margin-top:-15.5px;z-index:999}
+.hall .fwtop i{position:absolute;z-index:9}
+.hall .fwtop i.wx{background:url(../images/fw_wx.png) no-repeat;width:48px;height:27px;bottom:8px;left:50%;margin-left:-185px}
+.hall .fwtop i.topbj{background:url(../images/fw_top.png) no-repeat;width:623px;height:67px;right:60px;bottom:0}
+.hall .fwtop .user{position:absolute;right:33px;font-size:14px;height:60px;line-height:60px;z-index:999}
+.hall .fwtop .user img{vertical-align:middle;width:37px;height:37px;border-radius:37px;-webkit-border-radius:37px;-moz-border-radius:37px}
+.hall .fwtop .user span.name{margin:0 10px 0 5px}
+.hall .order{width:812px;height:auto;margin:0 auto}
+.hall .order img{width:664px;display:block;margin:70px auto 45px}
+.hall .order .applyusetime{width:558px;margin:60px auto 0;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;font-size:16px;color:#333}
+.hall .order .applyusetime .usetime{vertical-align:middle;padding:0;ime-mode:disabled}
+.hall .order .applyusetime p.next{width:50px;text-align:center;background-color:#4c78d5;color:#fff;padding:5px 10px;float:right;margin-top:18px;cursor:pointer}
+.hall .order .applyusetime .xieyi{margin-top:37px;position:relative;left:130px}
+.hall .order .applyusetime .xieyi span{margin-left:25px}
+.hall .order .applyusetime .xieyi a{color:#3C6BCD}
+.hall .order .applyusetime .xieyi i{width:17px;height:16px;display:inline-block;background:url(../images/wxtype.png) no-repeat;position:absolute;top:50%;margin-top:-8px}
+.hall .order .applyusetime .xieyi i.ed{background:url(../images/yxtype.png) no-repeat}
+.hall .order .applyusetime div{width:558px;line-height:14px;position:relative}
+.hall .order .applyusetime div em{width:100px}
+.hall .order .applyusetime div p{width:428px;position:relative;left:130px;top:-19px;line-height:26px}
+.hall .order .applyusetime div p span{position:relative;padding-left:22px;margin-right:15px;display:inline-block}
+.hall .order .applyusetime div p.sqtime span{padding-left:0;margin-right:0}
+.hall .order .applyusetime div p.sqtime input.usetime{margin-top:0}
+.hall .order .applyusetime div .mrtype i{width:17px;height:16px;display:inline-block;background:url(../images/mrtype.png) no-repeat;position:absolute;top:50%;margin-top:-8px;left:0}
+.hall .order .applyusetime div .jktype i,.hall .order .applyusetime div .layer i{width:17px;height:16px;display:inline-block;background:url(../images/wxtype.png) no-repeat;position:absolute;top:50%;margin-top:-8px;left:0}
+.hall .order .applyusetime div .jktype i.ed,.hall .order .applyusetime div .layer i.ed{background:url(../images/yxtype.png) no-repeat}
+.hall .order .applyusetime div .layer{margin-top:12px}
+.hall .order .applyusetime span.yxq{width:0;height:0;display:inline-block;border:13px solid #c2c4c6;vertical-align:middle;margin-left:35px;margin-right:7px;cursor:pointer}
+.hall .order .applyusetime span.yxq.ed{border:13px solid #4c78d5}
+.hall .order table .ordertitle{background-color:#6896f6;color:#fff;font-size:18px;text-indent:0}
+.hall .order table .ordercenter{height:163px;background-color:#f0f4fb;color:#4c78d5;font-size:16px;text-align:center;text-indent:0}
+.hall .order table .ordercenter p{line-height:30px;width:16px!important;padding:0 0 0 30px!important;text-align:center!important;letter-spacing:2px;direction:rtl!important;direction:inherit;vertical-align:middle!important}
+.hall .order table td{font-size:13px;color:#333;height:40px;line-height:40px;border:1px solid #6896f6;text-indent:9px}
+.hall .order table .tit1{color:#030303}
+.hall .order table .tit1.bg{background-color:#f0f4fb}
+.hall .order table.row{margin-top:25px}
+.hall .order p.ddxq{text-align:center;float:right;margin:35px 0}
+.hall .order p.ddxq span{width:74px;height:25px;line-height:25px;display:inline-block;cursor:pointer;font-size:14px}
+.hall .order p.ddxq span.back{background-color:#c2c4c6;color:#333}
+.hall .order p.ddxq span.sure{background-color:#4c78d5;color:#fff;margin-left:15px}
+.hall .order .sqfail{margin-top:150px}
+.hall .order .sqfail,.hall .order .sqsucess{width:650px;height:305px;margin:60px auto 0;display:none}
+.hall .order .sqfail h3,.hall .order .sqsucess h3{background-color:#6896f6;color:#fff;height:43px;line-height:43px;text-align:center;font-size:18px}
+.hall .order .sqfail .sucess,.hall .order .sqsucess .sucess{height:260px;border:1px solid #6896f6}
+.hall .order .sqfail .sucess img,.hall .order .sqsucess .sucess img{width:196px;height:185px;float:left;margin:38px 27px}
+.hall .order .sqfail .sucess p,.hall .order .sqsucess .sucess p{width:370px;line-height:28px;float:left;margin-top:78px;font-size:14px;color:#333;font-family:"Microsoft YaHei"}
+.hall .order .sqfail .sucess a,.hall .order .sqsucess .sucess a{color:#6896f6;text-decoration:underline}
+.hall .order .form{display:none}
+html{height:100%}
+.sqtime .ui-button-text-only .ui-button-text{padding:.2em 1em}

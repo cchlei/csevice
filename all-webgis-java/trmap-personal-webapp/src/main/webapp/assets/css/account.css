@@ -1,0 +1,47 @@
+.account a,.account_set .upgrade{border-radius:4px;text-align:center}
+.bar,.txcut{overflow:hidden}
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon{background-repeat:no-repeat;background-position:50% 50%}
+.clear{font-size:0;height:0;width:0;clear:both}
+.center{margin-left:auto;margin-right:auto}
+.txcut{text-overflow:ellipsis;white-space:nowrap}
+.planeUl{list-style:none}
+.planeUl li{margin:0}
+.noSelect{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.yahei{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.heiti{font-family:"\9ED1\4F53",SimHei}
+.account,.account .account_name h2,.account_set li{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.expandin{width:100%;height:100%;top:0;left:0}
+.v_hidden{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.account .account_name{color:#57a3f2;font-size:16px;height:60px;line-height:60px;border-bottom:1px solid #BCCDDA}
+.account .account_name h2{margin-left:19px;font-size:16px;color:#57a3f2;font-weight:500}
+.account a{margin-left:16px;display:block;height:36px;line-height:36px;width:160px;margin-bottom:12px;margin-top:12px;font-size:14px;color:#fff}
+.account_set ul,.project{margin-left:18px}
+.account .blue_account{background:#669fe4}
+.account .green_account{background:#4cc485}
+.account_set{border-bottom:1px solid #bccdda;height:60px;line-height:60px}
+.account_set li{float:left;font-size:14px}
+.account_set .gaikuo{color:#333;font-size:15px;margin-right:14px}
+.account_set .name{font-size:14px;color:#666;margin-right:17px}
+.account_set .level{color:#6ba8f1;margin-right:9px}
+.account_set .upgrade{background:#f87412;display:block;height:24px;line-height:24px;margin-top:16px;font-size:12px;width:47px}
+.account_set .upgrade a{color:#fff}
+.project{background:#e3e6eb;margin-bottom:20px;margin-right:20px;font-family:"\9ED1\4F53",SimHei;padding:13px 18px;display:block;min-width:820px}
+.project h3{font-size:17px;font-weight:400}
+.project ul{height:63px;padding-bottom:48px}
+.project li{float:left;padding-top:27px;padding-bottom:35px;margin-right:55px;width:213px}
+.project li .bind-icon{width:63px;height:63px;float:left;margin-left:18px;margin-right:25px}
+.project li .total{background:url(../images/icon_total.png) no-repeat}
+.project li .share{background:url(../images/icon_share.png) no-repeat}
+.project li .share_not{background:url(../images/icon_share_not.png) no-repeat}
+.project li .size_total{background:url(../images/icon_size_total.png) no-repeat}
+.project li span{padding-top:25px;display:block;float:left;color:#616263}
+.user_not{background:url(../images/icon_user_not.png) no-repeat}
+.user_has{background:url(../images/icon_user_has.png) no-repeat}
+.bar_box{margin:47px auto 47px 18px;font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53";font-size:16px;min-width:980px}
+.bar_box ul li{float:left;margin-right:76px;height:24px;line-height:24px}
+.bar_box span{float:left;color:#666}
+.bar_box em{color:#f87412}
+.bar_box i{background:url(../images/icon_gold.png) center 0 no-repeat;width:24px;height:24px;float:left;margin-right:9px}
+.bar{border-radius:10px;background:#6ba8f1;height:7px;line-height:7px;width:184px;float:left;margin-left:19px;margin-top:8px}
+.account_marg{background:#f0f2f5}

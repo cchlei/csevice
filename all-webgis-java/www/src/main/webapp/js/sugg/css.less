@@ -1,0 +1,82 @@
+@import "../../css/tool";
+
+._sugg{
+	@pp:24px;
+	font-size: 14px;
+	padding:@pp;
+	background-color: #f9f9f9;
+	.yahei;
+
+	h3{
+		text-align: center;
+		font-size: 1.7em;
+		line-height: 3em;
+		font-weight: 100;
+		background-color: #F3F3F3;
+		color: #333;
+		margin: 0;
+		.padding_h(@pp);
+		margin-left: -@pp;
+		margin-top: -@pp;
+		width: 100%;
+
+	}
+
+	em{
+		font-style: normal;
+		display: inline-block;
+		text-align: right;
+		vertical-align: top;
+		width: 6em;
+
+
+	}
+	>p{
+		line-height: 2.4;
+	}
+	input,textarea{
+		padding: 6px;
+		border: 1px solid #999;
+		width: 39em;
+		vertical-align: top;
+		outline: none;
+
+	}
+
+	input {
+		line-height: 1.2em;
+		.padding_v(1em);
+
+	}
+	textarea{
+		height: 12em;
+		resize: none;
+	}
+
+	.submit{
+		display: block;
+		line-height: 2em;
+		font-size: 1.4em;
+		color: #ffffff;
+		text-align: center;
+		font-style: normal;
+		background-color: #0074ED;
+		width: auto;
+		cursor: pointer;
+		margin-top: @pp;
+		&:hover {
+
+		}
+	}
+
+	.botline {
+		display: block;
+		width: 100%;
+		height: 5px;
+		.padding_h(@pp);
+		margin-left: -@pp;
+		background-color: #666;
+		margin-bottom: -@pp;
+		margin-top: @pp;
+	}
+}

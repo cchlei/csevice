@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="css.css"/>
+    <script src="../../sea/csea$.js"></script>
+    <script>
+        $(function(){
+            seajs.use("../cslid",function(CSlid){
+                var cd = new CSlid({
+                    size:{w:400,h:600},
+                    cont:"#cs"
+                });
+
+                var demo1 = new CSlid({
+                    cont:"#demo1",
+                    scaleWH:0.36,
+                    size:{
+                        w:"auto",
+                        h:"auto"
+                    }
+                });
+
+                var demo2 = new CSlid({
+                    cont:"#demo2",
+                    scaleWH:0.36,
+                    size:{
+                        w:"auto",
+                        h:240
+                    }
+                });
+
+                var demo3 = new CSlid({
+                    cont:"#demo3",
+                    scaleWH:0.36,
+                    size:{
+                        w:"auto",
+                        h:"auto"
+                    }
+                });
+
+            });
+        });
+    </script>
+    <title></title>
+    <style type="text/css">
+        body{ padding: 0; margin: 0;}
+        #cs{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <div style="float: left; width: 40%;">
+        <div id="demo2">
+            <div class='scrollEle'>
+                <div class='csele'>
+                    <div class='mainCont'>
+                        <img _src='../../img/a.jpg'/>
+                    </div>
+                    <div class='subCont'></div>
+                </div>
+                <div class='csele'>
+                    <div class='mainCont'>
+                        <img _src='../../img/b.jpg' preSrc='../../img/b.jpg'/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="float: left; width: 60%;">
+        <div id="demo3">
+            <div class='scrollEle'>
+                <div class='csele'>
+                    <div class='mainCont'>
+                        <img _src='../../img/a.jpg'/>
+                    </div>
+                    <div class='subCont'></div>
+                </div>
+                <div class='csele'>
+                    <div class='mainCont'>
+                        <img _src='../../img/b.jpg' preSrc='../../img/b.jpg'/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear: both; height: 0; font-size: 0;"></div>
+
+    <div id="demo1">
+        <div class='scrollEle'>
+            <div class='csele'>
+                <div class='mainCont'>
+                    <img _src='../../img/a.jpg'/>
+                </div>
+                <div class='subCont'></div>
+            </div>
+            <div class='csele'>
+                <div class='mainCont'>
+                    <img _src='../../img/b.jpg' preSrc='../../img/b.jpg'/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="cs">
+        <div class='scrollEle'>
+            <div class='csele'>
+                <div class='mainCont'>
+                    <img _src='../../img/a.jpg' preSrc='../../img/a.jpg'/>
+                </div>
+                <div class='subCont'></div>
+            </div>
+            <div class='csele'>
+                <div class='mainCont'>
+                    <img _src='../../img/b.jpg' preSrc='../../img/b.jpg'/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

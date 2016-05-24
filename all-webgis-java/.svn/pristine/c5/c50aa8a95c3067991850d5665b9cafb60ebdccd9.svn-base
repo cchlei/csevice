@@ -1,0 +1,63 @@
+<!doctype html><html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title></title>
+</head>
+<body>
+
+    <style type="text/css">
+        body{
+            background-color: #f0f0f0;
+        }
+        .box{
+            margin: 0 auto; width: 800px;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .box p{
+            line-height: 2em;
+            word-break: break-all;
+            padding: 0 2.7em;
+        }
+        .box p.g2{
+            padding: 0 4.7em;
+        }
+        .topimg{ background-color: #4092E8;;}
+        .topimg img{ display: block;}
+
+
+        a.btn{
+            margin: 1em 2em;
+            display: inline-block;
+            color: #fff;
+            padding: 0.7em 2em;
+            background-color: #4092e8;
+            border-radius: 5px;
+        }
+    </style>
+
+    <div class="box">
+        <div class="topimg"><img src="../images/mail_top.gif" alt=""></div>
+        <div class="tx">
+            <p style="color: #ff772c;">亲爱的天润云 {username}： </p>
+            <p class="g2">请点击激活按钮完成账户激活，激活后您将立刻享受到天润云地图服务。（请在48小时内完成激活） </p>
+
+            <br>
+            <p style="text-align: center;"><img src="../images/mail_illu.gif" alt=""></p>
+            <br>
+            <p style="text-align: center;"><a href="#" class="btn">点我激活</a></p>
+
+            <p class="g2">如果按钮无法点击，请点击或复制下面的链接到浏览器打开完成注册：<a href="#" style="color: #ff772c;"> http://192.168.1.111:8080/qtuser/account/active?email=bettysboy@trgis.com&code=f82eb111675f414bcd7aacbafafc1952.</a> </p>
+            <p style="border-top: 1px solid #CCCCCC; line-height: 4em; margin-top: 2em;">此邮件由天润云地图发送，请勿直接回复。如有问题请联系我们 <a href="mailto:contact@trmap.cn" style="color: #4092e8;"> contact@trmap.cn</a> </p>
+
+        </div>
+    </div>
+
+</body>
+</html>

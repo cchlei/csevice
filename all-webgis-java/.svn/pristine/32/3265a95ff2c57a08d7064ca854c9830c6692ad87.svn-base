@@ -1,0 +1,143 @@
+{
+  "total" : 3,
+  "rows" : [ {
+    "id" : 6501,
+    "topiccolor" : "#ae0505",
+    "selectStatus" : 1,
+    "user" : {
+      "id" : 4733,
+      "username" : "sunyuan",
+      "createDate" : "2016年04月15日  06:55:08",
+      "name" : "sunyuan",
+      "nickname" : null,
+      "gender" : "女",
+      "mobile" : null,
+      "email" : "576251119@qq.com",
+      "headimg" : "f2448e36-d977-417b-a934-1066dc7eef54-d1462256766244",
+      "status" : "ACTIVE",
+      "entity" : "PERSONAL",
+      "operation" : null
+    },
+    "topic" : {
+      "id" : 4377,
+      "name" : "2015旅游",
+      "description" : "豆腐干",
+      "shareflag" : 1,
+      "occurtime" : "2016年04月29日  16:26:24",
+      "creatime" : "2016年04月29日  16:26:24",
+      "coverurl" : "fe5a676b-c6bd-4abe-8105-f71c91cc3cfe-d1461918661019",
+      "topiccolor" : "#ae0505",
+      "selectStatus" : 1,
+      "delflag" : 0,
+      "user" : {
+        "id" : 8,
+        "username" : "qinling",
+        "createDate" : "2015年10月20日  17:28:59",
+        "name" : "qinling是女的好不",
+        "nickname" : null,
+        "gender" : "女",
+        "mobile" : null,
+        "email" : "459866@qq.com",
+        "headimg" : "",
+        "status" : "ACTIVE",
+        "entity" : "PERSONAL",
+        "operation" : null
+      }
+    },
+    "collect" : 5,
+    "iscollect" : true
+  }, {
+    "id" : 6500,
+    "topiccolor" : "#ffb400",
+    "selectStatus" : 1,
+    "user" : {
+      "id" : 4733,
+      "username" : "sunyuan",
+      "createDate" : "2016年04月15日  06:55:08",
+      "name" : "sunyuan",
+      "nickname" : null,
+      "gender" : "女",
+      "mobile" : null,
+      "email" : "576251119@qq.com",
+      "headimg" : "f2448e36-d977-417b-a934-1066dc7eef54-d1462256766244",
+      "status" : "ACTIVE",
+      "entity" : "PERSONAL",
+      "operation" : null
+    },
+    "topic" : {
+      "id" : 4375,
+      "name" : "梵蒂冈",
+      "description" : "豆腐干",
+      "shareflag" : 1,
+      "occurtime" : "2016年04月29日  16:27:08",
+      "creatime" : "2016年04月29日  16:27:08",
+      "coverurl" : "b2f2ce57-860e-4b06-aefe-aa74bef6b32d-d1461918704779",
+      "topiccolor" : "#4aa2ec",
+      "selectStatus" : 1,
+      "delflag" : 0,
+      "user" : {
+        "id" : 8,
+        "username" : "qinling",
+        "createDate" : "2015年10月20日  17:28:59",
+        "name" : "qinling是女的好不",
+        "nickname" : null,
+        "gender" : "女",
+        "mobile" : null,
+        "email" : "459866@qq.com",
+        "headimg" : "b5ab04fe-5724-4163-92d5-e1077c1deb9d-d1461750753131",
+        "status" : "ACTIVE",
+        "entity" : "PERSONAL",
+        "operation" : null
+      }
+    },
+    "collect" : 4,
+    "iscollect" : true
+  }, {
+    "id" : 6499,
+    "topiccolor" : "#c863d4",
+    "selectStatus" : 1,
+    "user" : {
+      "id" : 4733,
+      "username" : "sunyuan",
+      "createDate" : "2016年04月15日  06:55:08",
+      "name" : "sunyuan",
+      "nickname" : null,
+      "gender" : "女",
+      "mobile" : null,
+      "email" : "576251119@qq.com",
+      "headimg" : "f2448e36-d977-417b-a934-1066dc7eef54-d1462256766244",
+      "status" : "ACTIVE",
+      "entity" : "PERSONAL",
+      "operation" : null
+    },
+    "topic" : {
+      "id" : 6253,
+      "name" : "旅行",
+      "description" : "输入专题描述",
+      "shareflag" : 1,
+      "occurtime" : "2016年05月05日  17:15:41",
+      "creatime" : "2016年05月05日  17:15:41",
+      "coverurl" : "2c46564b-d11f-4e38-9cc6-94648e9d6003-d1461660921379",
+      "topiccolor" : "#c863d4",
+      "selectStatus" : 1,
+      "delflag" : 0,
+      "user" : {
+        "id" : 8,
+        "username" : "qinling",
+        "createDate" : "2015年10月20日  17:28:59",
+        "name" : "qinling是女的好不",
+        "nickname" : null,
+        "gender" : "女",
+        "mobile" : null,
+        "email" : "459866@qq.com",
+        "headimg" : "b5ab04fe-5724-4163-92d5-e1077c1deb9d-d1461750753131",
+        "status" : "ACTIVE",
+        "entity" : "PERSONAL",
+        "operation" : null
+      }
+    },
+    "collect" : 1,
+    "iscollect" : true
+  } ],
+  "totalCount" : 3
+}

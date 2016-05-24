@@ -1,0 +1,117 @@
+@import "tool";
+@import "vars";
+.fans_sub{
+  font-family:@font_yahei ;
+  h2{
+    font-size: @f+2;
+    .lineh(@page_name_h);
+    color: #57a3f2;
+    padding-left: 47px;
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+  .focus_name{
+    border-bottom: 1px solid #BCCDDA;
+    padding-left: 47px;
+    background: url(../images/icon_focus.png) no-repeat 21px center;
+    i {
+      position: absolute;
+      right: 21px;
+      font-size: @f+10;
+      color: #666666;
+    }
+  }
+  .fans_name{
+    background: url(../images/icon_fans.png) no-repeat 22px center;
+    font-size: 16px;
+    color: #57a3f2;
+    padding-left: 47px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 27px;
+  }
+  a{
+    margin-left: @g+4;
+    display: block;
+    border-radius:@btn_radius;
+    .lineh(36px);
+    width: 160px;
+    margin-bottom: @g;
+    margin-top:@g;
+    font-size: @f;
+    text-align: center;
+  }
+  .bg-focus{
+    background: #f0f2f5;
+    color: #666666;  }
+  .bg-all{
+    background: #669fe4;
+    color: #ffffff;  }
+}
+.fans_all{
+  color: #192330;
+  font-size: 18px;
+  &:extend(.yahei);
+  .lineh(@page_name_h);
+  font-weight: 500;
+  text-indent:@g;
+  border-bottom:1px solid #bccdda;
+}
+.fans_framework {
+  margin-left:22px;
+  overflow: hidden;
+  margin-top:9px;
+  li{
+    margin: 12px 10px;
+    background:#ffffff;
+    border-radius:@btn_radius;
+    font-size: @f;
+    min-height: 120px;
+    float: left;
+    min-width: 250px;
+  }
+  .fans_img{
+    width:95px;
+    height:71px;
+    float: left;
+    border-right: 1px solid #cfcfcf;
+    margin-top: 22px;
+    margin-left: 26px;
+    p{
+      ._size(71);
+      border-radius: 100%;
+    }
+  }
+  .fans_img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+  }
+  span{
+    float: left;
+    height:72px;
+    margin-top: 21px;
+    margin-left:17px;
+    margin-right: 32px;
+  }
+  i{
+    color: #666666;
+    padding-top: 12px;
+    display: block;
+  }
+  a{
+    background: #57a3f2;
+    border-radius:@btn_radius;
+    .lineh(30px);
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-top: 13px;
+    width: 80px;
+    &:hover{
+      background: #428de8;
+    }
+  }
+}

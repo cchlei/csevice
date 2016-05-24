@@ -1,0 +1,268 @@
+// 计算服务申请
+.font_wei{
+  font-family: "Microsoft YaHei";
+}
+.font_song{
+  font-family: "SimSun";
+}
+.font_s(@size){
+  font-size:@size;
+}
+.pos(r){
+  position:relative;
+}
+.pos(a){
+  position:absolute;
+}
+.pos(f){
+  position:fixed;
+}
+.clear{
+  clear: both;
+}
+textarea{
+  outline:none;
+  resize:none;
+}
+.hall{
+  .pos(r);
+  .font_wei;
+  color:#333;
+  .fwtop{
+    height:115px;
+    line-height:115px;
+    background-color:#3c6bcd;
+    color: #fff;
+    .pos(r);
+    top:0px;
+    width:100%;
+    z-index: 999;
+    img.fwlogo{
+      .pos(a);
+      height: 61px;
+      top:50%;
+      margin-top: -30.5px;
+      left:33px;
+      z-index: 999;
+    }
+    img.fwsq{
+      width: 188px;
+      height: 31px;
+      .pos(a);
+      left:50%;
+      margin-left: -62.5px;
+      top:50%;
+      margin-top: -15.5px;
+      z-index: 999;
+    }
+    i{
+      .pos(a);
+      z-index: 9;
+      &.wx{
+        background: url("../images/fw_wx.png") no-repeat;
+        width: 48px;
+        height: 27px;
+        bottom: 8px;
+        left:50%;
+        margin-left: -185px;
+      }
+      &.topbj{
+        background: url("../images/fw_top.png") no-repeat;
+        width: 623px;
+        height: 67px;
+        right: 60px;
+        bottom: 0px;
+      }
+    }
+    .user{
+      .pos(a);
+      right: 33px;
+      .font_s(14px);
+      height: 60px;
+      line-height: 60px;
+      z-index: 999;
+      img{
+        vertical-align: middle;
+        width: 37px;
+        height: 37px;
+        border-radius: 37px;
+        -webkit-border-radius: 37px;
+        -moz-border-radius: 37px;
+      }
+      span.name{
+        margin: 0px 10px 0px 5px;
+      }
+    }
+  }
+  .order{
+    width: 812px;
+    height: auto;
+    margin: 0px auto;
+    img{
+      width: 664px;
+      margin: 0px auto;
+      display: block;
+      margin: 70px auto 45px;
+    }
+    .applyusetime{
+      width: 558px;
+      margin: 60px auto 0px;
+      .font_s(16px);
+      .font_wei;
+      color: #333;
+      .usetime{
+        width: 200px;
+        height: 26px;
+        line-height: 26px;
+        padding: 0px 5px;
+        margin-top: 20px;
+        border: 1px #c2c4c6 solid;
+        margin:0px 10px 0px 25px;
+      }
+      p{
+        text-align: center;
+        &.next{
+          width: 50px;
+          text-align: center;
+          background-color: #4c78d5;
+          color: #fff;
+          padding: 5px 10px;
+          float: right;
+          margin-top: 40px;
+          cursor: pointer;
+        }
+      }
+      span.yxq{
+        width: 0px;
+        height: 0px;
+        display: inline-block;
+        border: 13px solid #c2c4c6;
+        vertical-align: middle;
+        margin-left: 35px;
+        margin-right: 7px;
+        cursor: pointer;
+        &.ed{
+          border: 13px solid #4c78d5;
+        }
+      }
+    }
+    table{
+      .ordertitle{
+        background-color: #6896f6;
+        color: #fff;
+        .font_s(18px);
+        .font_wei;
+        text-indent: 0px;
+      }
+      .ordercenter{
+        height: 163px;
+        background-color: #f0f4fb;
+        color: #4c78d5;
+        .font_s(16px);
+        .font_wei;
+        text-align: center;
+        text-indent: 0px;
+        p{
+          line-height: 30px;
+          width:16px!important;
+          padding:0px 0px 0px 30px!important;
+          text-align:center!important;
+          letter-spacing: 2px;
+          direction: rtl!important;
+          direction:inherit;
+          vertical-align: middle!important;
+        }
+      }
+      td{
+        .font_s(13px);
+        color: #333;
+        height: 40px;
+        line-height: 40px;
+        border: 1px #6896f6 solid;
+        text-indent: 9px;
+      }
+      .tit1{
+        color: #030303;
+        &.bg{
+          background-color: #f0f4fb;
+        }
+      }
+      &.row{
+        margin-top: 25px;
+      }
+    }
+    p.ddxq{
+      text-align: center;
+      float: right;
+      margin: 35px 0px;
+      span{
+        width: 74px;
+        height: 25px;
+        line-height: 25px;
+        display: inline-block;
+        cursor: pointer;
+        .font_s(14px);
+        .font_wei;
+        &.back{
+           background-color: #c2c4c6;
+           color: #333;
+        }
+        &.sure{
+          background-color: #4c78d5;
+          color: #fff;
+          margin-left: 15px;
+        }
+      }
+    }
+    .sqfail{
+      margin-top: 150px;
+    }
+    .sqsucess,.sqfail{
+      width: 650px;
+      height: 305px;
+      margin: 60px auto 0px;
+      display: none;
+      h3{
+        background-color: #6896f6;
+        color: #fff;
+        height: 43px;
+        line-height: 43px;
+        text-align: center;
+        .font_s(18px);
+      }
+      .sucess{
+        height: 260px;
+        border: 1px #6896f6 solid;
+        img{
+          width: 196px;
+          height: 185px;
+          float: left;
+          margin: 38px 27px;
+        }
+        p{
+          width: 370px;
+          line-height: 28px;
+          float: left;
+          margin-top: 78px;
+          .font_s(14px);
+          color: #333;
+          .font_wei;
+        }
+        a{
+          color: #6896f6;
+          text-decoration: underline;
+        }
+      }
+    }
+    .form{
+      display: none;
+    }
+  }
+
+}
+html{
+  height: 100%;
+}
+
+
+

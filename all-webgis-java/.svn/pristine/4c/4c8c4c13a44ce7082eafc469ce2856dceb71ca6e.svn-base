@@ -1,0 +1,224 @@
+.inblock,
+.iblock,
+.div_inline_block {
+  display: inline-block;
+  vertical-align: top;
+  *zoom: 1;
+  *display: inline;
+}
+.__icon {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.clear {
+  font-size: 0;
+  height: 0;
+  width: 0;
+  clear: both;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.txcut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.planeUl {
+  list-style: none;
+}
+.planeUl li {
+  margin: 0;
+}
+.noSelect,
+.treeview {
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  user-select: none;
+}
+.yahei {
+  font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", "\9ED1\4F53", "\65B0\5B8B\4F53";
+}
+.heiti {
+  font-family: "\9ED1\4F53", "SimHei";
+}
+.expandin {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.v_hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/*
+ * Base structure
+ */
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 26px;
+  font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", "\9ED1\4F53", "\65B0\5B8B\4F53";
+}
+/*
+ * Global add-ons
+ */
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+/*
+ * Sidebar
+ */
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px;
+  /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+/*
+ * Main content
+ */
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+/*
+ * Placeholder dashboard ideas
+ */
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+.body > .row {
+  padding-top: 24px;
+}
+.treeview li {
+  position: relative;
+  border-right: none;
+}
+.treeview .badge {
+  background-color: #27AE60;
+  position: absolute;
+  right: 6px;
+  top: 12px;
+}
+.treeview .node-main_tree {
+  border-radius: 0;
+  background-color: #f9f9f9;
+}
+.treeview .expand-icon {
+  color: #2C3E50;
+}
+.left_cont {
+  padding: 0;
+  height: calc(100% - 26px);
+  overflow-y: auto;
+  background-color: #ECF0F1;
+  box-shadow: #D8D8D8 0 6px 15px;
+}
+.main {
+  overflow-y: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+html,
+body {
+  overflow: hidden;
+}
+@media screen and (max-width: 765px) {
+  html,
+  body {
+    overflow: visible;
+  }
+}
+.sname {
+  font-size: 1.2em;
+  color: #ffffff !important;
+}
+.sname i {
+  padding-right: 0.5em;
+  color: #57D68D;
+}
+.navbar {
+  background-color: #2c3e50;
+}
+.form-control {
+  border-radius: 0;
+}
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #CCCCCC;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: #999999;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 9px;
+  background-color: #0286CC;
+}

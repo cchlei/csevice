@@ -1,0 +1,13 @@
+<html>   <head>       <meta charset="UTF-8" />   </head>   <body><h1 id="-">说明</h1>
+<blockquote>
+<p>目录作用</p>
+<blockquote>
+<p>assets/css/存放css文件以及字体文件</p>
+<p>assets/data/json的样例</p>
+<p>assets/images/ 项目中使用的图片</p>
+<p>assets/js/ 项目内部所使用的js文件</p>
+<p>assets/libs/ 引用的第三方库</p>
+<p>assets/pages/ 存放静态html文件</p>
+</blockquote>
+</blockquote>
+</body></html>

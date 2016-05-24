@@ -1,0 +1,5 @@
+#org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
+#Fri Apr 15 13:35:33 CST 2016
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;core;enterprise-api;enterprise-core;hstore-api;qtenterprise;qtuser;system;system-service;tresb;trmap-account;trmap-personal;trmap-personal-webapp;userauth;usermobile-api;www;wxservice;
+org.springsource.ide.eclipse.gradle.linkedresources=
+org.springsource.ide.eclipse.gradle.rootprojectloc=

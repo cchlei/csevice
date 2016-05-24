@@ -1,0 +1,91 @@
+{
+  "status": 0,
+  "msg": null,
+  "totalCount":15645,
+  "data": [
+    {
+      "name": "未分组",
+      "gid": 16676,
+      "shrink":true,
+      "user" : [ {
+        "headimg" : "f2448e36-d977-417b-a934-1066dc7eef54-d1462256766244",
+        "atteflag" : 1,
+        "userName" : "sunyuan",
+        "userId" : 4733,
+        "checked":true
+      }, {
+        "headimg" : null,
+        "atteflag" : 0,
+        "userName" : "daiyanjuntr",
+        "userId" : 456,
+        "checked":true
+      }, {
+        "headimg" : "7911bca8-238f-41a0-984d-cfaba64c9426-d1461750592659",
+        "atteflag" : 1,
+        "userName" : "liuyan_2016",
+        "checked":true,
+        "userId" : 5063
+      }]
+    },
+    {
+      "name": "分组一",
+      "gid": 16612,
+      "shrink":false,
+      "user" : [  {
+        "headimg" : "e2cbb781-c6e7-4c78-8367-7e69c75a47ba-d1461223113775",
+        "atteflag" : 1,
+        "userName" : "hacker.chlei",
+        "checked":false,
+        "userId" : 1417
+      }, {
+        "headimg" : null,
+        "atteflag" : 0,
+        "userName" : "chenlitrst",
+        "checked":true,
+        "userId" : 1326
+      }, {
+        "headimg" : "371b0b5d-0664-43e7-953c-458c908110b4-d1452820477338",
+        "atteflag" : 0,
+        "userName" : "admin",
+        "checked":false,
+        "userId" : 2
+      } ]
+    },
+    {
+      "name": "分组二",
+      "gid": 16613,
+      "shrink":false,
+      "user" : [ {
+        "headimg" : "6f876943-967e-4db0-81bc-96746f1c7fa3-d1456123786280",
+        "atteflag" : 0,
+        "userName" : "2hhhhhhhhhhhhhh",
+        "checked":false,
+        "userId" : 3841
+      }, {
+        "headimg" : "36e8230e-723f-4351-b3f9-1e6eb263dba4-d1453866914842",
+        "atteflag" : 0,
+        "userName" : "Noah",
+        "checked":false,
+        "userId" : 1997
+      } ]
+    },
+    {
+      "name": "分组三",
+      "gid": 16614,
+      "shrink":false,
+      "user" : [ {
+        "headimg" : "92edc9d5-07ca-4835-badc-442351153465-d1461836378440",
+        "atteflag" : 1,
+        "userName" : "yang11",
+        "checked":false,
+        "userId" : 4218
+      }, {
+        "headimg" : "248ade3c-99e3-4fa4-b7c9-447ec16e0a4b-d1452827938616",
+        "atteflag" : 0,
+        "userName" : "wqwqwqwqwq",
+        "checked":true,
+        "userId" : 1533
+      } ]
+    }
+  ]
+}

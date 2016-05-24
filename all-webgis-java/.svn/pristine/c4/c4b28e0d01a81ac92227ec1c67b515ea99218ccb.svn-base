@@ -1,0 +1,36 @@
+.planeUl,ol,ul{list-style:none}
+.div_inline_block,.iblock,.inblock{display:inline-block;vertical-align:top;*zoom:1;*display:inline}
+.__icon,.navbar .logo{background-repeat:no-repeat;background-position:50% 50%}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font-family:inherit;vertical-align:baseline}
+h1,h2,h3,h4,h5,h6{font-weight:700}
+article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}
+body{line-height:1;font-size:12px}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+em,i{font-style:normal}
+a{text-decoration:none}
+.clear{font-size:0;height:0;width:0;clear:both}
+.center{margin-left:auto;margin-right:auto}
+.txcut{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.planeUl li{margin:0}
+.noSelect{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+.yahei{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.heiti{font-family:"\9ED1\4F53",SimHei}
+.navbar,html body{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53"}
+.expandin{width:100%;height:100%;top:0;left:0}
+.v_hidden{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+html body .mc{margin-left:auto;margin-right:auto;width:1200px}
+.navbar{background-color:#115280;z-index:99;border-radius:0!important}
+.navbar .mc{position:relative;height:81px;line-height:81px;text-align:right;font-size:16.8px}
+.navbar .logo{width:205px;background-position:0 50%;position:absolute;height:100%;left:0;background-image:url(../images/logo_top.png)}
+.navbar .webname{position:absolute;top:0;left:205px;height:81px;color:#A0D4F9;font-size:30px;text-indent:.25em;line-height:97.2px;font-weight:100;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.navbar .btns,.navbar .btns a,.navbar .nav,.navbar .nav a{display:inline-block;vertical-align:top;height:81px;line-height:81px}
+.navbar .nav a{font-size:18px;display:inline-block;vertical-align:top;color:#fff;margin:0 1em;font-weight:100}
+.navbar .nav a.cur{background:url(../images/nav_btn_bg.png) 50% 100% no-repeat}
+.navbar .nav a:hover{color:#FECE00}
+.navbar .btns{padding-left:1em;color:#A0D4F9;font-weight:100;font-family:Arial,"\5FAE\8F6F\96C5\9ED1","Microsoft YaHei","\9ED1\4F53","\65B0\5B8B\4F53";height:81px}
+.navbar .btns,.navbar .btns a{line-height:84.24px!important;font-size:14px;letter-spacing:-.05em}
+.navbar .btns a{color:#fff;padding:0 .25em}
+.navbar .btns a:hover{color:#FECE00}
+.navbar.wide .mc{width:auto}

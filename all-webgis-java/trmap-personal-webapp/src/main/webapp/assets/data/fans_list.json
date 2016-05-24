@@ -1,0 +1,52 @@
+{
+  "totalCount":100,
+  "status" : 0,
+  "msg" : null,
+  "data" : [ {
+    "atteflag" : 0,
+    "headimg" : "../images/illu1.png",
+    "userId" : 15522,
+    "userName" : "宇宙科技公司"
+  },{
+    "atteflag" : 1,
+    "headimg" : null,
+    "userId" : 92111,
+    "userName" : "zqtest"
+  },{
+    "atteflag" : -1,
+    "headimg" : null,
+    "userId" : 7432,
+    "userName" : "zhaosi"
+  },{
+    "atteflag" : 1,
+    "headimg" : null,
+    "userId" : 9213,
+    "userName" : "zqtest"
+  },{
+    "atteflag" : 0,
+    "headimg" : null,
+    "userId" : 7435,
+    "userName" : "zhaosi"
+  },{
+    "atteflag" : 1,
+    "headimg" : null,
+    "userId" : 92188,
+    "userName" : "zqtest"
+  },{
+    "atteflag" : 0,
+    "headimg" : null,
+    "userId" : 74399,
+    "userName" : "zhaosi"
+  },{
+    "atteflag" : 1,
+    "headimg" : null,
+    "userId" : 921,
+    "userName" : "zqtest"
+  },{
+    "atteflag" : 0,
+    "headimg" : null,
+    "userId" : 74300,
+    "userName" : "zhaosi"
+  } ]
+}
+
